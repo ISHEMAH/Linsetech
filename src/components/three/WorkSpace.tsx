@@ -434,9 +434,10 @@ const SKY_FRAG = /* glsl */ `
     vec2 uv = rotate2D(n) * p.xy * 0.05;
     // Between the dark and the white space the sky passes through a saturated accent instead of a flat grey
     // (Puture mixes in its #2F74FF; our night band colour is too dark for that, so the middle has its own green, mixed
-    // in harder than Puture's .5 because a green over the grey midpoint reads muddier than their blue).
+    // in harder than Puture's .5 because a green over the grey midpoint reads muddier than their blue). The accent is
+    // a deep green: a bright one flooded the whole screen in one flat colour, grid lines gone, and read as a flash.
     float l = smoothstep(0.15, 0.85, uLight);
-    float via = sin(3.14159 * l) * 0.8;
+    float via = sin(3.14159 * l) * 0.75;
     vec3 first = mix(mix(uFirst, uFirstLight, l), uVia, via);
     vec3 second = mix(uSecond, uSecondLight, l);
     vec3 third = mix(mix(uThird, uThirdLight, l), uVia, via);
@@ -462,7 +463,7 @@ export function Sky() {
           uTime: { value: 0 }, uLight: { value: 0 }, uPhase: { value: 0 },
           uFirst: { value: new THREE.Color("#15803d") }, uSecond: { value: new THREE.Color("#cdefd9") }, uThird: { value: new THREE.Color("#020a07") },
           uFirstLight: { value: new THREE.Color("#cdefd9") }, uSecondLight: { value: new THREE.Color("#fbfdf9") }, uThirdLight: { value: new THREE.Color("#e4efe7") },
-          uVia: { value: new THREE.Color("#3ddc84") },
+          uVia: { value: new THREE.Color("#148a45") },
         },
         side: THREE.BackSide,
         depthWrite: false,

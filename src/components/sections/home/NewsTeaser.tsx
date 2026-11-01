@@ -2,7 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import DashedLine from "@/components/ui/DashedLine";
 import { Arrow, ButtonLink } from "@/components/ui/Button";
-import TurnLight from "@/components/motion/TurnLight";
+import DarkGradient from "@/components/backdrop/DarkGradient";
 import NewsCover from "@/components/sections/news/NewsCover";
 import DateBadge from "@/components/sections/news/DateBadge";
 import { badgeDate } from "@/components/sections/news/data";
@@ -37,7 +37,8 @@ function ReadMore({ label }: { label: string }) {
  * Sharplink "section-news": eyebrow + heading in the first of three dashed columns, "Visit our blog" in the last; the
  * latest three articles (CardArticle: pinned thumbnail, type + date badges, title, hide-text "Read more") in the three
  * columns on desktop, a swipe carousel on phones. Static on desktop (no reveal), no image zoom or title tint on hover.
- * Starts dark under the contact banner and turns light as it scrolls in (TurnLight).
+ * Opens on Sharplink's dark edge under the dark contact banner (black → green → the arc fading out), with room above
+ * the header so the heading arrives on the light end; a scrubbed black plate over the light page went through grey.
  */
 export default function NewsTeaser({ posts }: { posts: Post[] }) {
   const t = useTranslations("news");
@@ -63,8 +64,9 @@ export default function NewsTeaser({ posts }: { posts: Post[] }) {
   ));
 
   return (
-    <section data-theme="light" data-chapter="news" className="section-news relative z-[3] px-[clamp(16px,2.5vw,40px)] pb-[120px] text-ink min-[800px]:pb-0">
-      <TurnLight />
+    <section data-theme="light" data-chapter="news" className="section-news relative z-[3] px-[clamp(16px,2.5vw,40px)] pb-[120px] pt-[36vh] text-ink min-[800px]:pb-0">
+      {/* 35vh tall, 1.3× while the section scrolls in: faded to ~10 % by the heading 36vh down */}
+      <DarkGradient position="top" height="35vh" />
       {/* header: three dashed columns, brand pin */}
       <div className="relative grid grid-cols-1 min-[800px]:grid-cols-3 min-[800px]:gap-x-[28px]">
         <DashedLine className="top-0" />

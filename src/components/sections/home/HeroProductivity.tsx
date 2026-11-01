@@ -147,8 +147,9 @@ export default function HeroProductivity({ latest, latestDate }: { latest?: Post
             .fromTo(q(".pc-label"), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, stagger: 0.15 }, 0.15)
             .fromTo(q(".pc-value"), { yPercent: 100 }, { yPercent: 0, autoAlpha: 1, duration: 0.4, stagger: 0.15 }, 0.3)
             .fromTo(q(".pc-cta"), { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.4 }, 0.3);
-          // theirs plays when the card's top reaches the centre, or once the section top is 20 % above the viewport
-          ScrollTrigger.create({ trigger: q(".prod-chart")[0], start: "top center", onEnter: () => c.play(), onRefresh: (st) => st.progress > 0 && c.play() });
+          // theirs plays when the card's top reaches the centre, or once the section top is 20 % above the viewport; ours
+          // plays as the card comes in: its gradient is black over most of its height, so waiting showed an empty box
+          ScrollTrigger.create({ trigger: q(".prod-chart")[0], start: "top bottom", onEnter: () => c.play(), onRefresh: (st) => st.progress > 0 && c.play() });
           ScrollTrigger.create({ trigger: body, start: "top -20%", onEnter: () => c.play() });
           return;
         }

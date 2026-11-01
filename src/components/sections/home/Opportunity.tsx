@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -31,6 +31,8 @@ export default function Opportunity({ services }: { services: Service[] }) {
   const t = useTranslations("opportunity");
   const tw = useTranslations("whatWeDo.items");
   const root = useRef<HTMLElement>(null);
+  // the chrome parts render only while their window is on (shown a screen before the fade, see below)
+  const [partsOn, setPartsOn] = useState(false);
   const parts = useRef(0);
 
   useGSAP(
@@ -117,9 +119,18 @@ export default function Opportunity({ services }: { services: Service[] }) {
               end: mobile ? "bottom 75%" : "bottom bottom",
               scrub: true,
               animation: fade,
+            });
+            // the canvas renders (data-on) from a screen before the fade, still at opacity 0: rendering only for the fade,
+            // its first frame (shader compile, environment map) landed after the window had already scrolled by
+            ScrollTrigger.create({
+              trigger: list,
+              endTrigger: el,
+              start: mobile ? "bottom 190%" : "top 175%",
+              end: mobile ? "bottom 75%" : "bottom bottom",
               onToggle: (st) => {
                 if (st.isActive) partsBox.dataset.on = "1";
                 else delete partsBox.dataset.on;
+                setPartsOn(st.isActive);
               },
             });
           }
@@ -192,9 +203,10 @@ export default function Opportunity({ services }: { services: Service[] }) {
         </div>
         {/* Sharplink .video-container: fixed at the right from 160px down, soft top edge, faded by the list's scroll */}
         <div className="opp-parts-anchor relative hidden md:block" style={{ ["--po" as string]: 0 }}>
-          <WhenNear className="absolute inset-0">
+          {/* mounted three screens ahead, so its chunk and studio lighting are loaded before it is shown */}
+          <WhenNear className="absolute inset-0" margin="300% 0px">
             <div className="opp-parts pointer-events-none fixed right-0 top-[160px] z-0 h-[calc(100vh-160px)] w-[50vw] [mask-image:linear-gradient(0deg,#000_80%,transparent)]" style={{ opacity: "var(--po)" }}>
-              <MachineScene variant="parts" progressRef={parts} className="absolute inset-0" />
+              <MachineScene variant="parts" progressRef={parts} active={partsOn} className="absolute inset-0" />
             </div>
           </WhenNear>
         </div>

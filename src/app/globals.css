@@ -607,8 +607,10 @@ html[data-nav="dark"] .nav-chrome {
   opacity: 1;
 }
 /* the fixed chrome parts beside the service cards exist only while their fade window is active (Opportunity.tsx) */
+/* hidden but laid out: a canvas mounted under display:none keeps the 300×150 default size until the browser happens to
+   report the layer appearing, and showed nothing in the meantime (its render loop pauses there instead, Opportunity) */
 .opp-parts-anchor:not([data-on]) .opp-parts {
-  display: none;
+  visibility: hidden;
 }
 
 /* ──────────────────────────────────────────────────────────────────────────

@@ -95,6 +95,12 @@ export default function WorkChapter({ projects, chapter = "work", dark = false, 
           const top = frame.getBoundingClientRect().top;
           const shift = top > 0 || (top < 0 && toDark) ? -top : 0;
           stage.current!.style.transform = shift ? `translate3d(0, ${shift.toFixed(1)}px, 0)` : "";
+          // entering, the frame's top edge would cut the space off from the page above in a hard line: it fades in over
+          // up to 35 % of the screen instead, shrinking to nothing as the frame reaches the top and pins
+          const fade = top > 0 ? Math.min(top, window.innerHeight * 0.35) : 0;
+          const mask = fade > 1 ? `linear-gradient(to bottom, transparent 0, #000 ${fade.toFixed(0)}px)` : "";
+          frame.style.maskImage = mask;
+          frame.style.webkitMaskImage = mask;
         };
         ScrollTrigger.create({ trigger: el, start: "top bottom", end: "bottom top", onUpdate: align, onRefresh: align, onLeave: align, onEnterBack: align, onLeaveBack: align });
         align();
@@ -111,7 +117,9 @@ export default function WorkChapter({ projects, chapter = "work", dark = false, 
       id={chapter}
       data-theme={dark ? "dark" : "light"}
       data-chapter={chapter}
-      className={cn("relative", dark ? "bg-[#020a07] text-off-white" : "bg-paper text-ink", className)}
+      // the light variant has no background of its own: the frame covers the screen once pinned, and while it enters,
+      // its faded top edge shows the page backdrop behind it (as the section above does), not a flat plate
+      className={cn("relative", dark ? "bg-[#020a07] text-off-white" : "text-ink", className)}
       style={{ height: `${(pacing.total + 1) * 100}svh` }}
     >
       {/* header theme: the floor turns night during the dark hand-off, through a bright saturated green; from ~1.05
