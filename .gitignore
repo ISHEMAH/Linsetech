@@ -1,0 +1,27 @@
+# dependencies and build output
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# environment (keep the documented example)
+.env*
+!.env.example
+
+# Blender renders and recolour outputs: reproducible from tools/blender/*.py and tools/bg (several GB)
+tools/blender/out/
+tools/bg/out/
+__pycache__/
+*.pyc
+
+# reference captures of third-party sites and comparison sheets: internal only
+docs/reference/
+docs/compare/
+
+# generated clip artefacts the site does not use (frame sheets, PNG posters replaced by WebP)
+public/clips/*_sheet.jpg
+public/clips/*_poster.png
+
+.DS_Store

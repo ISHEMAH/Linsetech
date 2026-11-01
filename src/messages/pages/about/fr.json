@@ -1,0 +1,157 @@
+{
+  "aboutPage": {
+    "meta": {
+      "title": "À propos",
+      "description": "Linse est une entreprise technologique basée à Kigali. Nous concevons et développons des logiciels, éditons nos propres produits, distribuons du matériel et gérons l’informatique d’organisations qui ont besoin que tout fonctionne ensemble."
+    },
+    "hero": {
+      "title": "Construire la colonne vertébrale numérique des entreprises qui grandissent.",
+      "cta1": "Voir nos réalisations",
+      "cta2": "Nous parler"
+    },
+    "story": {
+      "heading": "Une seule équipe pour tout ce qui fait tourner votre entreprise.",
+      "rows": {
+        "story": {
+          "label": "Notre histoire",
+          "text": "Linse est une entreprise technologique basée à Kigali. Elle a commencé comme un petit studio logiciel, et les entreprises pour lesquelles nous développions posaient toujours la même question : qui va faire fonctionner tout cela ensemble ?"
+        },
+        "scope": {
+          "label": "Notre périmètre",
+          "text": "Alors nous avons élargi notre champ d’action. Aujourd’hui, nous concevons et développons des logiciels sur mesure, éditons des produits que nous possédons et exploitons, distribuons du matériel professionnel et gérons l’informatique sous contrat. Une équipe, un interlocuteur, et la même exigence partout : il faut que ça tourne."
+        },
+        "serve": {
+          "label": "Nos clients",
+          "text": "Nous travaillons avec des commerçants, des prêteurs, des cliniques, des écoles et des institutions publiques au Rwanda et dans la région. L’essentiel de notre travail est de l’intégration : faire en sorte que les systèmes existants, les nouveaux produits et les appareils sur lesquels ils tournent échangent leurs données de façon fiable."
+        }
+      },
+      "whatLabel": "Ce que nous sommes",
+      "pillars": {
+        "software": {
+          "title": "Solutions logicielles",
+          "text": "Design, sites, applications et systèmes conçus sur mesure."
+        },
+        "publishing": {
+          "title": "Édition de logiciels",
+          "text": "Des produits dans lesquels nous investissons et que nous proposons sous licence."
+        },
+        "hardware": {
+          "title": "Vente et distribution de matériel",
+          "text": "Des équipements fournis, livrés et pris en charge dans tout le pays."
+        },
+        "services": {
+          "title": "Services informatiques",
+          "text": "Support, réseaux, cloud et sécurité, sous contrat."
+        }
+      },
+      "milestonesLabel": "Étapes clés",
+      "milestones": {
+        "2022": {
+          "title": "Fondation à Kigali",
+          "text": "Linse démarre comme studio logiciel, en créant des sites et des systèmes pour les entreprises locales."
+        },
+        "2024": {
+          "title": "MacyePay",
+          "text": "Nous publions notre premier produit : le paiement échelonné avec recouvrement légal."
+        },
+        "2025": {
+          "title": "Distribution de matériel",
+          "text": "Distribution agréée d’équipements et de réseaux professionnels."
+        },
+        "2026": {
+          "title": "Linsetech",
+          "text": "Logiciels, produits, matériel et services informatiques sous un même toit."
+        }
+      }
+    },
+    "quote": {
+      "text": "Nous ne vendons ni logiciels, ni matériel, ni support. Nous vendons le fait que, le lundi matin, tout fonctionne.",
+      "name": "Fondateur et CEO",
+      "role": "Linse, Kigali"
+    },
+    "people": {
+      "statement": "Linse est dirigée par des personnes qui conçoivent, livrent et assurent le support de ce qu’elles vendent. Nos priorités : fiabilité, responsabilité, clarté et service.",
+      "rail": {
+        "aria": "Sur cette page",
+        "leadership": "Direction",
+        "team": "Équipe",
+        "partners": "Partenaires",
+        "documents": "Documents",
+        "contacts": "Contacts"
+      },
+      "headings": {
+        "leadership": "Direction",
+        "team": "Équipe",
+        "partners": "Partenaires et certifications",
+        "documents": "Documents de l’entreprise",
+        "contacts": "Contacts"
+      },
+      "member": "Membre de l’équipe",
+      "portrait": "Portrait à venir",
+      "readBio": "Lire la bio",
+      "drawerTitle": "Notre équipe de direction",
+      "close": "Fermer",
+      "bio1": "{role} chez Linse, en charge de {focus}.",
+      "bio2": "Une biographie complète et un portrait seront publiés ici dès qu’ils nous auront été transmis.",
+      "leadership": {
+        "ceo": {
+          "role": "Fondateur et CEO",
+          "focus": "la stratégie et des produits"
+        },
+        "engineering": {
+          "role": "Responsable de l’ingénierie",
+          "focus": "l’ingénierie logicielle et des systèmes"
+        },
+        "hardware": {
+          "role": "Responsable du matériel",
+          "focus": "la vente et de la distribution de matériel"
+        },
+        "design": {
+          "role": "Responsable du design",
+          "focus": "la marque, de l’UX et de l’UI"
+        }
+      },
+      "roles": {
+        "engineer": "Ingénieur",
+        "designer": "Designer",
+        "support": "Support",
+        "sales": "Ventes"
+      },
+      "partners": {
+        "sub": "Nous fournissons et assurons le support d’équipements professionnels, et construisons sur les plateformes que nos clients utilisent déjà.",
+        "brands": "Marques de matériel",
+        "platforms": "Plateformes et partenaires",
+        "certs": "Certifications"
+      },
+      "certifications": {
+        "rdb": "Enregistrée au RDB",
+        "rra": "En règle auprès de la RRA",
+        "microsoft": "Partenaire Microsoft (en cours)",
+        "iso": "ISO 27001 (en cours)"
+      },
+      "documents": {
+        "profile": "Présentation de l’entreprise",
+        "incorporation": "Certificat d’immatriculation",
+        "press": "Kit presse et éléments de marque",
+        "soon": "Bientôt disponible",
+        "download": "Télécharger"
+      },
+      "contacts": {
+        "sales": "Ventes",
+        "support": "Support",
+        "media": "Presse",
+        "careers": "Carrières",
+        "office": "Bureau",
+        "phone": "Téléphone",
+        "copy": "Copier",
+        "copied": "Copié",
+        "email": "E-mail"
+      },
+      "drawerCta": "Nous parler"
+    },
+    "cta": {
+      "title": "Construisons-le ensemble, et gardons-le en marche.",
+      "careers": "Carrières"
+    }
+  }
+}

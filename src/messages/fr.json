@@ -1,0 +1,480 @@
+{
+  "meta": {
+    "title": "Linse — Logiciels, systèmes et matériel",
+    "description": "Linse conçoit, développe et possède des logiciels, intègre des systèmes et distribue du matériel informatique — toutes les activités IT, depuis le Rwanda."
+  },
+  "cookies": {
+    "label": "Avis sur les cookies",
+    "text": "Ce site utilise des cookies pour améliorer votre expérience. En poursuivant votre navigation, vous acceptez notre",
+    "link": "Politique de confidentialité",
+    "close": "Fermer l’avis sur les cookies"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "work": "Réalisations",
+    "services": "Services",
+    "news": "Actualités",
+    "careers": "Carrières",
+    "support": "Support",
+    "cta": "Lancer un projet",
+    "menu": "Menu",
+    "close": "Fermer",
+    "language": "Langue",
+    "contact": "Contact",
+    "homeLabel": "Linse — accueil",
+    "primary": "Navigation principale",
+    "mobileNav": "Navigation mobile",
+    "pagination": "Pagination"
+  },
+  "chapters": {
+    "kicker": "Chapitre",
+    "welcome": "Bienvenue",
+    "about": "À propos",
+    "services": "Services",
+    "stack": "La pile",
+    "work": "Réalisations",
+    "numbers": "Chiffres",
+    "process": "Méthode",
+    "products": "Produits",
+    "news": "Actualités",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Logiciels · Systèmes · Matériel",
+    "title": "Tout l’IT, sous un même toit.",
+    "sub": "Linse conçoit et développe des logiciels, édite ses propres produits, fournit du matériel professionnel et fait tourner l’ensemble — depuis Kigali, pour l’Afrique.",
+    "cta1": "Voir nos réalisations",
+    "cta2": "Lancer un projet",
+    "latest": "Dernière actu",
+    "scroll": "Défiler",
+    "proudly": "Éditeur de",
+    "news": "Actualité"
+  },
+  "statement": {
+    "text": "Nous concevons, développons et possédons les logiciels qui font tourner votre entreprise, et nous livrons le matériel pour les exécuter.",
+    "highlights": "concevons,développons,possédons,matériel"
+  },
+  "whatWeDo": {
+    "eyebrow": "Ce que nous faisons",
+    "title": "Tout l’IT, sous un même toit.",
+    "explore": "Découvrir",
+    "items": {
+      "design": {
+        "title": "Design",
+        "blurb": "Identité, UX et UI pour des produits qu’on aime vraiment utiliser."
+      },
+      "web": {
+        "title": "Sites & applications",
+        "blurb": "Sites rapides et accessibles, applications mobiles sur des stacks modernes."
+      },
+      "systems": {
+        "title": "Systèmes & intégration",
+        "blurb": "ERP, HMIS, paiements et plateformes sur mesure qui se parlent."
+      },
+      "software": {
+        "title": "Nos logiciels",
+        "blurb": "Des produits que nous développons, possédons et opérons, comme MacyePay."
+      },
+      "hardware": {
+        "title": "Matériel & distribution",
+        "blurb": "Ordinateurs, serveurs, réseau et terminaux : sourcés, livrés, supportés."
+      },
+      "it": {
+        "title": "Services IT",
+        "blurb": "Support, réseaux, cloud et sécurité pour les équipes de toute taille."
+      }
+    }
+  },
+  "stack": {
+    "eyebrow": "La pile",
+    "title": "La pile pour faire tourner une entreprise",
+    "rows": {
+      "build": {
+        "title": "Construit par ceux qui livrent",
+        "blurb": "Sites, applications et systèmes conçus et développés selon votre brief par une équipe qui a livré ses propres produits.",
+        "eyebrow": "Logiciels"
+      },
+      "own": {
+        "title": "Des logiciels à nous",
+        "blurb": "Nous investissons dans nos propres plateformes, comme MacyePay, et les licencions au marché : notre feuille de route est guidée par de vrais utilisateurs.",
+        "eyebrow": "Produits"
+      },
+      "supply": {
+        "title": "Des équipements, livrés",
+        "blurb": "Nous sourçons et distribuons ordinateurs, serveurs et réseau de marques de confiance, dans tout le pays, avec garantie locale.",
+        "eyebrow": "Matériel"
+      },
+      "support": {
+        "title": "Exploité, surveillé, supporté",
+        "blurb": "Nous exploitons, surveillons et supportons ce que nous livrons, et ce que vous avez déjà, sous un seul contrat avec des délais convenus.",
+        "eyebrow": "Services"
+      }
+    }
+  },
+  "work": {
+    "eyebrow": "Réalisations",
+    "title": "Des produits en production, utilisés aujourd’hui.",
+    "all": "Toutes les réalisations",
+    "view": "Voir le projet",
+    "client": "Client",
+    "category": "Catégorie",
+    "result": "Résultat",
+    "year": "Année",
+    "award": {
+      "headline": "Nous avons conçu et exploitons\nMacyePay, qui a déjà traité\n[RWF 500M+] en paiements échelonnés",
+      "kicker": "Qu’est-ce que MacyePay ?",
+      "explainer": "Le paiement échelonné pour les entreprises rwandaises. Chaque plan est un contrat vérifié par un notaire ; rappels, pénalités et relances s’exécutent automatiquement, et l’historique de paiement construit le score de confiance de chaque client.",
+      "facts": [
+        {
+          "label": "Recouvrement",
+          "value": "98 %"
+        },
+        {
+          "label": "Contrats",
+          "value": "5 000+"
+        },
+        {
+          "label": "Entreprises",
+          "value": "200+"
+        }
+      ],
+      "cta": "Voir MacyePay"
+    },
+    "tiles": [
+      "Matériel",
+      "Ingénierie",
+      "Architecture",
+      "Données",
+      "Réseaux",
+      "Supervision",
+      "Automatisation",
+      "Assistance",
+      "Interfaces",
+      "Infrastructure",
+      "Sécurité",
+      "Lancement"
+    ]
+  },
+  "numbers": {
+    "eyebrow": "Chiffres",
+    "title": "Fait pour tourner.",
+    "items": {
+      "projects": "Projets livrés",
+      "products": "Produits que nous possédons",
+      "devices": "Équipements distribués",
+      "uptime": "Disponibilité, 12 derniers mois"
+    }
+  },
+  "process": {
+    "eyebrow": "Méthode",
+    "title": "De l’idée à quelque chose qui tourne.",
+    "intro": "Nous vérifions nous-mêmes chaque étape, et livrons les systèmes un par un, en état de marche.",
+    "outro": "Les détails\nfont le produit.",
+    "steps": {
+      "discover": {
+        "title": "Découvrir",
+        "blurb": "Nous cartographions le problème, les utilisateurs et les contraintes avant d’écrire une ligne.",
+        "line": "Un problème clair.",
+        "log": [
+          "> découvrir — usagers, données, contraintes",
+          "entretiens → un problème clair",
+          "sortie — périmètre et critères de réussite"
+        ]
+      },
+      "design": {
+        "title": "Concevoir",
+        "blurb": "Parcours, interfaces et architecture, revus avec vous, pas à votre place.",
+        "line": "Un plan qui se voit.",
+        "log": [
+          "> concevoir — parcours, écrans, architecture",
+          "esquisse → revue → ajustement",
+          "sortie — un plan validé avec vous"
+        ]
+      },
+      "build": {
+        "title": "Construire",
+        "blurb": "Cycles courts, logiciel fonctionnel toutes les deux semaines, testé sur le terrain.",
+        "line": "Un logiciel qui marche.",
+        "log": [
+          "> construire — cycles de deux semaines",
+          "coder → tester → livrer",
+          "sortie — un logiciel en service sur le terrain"
+        ]
+      },
+      "run": {
+        "title": "Exploiter",
+        "blurb": "Nous déployons, surveillons et supportons, et continuons d’améliorer.",
+        "line": "En service, et meilleur.",
+        "log": [
+          "> exploiter — déployer, surveiller, assister",
+          "observer → apprendre → améliorer",
+          "sortie — un système qui tient dans la durée"
+        ]
+      }
+    }
+  },
+  "products": {
+    "eyebrow": "Produits & matériel",
+    "softwareTitle": "Les logiciels que nous éditons",
+    "softwareBlurb": "Des plateformes que nous développons, possédons et opérons pour le marché.",
+    "hardwareTitle": "Le matériel que nous distribuons",
+    "hardwareBlurb": "Fourniture agréée d’équipements professionnels, avec garantie et support sur site.",
+    "catalogue": "Demander le catalogue",
+    "learn": "En savoir plus"
+  },
+  "partners": {
+    "eyebrow": "Partenaires",
+    "title": "Avec les meilleurs."
+  },
+  "news": {
+    "eyebrow": "Du côté du blog",
+    "title": "Actualités",
+    "all": "Voir le blog",
+    "read": "Lire",
+    "minRead": "{min} min de lecture",
+    "readMore": "Lire la suite",
+    "prev": "Diapositive précédente",
+    "next": "Diapositive suivante"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Vos questions, nos réponses.",
+    "items": [
+      {
+        "q": "Comment démarrer un projet avec Linse ?",
+        "a": "Envoyez-nous un court brief via « Lancer un projet ». Nous répondons sous deux jours ouvrés avec des questions, puis une proposition cadrée avec délais et prix."
+      },
+      {
+        "q": "Maintenez-vous les systèmes que vous construisez ?",
+        "a": "Oui. Chaque réalisation est livrée avec une option de support : supervision, mises à jour, hébergement et help desk avec des délais de réponse convenus."
+      },
+      {
+        "q": "Livrez-vous le matériel dans tout le pays ?",
+        "a": "Oui. Nous livrons et installons dans tout le Rwanda, et expédions dans la région sur demande. La garantie est gérée par nous, localement."
+      },
+      {
+        "q": "Pouvez-vous travailler avec nos logiciels existants ?",
+        "a": "C’est l’essentiel de notre travail : intégrer ERP, HMIS, paiements et systèmes publics pour qu’ils partagent les données de façon fiable."
+      },
+      {
+        "q": "Licenciez-vous vos propres produits ?",
+        "a": "Oui. Les produits que nous éditons, comme MacyePay, sont disponibles sous licence ou en service managé."
+      },
+      {
+        "q": "Où êtes-vous basés ?",
+        "a": "À Kigali, au Rwanda. Nous travaillons avec des clients de toute l’Afrique de l’Est et à distance."
+      }
+    ],
+    "more": "D’autres questions ?",
+    "reach": "Contactez-nous"
+  },
+  "cta": {
+    "title": "Votre prochain système, avec Linse.",
+    "sub": "Dites-nous ce que vous devez construire, acheter ou réparer.",
+    "button": "Lancer un projet"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Restez informé",
+      "placeholder": "Votre e-mail",
+      "button": "S’abonner",
+      "note": "Nouveautés produits et analyses, environ une fois par mois.",
+      "done": "Merci, vous êtes inscrit."
+    },
+    "columns": {
+      "navigate": "Naviguer",
+      "company": "Entreprise",
+      "social": "Réseaux"
+    },
+    "company": {
+      "contact": "Contact",
+      "careers": "Carrières",
+      "partners": "Partenaires",
+      "support": "Support"
+    },
+    "legal": {
+      "rights": "© {year} Linsetech Ltd. Tous droits réservés.",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "top": "Haut de page",
+      "address": "Kigali, Rwanda"
+    }
+  },
+  "contact": {
+    "title": "Lancer un projet",
+    "sub": "Parlez-nous de votre besoin. Nous répondons sous deux jours ouvrés.",
+    "name": "Votre nom",
+    "email": "E-mail professionnel",
+    "company": "Entreprise",
+    "need": "De quoi avez-vous besoin ?",
+    "needs": {
+      "build": "Développer un logiciel",
+      "buy": "Acheter du matériel",
+      "support": "Support IT",
+      "other": "Autre chose",
+      "careers": "Candidature"
+    },
+    "message": "Quelques lignes sur le projet",
+    "send": "Envoyer",
+    "sent": "Merci, nous avons reçu votre brief. Nous revenons vers vous rapidement.",
+    "later": "L’envoi en ligne est indisponible pour le moment : votre message ne nous est pas parvenu. Écrivez-nous à <link>{email}</link>.",
+    "cvUrl": "Lien vers votre CV ou portfolio (facultatif)",
+    "careers": {
+      "title": "Postuler chez Linse",
+      "sub": "Présentez-vous en quelques lignes et ajoutez un lien vers votre CV ou votre portfolio. Nous lisons chaque candidature.",
+      "role": "Poste",
+      "email": "E-mail",
+      "message": "Quelques lignes sur vous",
+      "sent": "Merci, nous avons bien reçu votre candidature. L’équipe recrutement reviendra vers vous."
+    }
+  },
+  "pages": {
+    "about": {
+      "eyebrow": "À propos",
+      "title": "Construire la colonne vertébrale numérique des entreprises qui grandissent.",
+      "sub": "Linse est une entreprise technologique basée à Kigali. Nous concevons et développons des logiciels, éditons nos propres produits, distribuons du matériel et gérons l’IT d’organisations qui ont besoin que tout fonctionne ensemble.",
+      "cta1": "Nos réalisations",
+      "cta2": "Contact",
+      "story": "Notre histoire",
+      "pillars": "Ce que nous sommes",
+      "rail": {
+        "leadership": "Direction",
+        "team": "Équipe",
+        "partners": "Partenaires & certifications",
+        "documents": "Documents",
+        "contacts": "Contacts"
+      },
+      "timeline": "Étapes clés",
+      "join": "Travailler avec nous"
+    },
+    "work": {
+      "eyebrow": "Réalisations",
+      "title": "Réalisations",
+      "sub": "Produits et systèmes que nous avons conçus, construits et livrés.",
+      "filter": "Filtrer",
+      "all": "Tout",
+      "archive": "Archives",
+      "next": "Projet suivant",
+      "prev": "Projet précédent",
+      "scope": "Périmètre",
+      "period": "Période",
+      "role": "Rôle",
+      "stack": "Stack",
+      "delivered": "Ce que nous avons livré",
+      "screens": "Écrans",
+      "journey": "Un parcours utilisateur",
+      "engineering": "Points d’ingénierie",
+      "comingSoon": "Étude de cas en préparation"
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Tout l’IT, sous un même toit.",
+      "sub": "Six services, une équipe, un seul interlocuteur.",
+      "related": "Réalisations liées",
+      "models": "Modes de collaboration",
+      "talk": "Parlons-en",
+      "allServices": "Tous les services"
+    },
+    "news": {
+      "eyebrow": "Actualités",
+      "title": "Actualités & analyses",
+      "featured": "À la une",
+      "recent": "Les plus récentes",
+      "all": "Tous les articles",
+      "press": "Communiqués",
+      "search": "Rechercher",
+      "back": "Toutes les actualités",
+      "share": "Partager",
+      "related": "À lire aussi",
+      "download": "Télécharger le PDF",
+      "contents": "Sommaire",
+      "categories": {
+        "company": "Entreprise",
+        "product": "Produit",
+        "hardware": "Matériel",
+        "insights": "Analyses",
+        "press": "Presse"
+      }
+    },
+    "careers": {
+      "eyebrow": "Carrières",
+      "title": "Construire des choses qui tournent.",
+      "sub": "Nous sommes une petite équipe au large périmètre. Si vous aimez livrer de vrais produits à de vrais utilisateurs, parlons-en.",
+      "open": "Postes ouverts",
+      "none": "Aucun poste ouvert pour le moment. Envoyez une candidature spontanée à careers@linsetech.com.",
+      "apply": "Postuler",
+      "perks": "Pourquoi Linse"
+    },
+    "support": {
+      "eyebrow": "Support",
+      "title": "Nous sommes là quand ça compte.",
+      "sub": "Assistance pour les logiciels que nous éditons, les systèmes que nous maintenons et le matériel que nous fournissons.",
+      "channels": "Canaux",
+      "hours": "Horaires",
+      "sla": "Délais de réponse",
+      "status": "État des systèmes",
+      "operational": "Tous les systèmes opérationnels"
+    }
+  },
+  "productivity": {
+    "eyebrow": "Produits",
+    "title": "Les logiciels que nous éditons",
+    "desc": "MacyePay est la première plateforme que nous avons construite, que nous possédons et opérons : des paiements échelonnés pour les entreprises rwandaises, garantis par des accords notariés et un recouvrement automatisé. D’autres produits sont en développement.",
+    "chart": "Taux de recouvrement",
+    "chartSub": "Accords actifs, 12 derniers mois",
+    "cta": "Voir l’étude de cas",
+    "stats": {
+      "processed": "Transactions traitées",
+      "agreements": "Accords actifs",
+      "businesses": "Entreprises inscrites",
+      "recovery": "Taux de recouvrement"
+    },
+    "cards": {
+      "agreements": "Plus de 5 000 accords actifs",
+      "businesses": "Plus de 200 entreprises inscrites",
+      "recovery": "Accords notariés, recouvrement automatisé"
+    }
+  },
+  "banner": {
+    "title": "Construit à Kigali, conçu pour tourner.",
+    "cta1": "Nos services",
+    "cta2": "Lancer un projet"
+  },
+  "opportunity": {
+    "eyebrow": "Nos services",
+    "statement": "Des logiciels qui s’adaptent, du matériel qui dure et un support qui répond. Nous construisons les trois, pour qu’ils ne fassent qu’un.",
+    "cta": "Tous les services"
+  },
+  "seo": {
+    "skipToContent": "Aller au contenu",
+    "ogTitle": "Logiciels, systèmes et matériel, conçus au Rwanda",
+    "error": {
+      "eyebrow": "Erreur",
+      "title": "Une erreur est survenue",
+      "text": "Cette page n’a pas pu s’afficher. Réessayez ou revenez à l’accueil.",
+      "retry": "Réessayer",
+      "home": "Retour à l’accueil",
+      "reference": "Référence de l’erreur : {digest}"
+    }
+  },
+  "forms": {
+    "sending": "Envoi…",
+    "loading": "Chargement...",
+    "retry": "Réessayer",
+    "error": "Une erreur est survenue et rien n’a été envoyé. Réessayez, ou écrivez-nous à <link>{email}</link>.",
+    "limited": "Trop de tentatives depuis votre connexion. Patientez quelques minutes avant de réessayer, ou écrivez-nous à <link>{email}</link>.",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Saisissez une adresse e-mail complète, par exemple nom@entreprise.com.",
+      "tooLong": "Trop long : {max} caractères au maximum.",
+      "url": "Saisissez une adresse web complète, par exemple https://…",
+      "invalid": "Choisissez l’une des options."
+    },
+    "newsletter": {
+      "later": "Nous n’avons pas pu vous inscrire automatiquement. Écrivez à <link>{email}</link> pour rejoindre la liste.",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "limited": "Trop de tentatives. Réessayez dans quelques minutes."
+    }
+  }
+}

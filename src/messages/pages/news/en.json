@@ -1,0 +1,151 @@
+{
+  "newsPage": {
+    "metaTitle": "News",
+    "metaDescription": "Company news, product updates, hardware guides, insights and press releases from Linse.",
+    "title": "Latest News",
+    "featured": "Featured Blog",
+    "recent": "Most Recent",
+    "readMore": "Read more",
+    "allPosts": "All articles",
+    "press": "Press Releases",
+    "categories": {
+      "company": "Company",
+      "product": "Product",
+      "hardware": "Hardware",
+      "insights": "Insights",
+      "press": "Press release"
+    },
+    "cover": {
+      "company": "Newsroom",
+      "product": "MacyePay",
+      "hardware": "Hardware",
+      "insights": "Insights",
+      "press": "Press"
+    },
+    "filters": {
+      "category": "Filter by category",
+      "allCategories": "All categories",
+      "year": "Filter by year",
+      "allYears": "All years",
+      "selectYear": "Select year",
+      "search": "Search…",
+      "searchLabel": "Search press releases",
+      "searchArticles": "Search articles"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {n}",
+      "prev": "Prev",
+      "next": "Next",
+      "first": "First",
+      "previous": "Previous",
+      "last": "Last",
+      "showing": "Showing {from}–{to} of {total} items",
+      "showingOne": "Showing {from} of {total} items"
+    },
+    "empty": "Nothing matches these filters yet.",
+    "reset": "Reset filters",
+    "download": "Download PDF",
+    "open": "Read the release",
+    "newsletter": {
+      "eyebrow": "Get Linse insights in your inbox",
+      "title": "Sign up for product news and insights",
+      "continue": "Continue",
+      "placeholder": "Your work email",
+      "submit": "Subscribe",
+      "done": "Thanks, you are on the list.",
+      "close": "Close",
+      "fields": {
+        "email": "Email",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "company": "Company"
+      },
+      "configure": "Configure what you’ll want to receive *",
+      "helper": "Select at least one option to subscribe",
+      "topics": {
+        "product": "Product news",
+        "insights": "Insights",
+        "press": "Press releases",
+        "careers": "Careers"
+      },
+      "unsubscribeText": "Unsubscribe from all email communications.",
+      "unsubscribe": "Unsubscribe",
+      "unsubscribed": "Done: this address will no longer receive our emails.",
+      "unsubLater": "We could not remove you automatically. Write to <link>{email}</link> and we will do it."
+    },
+    "article": {
+      "back": "All articles",
+      "share": "Share:",
+      "download": "Download:",
+      "pdf": "PDF",
+      "copyLink": "Copy link",
+      "copied": "Copied",
+      "minRead": "{min} min read",
+      "by": "By {author}",
+      "prev": "Previous article",
+      "next": "Next article",
+      "related": "Related articles",
+      "more": "More from the blog",
+      "prevSlide": "Previous slide",
+      "nextSlide": "Next slide"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Email, phone, office hours and a project form to reach Linse in Kigali.",
+    "title": "Contact Linse",
+    "office": "Office",
+    "phone": "Phone / WhatsApp",
+    "hours": "Office hours",
+    "hoursLines": {
+      "week": "Monday – Friday · 08:00 – 18:00",
+      "sat": "Saturday · 09:00 – 13:00",
+      "sun": "Sunday · Closed"
+    },
+    "timezone": "Kigali time (CAT, UTC+2)",
+    "general": "General enquiries",
+    "support": "Support",
+    "careers": "Careers",
+    "copy": "Copy",
+    "copied": "Copied",
+    "call": "Call",
+    "map": "Open in maps",
+    "formEyebrow": "Project enquiries",
+    "formTitle": "Start a project",
+    "formSub": "Tell us a little about what you need. We reply within two working days.",
+    "form": {
+      "name": "Your name",
+      "email": "Work email",
+      "company": "Company",
+      "need": "What do you need?",
+      "needs": {
+        "build": "Build software",
+        "buy": "Buy hardware",
+        "support": "IT support",
+        "other": "Something else"
+      },
+      "message": "A few lines about the project",
+      "send": "Send",
+      "sending": "Sending…",
+      "sent": "Thanks, we have your brief. We will be in touch shortly.",
+      "later": "Online delivery is unavailable right now, so your message has not reached us. Please write to us at <link>{email}</link>.",
+      "again": "Send another message"
+    },
+    "links": {
+      "eyebrow": "Elsewhere",
+      "supportTitle": "Need help with a system we run?",
+      "supportText": "Open a ticket with the help desk, tracked with an SLA.",
+      "supportCta": "Support",
+      "careersTitle": "Want to build with us?",
+      "careersText": "See open roles in engineering, hardware and support.",
+      "careersCta": "Careers"
+    }
+  },
+  "notFoundPage": {
+    "metaTitle": "Page not found",
+    "eyebrow": "Page not found",
+    "title": "We’re sorry, the requested\npage cannot be found",
+    "cta": "Return home"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "newsPage": {
+    "metaTitle": "Amakuru",
+    "metaDescription": "Amakuru y’ikigo, ibishya ku bicuruzwa, inama ku bikoresho, ubusesenguzi n’amatangazo ya Linse.",
+    "title": "Amakuru mashya",
+    "featured": "Inkuru yatoranyijwe",
+    "recent": "Iziheruka",
+    "readMore": "Soma byinshi",
+    "allPosts": "Inkuru zose",
+    "press": "Amatangazo",
+    "categories": {
+      "company": "Ikigo",
+      "product": "Igicuruzwa",
+      "hardware": "Ibikoresho",
+      "insights": "Ubusesenguzi",
+      "press": "Itangazo"
+    },
+    "cover": {
+      "company": "Amakuru",
+      "product": "MacyePay",
+      "hardware": "Ibikoresho",
+      "insights": "Ubusesenguzi",
+      "press": "Itangazo"
+    },
+    "filters": {
+      "category": "Hitamo icyiciro",
+      "allCategories": "Ibyiciro byose",
+      "year": "Hitamo umwaka",
+      "allYears": "Imyaka yose",
+      "selectYear": "Hitamo umwaka",
+      "search": "Shakisha…",
+      "searchLabel": "Shakisha itangazo",
+      "searchArticles": "Shakisha inkuru"
+    },
+    "pagination": {
+      "label": "Impapuro",
+      "page": "Urupapuro {n}",
+      "prev": "Ibibanza",
+      "next": "Ibikurikira",
+      "first": "Intangiriro",
+      "previous": "Ibibanza",
+      "last": "Iherezo",
+      "showing": "Turerekana {from}–{to} kuri {total}",
+      "showingOne": "Turerekana {from} kuri {total}"
+    },
+    "empty": "Nta nkuru ihuye n’ibyo wahisemo.",
+    "reset": "Siba ibyo wahisemo",
+    "download": "Kuramo PDF",
+    "open": "Soma itangazo",
+    "newsletter": {
+      "eyebrow": "Ubusesenguzi bwa Linse muri imeyili yawe",
+      "title": "Iyandikishe ubone ibishya n’ubusesenguzi",
+      "continue": "Komeza",
+      "placeholder": "Imeyili y’akazi",
+      "submit": "Iyandikishe",
+      "done": "Murakoze, mwiyandikishije.",
+      "close": "Funga",
+      "fields": {
+        "email": "Imeyili",
+        "firstName": "Izina bwite",
+        "lastName": "Izina ry’umuryango",
+        "company": "Ikigo"
+      },
+      "configure": "Hitamo ibyo wifuza kwakira *",
+      "helper": "Hitamo nibura kimwe kugira ngo wiyandikishe",
+      "topics": {
+        "product": "Amakuru y’ibicuruzwa",
+        "insights": "Ubusesenguzi",
+        "press": "Amatangazo y’itangazamakuru",
+        "careers": "Imyanya y’akazi"
+      },
+      "unsubscribeText": "Kureka kwakira imeyili zacu zose.",
+      "unsubscribe": "Kwiyandukuza",
+      "unsubscribed": "Byakozwe: iyi aderesi ntizongera kwakira imeyili zacu.",
+      "unsubLater": "Ntitwabashije kugukura ku rutonde mu buryo bwikora. Twandikire kuri <link>{email}</link> tubikore."
+    },
+    "article": {
+      "back": "Inkuru zose",
+      "share": "Sangiza:",
+      "download": "Kuramo:",
+      "pdf": "PDF",
+      "copyLink": "Koporora ihuza",
+      "copied": "Byakoporowe",
+      "minRead": "Iminota {min} yo gusoma",
+      "by": "Byanditswe na {author}",
+      "prev": "Inkuru ibanza",
+      "next": "Inkuru ikurikira",
+      "related": "Inkuru bijyanye",
+      "more": "Izindi nkuru",
+      "prevSlide": "Ibanziriza",
+      "nextSlide": "Ikurikira"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Twandikire",
+    "metaDescription": "Imeyili, telefoni, amasaha y’akazi n’ifishi y’umushinga kugira ngo uvugane na Linse i Kigali.",
+    "title": "Vugana na Linse",
+    "office": "Ibiro",
+    "phone": "Telefoni / WhatsApp",
+    "hours": "Amasaha y’akazi",
+    "hoursLines": {
+      "week": "Ku wa mbere – Ku wa gatanu · 08:00 – 18:00",
+      "sat": "Ku wa gatandatu · 09:00 – 13:00",
+      "sun": "Ku cyumweru · Turafunze"
+    },
+    "timezone": "Isaha y’i Kigali (CAT, UTC+2)",
+    "general": "Ibibazo rusange",
+    "support": "Ubufasha",
+    "careers": "Akazi",
+    "copy": "Koporora",
+    "copied": "Byakoporowe",
+    "call": "Hamagara",
+    "map": "Fungura ku ikarita",
+    "formEyebrow": "Ibijyanye n’imishinga",
+    "formTitle": "Tangira umushinga",
+    "formSub": "Tubwire gato ku cyo ukeneye. Dusubiza mu minsi ibiri y’akazi.",
+    "form": {
+      "name": "Izina ryawe",
+      "email": "Imeyili y’akazi",
+      "company": "Ikigo",
+      "need": "Ukeneye iki?",
+      "needs": {
+        "build": "Kubaka porogaramu",
+        "buy": "Kugura ibikoresho",
+        "support": "Ubufasha bwa IT",
+        "other": "Ikindi"
+      },
+      "message": "Imirongo mike ku mushinga",
+      "send": "Ohereza",
+      "sending": "Biroherezwa…",
+      "sent": "Murakoze, twakiriye ubutumwa bwanyu. Tuzabasubiza vuba.",
+      "later": "Kohereza ubutumwa binyuze ku rubuga ntibishoboka ubu, bityo ubutumwa bwanyu ntibwatugezeho. Mutwandikire kuri <link>{email}</link>.",
+      "again": "Ohereza ubundi butumwa"
+    },
+    "links": {
+      "eyebrow": "Ahandi",
+      "supportTitle": "Ukeneye ubufasha kuri sisitemu ducunga?",
+      "supportText": "Fungura ikibazo ku biro by’ubufasha, gikurikiranwa hakurikijwe SLA.",
+      "supportCta": "Ubufasha",
+      "careersTitle": "Wifuza kubakana natwe?",
+      "careersText": "Reba imyanya ifunguye mu iterambere rya porogaramu, ibikoresho n’ubufasha.",
+      "careersCta": "Akazi"
+    }
+  },
+  "notFoundPage": {
+    "metaTitle": "Urupapuro ntirubonetse",
+    "eyebrow": "Urupapuro ntirubonetse",
+    "title": "Tubabarira, urupapuro\nmwasabye ntirubonetse",
+    "cta": "Subira ahabanza"
+  }
+}

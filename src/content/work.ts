@@ -1,0 +1,183 @@
+export type ProjectCategory = "software" | "web" | "systems" | "design" | "hardware";
+export type CardShape = "landscape" | "portrait" | "kiosk";
+
+export type Screen = { src: string | null; caption: string };
+
+export type Project = {
+  slug: string;
+  title: string;
+  client: string;
+  /** where it runs (case-study meta row) */
+  place?: string;
+  tag: string;
+  category: ProjectCategory;
+  year: string;
+  blurb: string;
+  summary: string;
+  shape: CardShape;
+  cover: string | null;
+  accent: string;
+  result: { value: string; label: string };
+  stats: { value: string; label: string }[];
+  meta: { scope: string; period: string; role: string; stack: string[] };
+  delivered: string[];
+  screens: Screen[];
+  /** a second, mobile part shown as its own section (screens are wide composites of several phone screens) */
+  phone?: { title: string; text: string; screens: Screen[] };
+  journey: { title: string; text: string }[];
+  engineering: { title: string; text: string }[];
+  /** Sample entry to show the layout until a real case study replaces it. */
+  placeholder?: boolean;
+  featured?: boolean;
+  url?: string;
+};
+
+export const projects: Project[] = [
+  {
+    slug: "macyepay",
+    title: "MacyePay",
+    client: "MacyePay Ltd",
+    place: "Kigali, Rwanda · merchants nationwide",
+    tag: "Fintech · Published product",
+    category: "software",
+    year: "2024 — ongoing",
+    blurb: "Installment payments for Rwandan businesses, backed by notarised agreements, automated enforcement and credit-bureau integration.",
+    summary:
+      "MacyePay lets retailers and lenders sell on installments without giving up their revenue. Every plan is a legally binding, notary-verified agreement; reminders, penalties and escalation run automatically; and payment history builds a trust score for each customer. We designed, built and now operate the platform: a merchant web portal, a customer mobile app and the notary workflow behind them.",
+    shape: "landscape",
+    cover: "/work/macyepay/dashboard.webp",
+    accent: "#16a34a",
+    result: { value: "98%", label: "Recovery rate on active agreements" },
+    stats: [
+      { value: "RWF 500M+", label: "Transactions processed" },
+      { value: "5,000+", label: "Active agreements" },
+      { value: "200+", label: "Registered businesses" },
+    ],
+    meta: {
+      scope: "Product design · Merchant web portal · Customer mobile app · Notary workflow · Backend & integrations",
+      period: "2024 — ongoing",
+      role: "Owner, designer and publisher",
+      stack: ["Next.js", "Flutter", "Node.js", "PostgreSQL", "Mobile money APIs", "Credit bureau (CRB)", "PDF signing"],
+    },
+    delivered: [
+      "Merchant portal: product catalogue, client verification, agreement creation, payment tracking, analytics and reports.",
+      "Customer app: clear payment schedules, multiple payment methods, reminders, trust score and document access.",
+      "Notary workflow: digital verification, secure signing, document management and a full audit trail.",
+      "Automated enforcement: reminders, penalty calculation, escalation and credit-bureau reporting.",
+    ],
+    screens: [
+      { src: "/work/macyepay/dashboard.webp", caption: "Merchant dashboard: collections, recovery rate and plan length at a glance" },
+      { src: "/work/macyepay/overview.webp", caption: "Agreement overview with schedule, signatures and notarisation status" },
+      { src: "/work/macyepay/approvals.webp", caption: "Approvals queue for new installment plans" },
+      { src: "/work/macyepay/enforcement.webp", caption: "Enforcement: reminders, penalties and escalation steps" },
+    ],
+    phone: {
+      title: "Business wallet app",
+      text: "Collections land in a business wallet. Owners check the balance and card details, request withdrawals to mobile money, and a teammate with approval rights signs them off.",
+      screens: [
+        { src: "/work/macyepay/app-wallet.png", caption: "Wallet: balance, card details and recent withdrawals" },
+        { src: "/work/macyepay/app-withdraw.png", caption: "Withdrawal: amount, confirmation and approval status" },
+      ],
+    },
+    journey: [
+      { title: "Create", text: "The merchant picks a product, verifies the customer and sets a weekly, bi-weekly or monthly schedule." },
+      { title: "Sign & notarise", text: "Both parties sign digitally; a licensed notary verifies the agreement and it becomes enforceable." },
+      { title: "Pay", text: "The customer pays by mobile money or card; reminders go out before each due date." },
+      { title: "Recover", text: "Late payments trigger penalties and escalation automatically; history feeds the trust score." },
+    ],
+    engineering: [
+      { title: "Three portals, one API", text: "Merchant, customer and notary experiences share a single backend with role-based access and a common agreement model." },
+      { title: "Signatures embedded in PDF", text: "Customer and merchant signatures are embedded into the agreement PDF server-side, so the notarised document carries both." },
+      { title: "Payment reconciliation", text: "Provider webhooks can land after the user returns; deposits are polled and reconciled so the success state is never stale." },
+      { title: "Mobile first", text: "The customer app is built with Flutter for Android and iOS, sharing the design system with the web portal." },
+    ],
+    featured: true,
+    url: "https://macyepay.com",
+  },
+  {
+    slug: "clinic-hmis",
+    title: "Clinic HMIS",
+    client: "Sample client",
+    place: "Kigali, Rwanda",
+    tag: "Systems · Health",
+    category: "systems",
+    year: "2025",
+    blurb: "Patient records, pharmacy, billing and insurance claims in one hospital management system.",
+    summary:
+      "A sample case study that shows how a systems project is presented here: registration, consultations, pharmacy, billing and insurance claims brought into one hospital management system. It stands in for a real project until one is published from the Studio.",
+    shape: "portrait",
+    cover: "/work/clinic-hmis/cover.jpg",
+    accent: "#0f5132",
+    result: { value: "−40%", label: "Time per patient visit (sample figure)" },
+    stats: [
+      { value: "12", label: "Departments connected" },
+      { value: "3", label: "Insurers integrated" },
+      { value: "24/7", label: "Support" },
+    ],
+    meta: { scope: "Discovery · UX · Web app · Integrations", period: "2025", role: "Design & build", stack: ["React", "Node.js", "PostgreSQL", "HL7 / FHIR"] },
+    delivered: [
+      "Registration desk: one patient record, found by ID or phone number on every visit.",
+      "Consultation and pharmacy: prescriptions flow from the doctor to the dispensary and stock.",
+      "Billing and claims: invoices split between patient and insurer, claims sent electronically.",
+    ],
+    screens: [
+      { src: "/work/clinic-hmis/cover.jpg", caption: "Outpatient overview (sample screen)" },
+      { src: null, caption: "Pharmacy and stock" },
+      { src: null, caption: "Billing and insurance claims" },
+    ],
+    journey: [
+      { title: "Register", text: "The patient is identified once; the record follows them to every department." },
+      { title: "Consult", text: "Doctors see history, results and prescriptions on one screen." },
+      { title: "Bill", text: "The visit closes with one invoice and an insurance claim sent automatically." },
+    ],
+    engineering: [
+      { title: "One patient record", text: "Every department reads and writes the same record, with role-based access." },
+      { title: "Standards first", text: "Lab and insurer integrations use HL7 / FHIR messages instead of one-off exports." },
+    ],
+    placeholder: true,
+  },
+  {
+    slug: "retail-rollout",
+    title: "Retail POS rollout",
+    client: "Sample client",
+    place: "Kigali, Rwanda · 38 branches",
+    tag: "Hardware · Distribution",
+    category: "hardware",
+    year: "2025",
+    blurb: "Point-of-sale terminals, networking and on-site support for a multi-branch retailer.",
+    summary:
+      "A sample case study that shows how a hardware project is presented here: sourcing, delivery, installation and support of point-of-sale terminals and networking across a branch network. It stands in for a real project until one is published from the Studio.",
+    shape: "kiosk",
+    cover: "/work/retail-rollout/cover.jpg",
+    accent: "#22c55e",
+    result: { value: "38", label: "Branches equipped (sample figure)" },
+    stats: [
+      { value: "210", label: "Devices delivered" },
+      { value: "6 wks", label: "Rollout" },
+      { value: "2 yrs", label: "Warranty & support" },
+    ],
+    meta: { scope: "Sourcing · Delivery · Installation · Support", period: "2025", role: "Supplier & integrator", stack: ["POS terminals", "Ubiquiti", "MikroTik", "Windows / Android"] },
+    delivered: [
+      "Sourcing: terminals, printers and scanners from authorised distributors, with warranty.",
+      "Installation: cabling, Wi-Fi and a configured terminal at every till, branch by branch.",
+      "Support: a help desk and spare devices so a broken till is replaced the same day.",
+    ],
+    screens: [
+      { src: "/work/retail-rollout/cover.jpg", caption: "Checkout terminal (sample screen)" },
+      { src: null, caption: "Branch network" },
+      { src: null, caption: "On-site support" },
+    ],
+    journey: [
+      { title: "Audit", text: "Each branch is surveyed: tills, power, network and staff." },
+      { title: "Deliver", text: "Devices arrive configured, are installed and tested on site." },
+      { title: "Support", text: "Faults go to one help desk; spares keep every till running." },
+    ],
+    engineering: [
+      { title: "Configured before delivery", text: "Terminals are imaged and enrolled centrally, so a branch goes live in hours." },
+      { title: "Managed network", text: "Branch routers and access points are monitored from one dashboard." },
+    ],
+    placeholder: true,
+  },
+];
+
+export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

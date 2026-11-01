@@ -1,0 +1,847 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-50: #f1faf4;
+  --color-green-100: #cdefd9;
+  --color-green-200: #86efac;
+  --color-green-300: #4ade80;
+  --color-green-400: #22c55e;
+  --color-green-500: #16a34a;
+  --color-green-600: #15803d;
+  --color-green-700: #0f5132;
+  --color-green-800: #0b3d2e;
+  --color-green-900: #06281f;
+  --color-green-950: #04150f;
+  --color-ink: #0b1411;
+  --color-paper: #f7f9f7;
+  --color-mist: #fbfdf9;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-narrow: var(--font-archivo-narrow), var(--font-archivo), sans-serif;
+
+  /* Sharplink's easing tokens (entry.css) */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --breakpoint-3xl: 1800px;
+
+  /* Sharplink design language: everything is square */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+
+  --color-off-white: #f3f3f3;
+}
+
+:root {
+  overscroll-behavior: none;
+  --off-white: #f3f3f3;
+  --black: #0b1411;
+  --brand: #22c55e;
+  /* Sharplink surface / hover tokens (colors.css), alpha for alpha */
+  --surface-lighter: rgba(238, 238, 240, 0.1);
+  --surface-lighter-secondary: rgba(238, 238, 240, 0.06);
+  --surface-lighter-subtle: rgba(238, 238, 240, 0.04);
+  --surface-darker: rgba(0, 0, 0, 0.1);
+  --surface-darker-secondary: rgba(0, 0, 0, 0.03);
+  --surface-darker-tertiary: rgba(38, 38, 41, 0.45);
+  --hover-on-dark: rgba(238, 238, 240, 0.18);
+  --hover-on-dark-tertiary: rgba(38, 38, 41, 0.62);
+  --hover-on-light: rgba(0, 0, 0, 0.18);
+  --hover-on-light-secondary: rgba(0, 0, 0, 0.08);
+  --stroke-black-subtle: rgba(0, 0, 0, 0.15);
+  --stroke-off-white-subtle: rgba(243, 243, 243, 0.15);
+  --off-white-subtle: rgba(243, 243, 243, 0.6);
+  --black-subtle: rgba(0, 0, 0, 0.6);
+}
+
+/* Page gradients — the Sharplink rhythm (dark hero → light body → dark footer) in green */
+@utility bg-hero {
+  background: linear-gradient(180deg, #020a07 0%, #04150f 28%, #0b3d2e 58%, #1f8f5a 82%, #cdefd9 100%);
+}
+@utility bg-body {
+  background:
+    radial-gradient(ellipse 100% 130% at 50% -30%, #cdefd9 45%, #fbfdf9 85%, #f7f9f7),
+    #f7f9f7;
+}
+@utility bg-sweep {
+  background: linear-gradient(115deg, #04150f, #0b3d2e 45%, #22c55e);
+}
+@utility bg-dark {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, #0f5132 0%, #06281f 45%, #04150f 100%),
+    #04150f;
+}
+
+/* Layout helpers */
+@utility px-page {
+  padding-inline: clamp(1rem, 4vw, 4rem);
+}
+@utility eyebrow {
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+@utility display {
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.96;
+  text-wrap: balance;
+}
+@utility lbl {
+  font-family: var(--font-narrow);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--color-green-400);
+  color: var(--color-green-950);
+  padding: 0.15em 0.45em;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: auto;
+}
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+::selection {
+  background: var(--color-green-400);
+  color: var(--color-green-950);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Route transition curtain (Sharplink #page-transition): painted in the body
+   gradient, pointer-transparent, faded by PageTransition.tsx (0.5s power3.inOut)
+   ────────────────────────────────────────────────────────────────────────── */
+#page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse 100% 130% at 50% -30%, #cdefd9 45%, #fbfdf9 85%, #f7f9f7),
+    #f7f9f7;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Header (Sharplink site-header): the strip is pointer-transparent, tabs are
+   secondary ui-buttons whose glass tint follows the section under the header
+   (html[data-nav] = their .theme-dark / .theme-light). Colour swaps in .25s.
+   ────────────────────────────────────────────────────────────────────────── */
+.nav-chrome {
+  --nav-fg: var(--black);
+  --nav-bg: var(--surface-darker);
+  --nav-bg-hover: var(--hover-on-light);
+  color: var(--nav-fg);
+  pointer-events: none;
+}
+html[data-nav="dark"] .nav-chrome {
+  --nav-fg: var(--off-white);
+  --nav-bg: var(--surface-lighter);
+  --nav-bg-hover: var(--hover-on-dark);
+}
+.nav-chrome a,
+.nav-chrome button,
+.nav-chrome label {
+  pointer-events: auto;
+}
+.nav-chrome .ui-btn--secondary {
+  --btn-bg: var(--nav-bg);
+  --btn-fg: var(--nav-fg);
+  --btn-bg-hover: var(--nav-bg-hover);
+  --icon-bg: var(--nav-bg);
+  --icon-fg: var(--nav-fg);
+  --icon-bg-hover: var(--nav-bg-hover);
+}
+/* plain tab (locale switcher): same metrics and glass as a secondary button */
+.nav-tab {
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  height: 34px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--nav-fg);
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: background-color 0.25s var(--ease-in-out-quad), color 0.25s var(--ease-in-out-quad);
+}
+.nav-tab:hover,
+.nav-tab.is-active {
+  background: var(--nav-bg-hover);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Sharplink ui-button, 1:1 with their entry.css
+   .content / .icon are masks; the label and the icon are duplicated vertically
+   and slide up by their own height on hover: transform .5s ease-in-out-circ,
+   the icon twins 70ms later. Secondary tints swap in .25s ease-in-out-quad.
+   Primary + icon: the icon leaves top-right (and moves to left:32px), the
+   label shifts 34px right (delay .12s) and a second icon rises in bottom-left.
+   ────────────────────────────────────────────────────────────────────────── */
+.ui-btn {
+  --btn-bg: var(--black);
+  --btn-fg: var(--off-white);
+  --btn-bg-hover: var(--btn-bg);
+  --icon-bg: var(--brand);
+  --icon-fg: var(--black);
+  --icon-bg-hover: var(--icon-bg);
+  position: relative;
+  display: inline-flex;
+  gap: 2px;
+  overflow: hidden;
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+.ui-btn > * {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 16px;
+}
+.ui-btn__content {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  transition:
+    transform 0.5s var(--ease-in-out-circ) 0s,
+    background-color 0.25s var(--ease-in-out-quad);
+}
+.ui-btn__content > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 34px;
+  flex-shrink: 0;
+  transition: transform 0.5s var(--ease-in-out-circ) 0.07s;
+}
+.ui-btn__icon {
+  position: relative;
+  left: 0;
+  width: 32px;
+  padding: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  background: var(--icon-bg);
+  color: var(--icon-fg);
+  transition:
+    transform 0.5s var(--ease-out-circ) 0.3s,
+    left 0.5s var(--ease-in-out-circ) 0s,
+    background-color 0.25s var(--ease-in-out-quad);
+}
+.ui-btn__icon > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.5s var(--ease-in-out-circ) 0s;
+}
+.ui-btn__icon--left {
+  order: -1;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.5s var(--ease-in-out-circ) 0s;
+}
+/* current route / selected (Sharplink .ui-button.active): brand square before the label */
+.ui-btn.is-active .ui-btn__content > span::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: var(--brand);
+}
+.ui-btn:focus-visible {
+  outline: 1px solid var(--brand);
+  outline-offset: 2px;
+}
+.ui-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (min-width: 800px) {
+  .ui-btn:hover .ui-btn__content > span,
+  :is(a, button, .card-hover):hover .ui-btn.allow-parent-hover .ui-btn__content > span {
+    transform: translateY(-100%);
+    transition-delay: 0s;
+  }
+  .ui-btn:hover .ui-btn__icon > span,
+  :is(a, button, .card-hover):hover .ui-btn.allow-parent-hover .ui-btn__icon > span {
+    transform: translateY(-100%);
+    transition-delay: 0.07s;
+  }
+  .ui-btn:hover .ui-btn__content,
+  :is(a, button, .card-hover):hover .ui-btn.allow-parent-hover .ui-btn__content {
+    background: var(--btn-bg-hover);
+  }
+  .ui-btn:hover .ui-btn__icon,
+  :is(a, button, .card-hover):hover .ui-btn.allow-parent-hover .ui-btn__icon {
+    background: var(--icon-bg-hover);
+  }
+  .ui-btn--primary.has-icon:hover .ui-btn__icon:not(.ui-btn__icon--left),
+  :is(a, button, .card-hover):hover .ui-btn--primary.has-icon.allow-parent-hover .ui-btn__icon:not(.ui-btn__icon--left) {
+    left: 32px;
+    transform: translateY(-100%);
+    transition-delay: 0s, 0.1s, 0s;
+    transition-timing-function: var(--ease-in-out-circ), var(--ease-in-out-circ), var(--ease-in-out-quad);
+  }
+  .ui-btn--primary.has-icon:hover .ui-btn__icon--left,
+  :is(a, button, .card-hover):hover .ui-btn--primary.has-icon.allow-parent-hover .ui-btn__icon--left {
+    left: 0;
+    transform: translateY(-100%);
+    transition-delay: 0.12s;
+  }
+  .ui-btn--primary.has-icon:hover .ui-btn__content,
+  :is(a, button, .card-hover):hover .ui-btn--primary.has-icon.allow-parent-hover .ui-btn__content {
+    transform: translateX(34px);
+    transition-delay: 0.12s;
+  }
+  .ui-btn--primary.has-icon:hover .ui-btn__content > span,
+  :is(a, button, .card-hover):hover .ui-btn--primary.has-icon.allow-parent-hover .ui-btn__content > span {
+    transition-delay: 0.12s;
+  }
+}
+
+/* Sharplink .ui-button.hide-text: only the icon box shows; on hover the label rises from below on the brand colour
+   while the icon box moves right by the label's width (.5s ease-in-out-circ, the label .1s later, the arrow rolls up).
+   Their icon takes a measured margin-left; here the label's grid column grows from 0fr to 1fr, the same motion. */
+.ui-btn.hide-text {
+  display: inline-grid;
+  grid-template-columns: 0fr auto;
+  column-gap: 0;
+  transition:
+    grid-template-columns 0.5s var(--ease-in-out-circ),
+    column-gap 0.5s var(--ease-in-out-circ);
+}
+.ui-btn.hide-text .ui-btn__content {
+  min-width: 0;
+  padding: 0;
+  transform: none !important;
+}
+.ui-btn.hide-text .ui-btn__content > span {
+  padding: 0 16px;
+}
+.ui-btn.hide-text .ui-btn__content > span:first-child {
+  opacity: 0;
+}
+.ui-btn.hide-text .ui-btn__icon {
+  left: 0 !important;
+}
+@media (min-width: 800px) {
+  .ui-btn.hide-text:hover,
+  :is(a, button, .card-hover):hover .ui-btn.hide-text.allow-parent-hover {
+    grid-template-columns: 1fr auto;
+    column-gap: 2px;
+  }
+  .ui-btn.hide-text:hover :is(.ui-btn__content, .ui-btn__icon),
+  :is(a, button, .card-hover):hover .ui-btn.hide-text.allow-parent-hover :is(.ui-btn__content, .ui-btn__icon) {
+    background: var(--brand);
+    color: var(--off-white);
+  }
+  .ui-btn.hide-text:hover .ui-btn__content > span,
+  :is(a, button, .card-hover):hover .ui-btn.hide-text.allow-parent-hover .ui-btn__content > span {
+    transition-delay: 0.1s;
+  }
+  .ui-btn.hide-text:hover .ui-btn__icon:not(.ui-btn__icon--left),
+  :is(a, button, .card-hover):hover .ui-btn.hide-text.allow-parent-hover .ui-btn__icon:not(.ui-btn__icon--left) {
+    transform: none;
+  }
+}
+
+/* the cookie banner's close: an icon box without its glass (Sharplink .cookie-banner .close-cta > div:first-child) */
+.cookie-close .ui-btn__icon {
+  background: transparent !important;
+  backdrop-filter: none;
+}
+
+/* variants (Sharplink btn-primary / btn-secondary / btn-tertiary, theme from the nearest [data-theme]) */
+.ui-btn--primary {
+  --btn-bg: var(--black);
+  --btn-fg: var(--off-white);
+  --btn-bg-hover: var(--black);
+  --icon-bg: var(--brand);
+  --icon-fg: var(--black);
+}
+[data-theme="dark"] .ui-btn--primary {
+  --btn-bg: var(--off-white);
+  --btn-fg: var(--black);
+  --btn-bg-hover: var(--off-white);
+}
+.ui-btn--secondary {
+  --btn-bg: var(--surface-darker);
+  --btn-fg: var(--black);
+  --btn-bg-hover: var(--hover-on-light);
+  --icon-bg: var(--surface-darker);
+  --icon-fg: var(--black);
+  --icon-bg-hover: var(--hover-on-light);
+}
+[data-theme="dark"] .ui-btn--secondary {
+  --btn-bg: var(--surface-lighter);
+  --btn-fg: var(--off-white);
+  --btn-bg-hover: var(--hover-on-dark);
+  --icon-bg: var(--surface-lighter);
+  --icon-fg: var(--off-white);
+  --icon-bg-hover: var(--hover-on-dark);
+}
+.ui-btn--tertiary {
+  --btn-bg: var(--surface-darker-tertiary);
+  --btn-fg: var(--off-white);
+  --btn-bg-hover: var(--hover-on-dark-tertiary);
+  --icon-bg: var(--surface-darker-tertiary);
+  --icon-fg: var(--off-white);
+  --icon-bg-hover: var(--hover-on-dark-tertiary);
+}
+.ui-btn--secondary > *,
+.ui-btn--tertiary > * {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.ui-btn--light {
+  --btn-bg: var(--off-white);
+  --btn-fg: var(--black);
+  --btn-bg-hover: var(--off-white);
+  --icon-bg: var(--brand);
+  --icon-fg: var(--black);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Links (Sharplink footer .menu-link / .legal-link)
+   .link      – 1px underline drawn left → right, width .2s ease-in-out-quad
+   .link--fade – muted → full colour, .2s ease-in-out-quad
+   ────────────────────────────────────────────────────────────────────────── */
+.link {
+  position: relative;
+  display: inline-block;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.2s var(--ease-in-out-quad);
+}
+.link:hover::after,
+.link:focus-visible::after {
+  width: 100%;
+}
+.link--fade {
+  --link-muted: var(--black-subtle);
+  --link-strong: var(--black);
+  color: var(--link-muted);
+  transition: color 0.2s var(--ease-in-out-quad);
+}
+[data-theme="dark"] .link--fade {
+  --link-muted: var(--off-white-subtle);
+  --link-strong: var(--off-white);
+}
+.link--fade:hover,
+.link--fade:focus-visible {
+  color: var(--link-strong);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Cards (Sharplink card-featured-article / card-article-link / article-card)
+   .card-hover – surface tint .3s ease-in-out-quad; an inner .card-img zooms 1.08
+   over .8s cubic-bezier(.25,.8,.25,1); a nested .ui-btn.allow-parent-hover
+   plays its hover with the card.
+   ────────────────────────────────────────────────────────────────────────── */
+.card-hover {
+  --card-hover-bg: var(--hover-on-light-secondary);
+  transition: background-color 0.3s var(--ease-in-out-quad);
+}
+[data-theme="dark"] .card-hover,
+.card-hover--dark {
+  --card-hover-bg: var(--surface-lighter-subtle);
+}
+@media (min-width: 800px) {
+  .card-hover:hover {
+    background-color: var(--card-hover-bg);
+  }
+}
+.card-hover .card-img {
+  transform-origin: center center;
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform;
+}
+.card-hover:hover .card-img {
+  transform: scale(1.08);
+}
+
+/* news card (hero bottom-right) = Sharplink card-latest-press: glass tertiary surface, 6px pin,
+   on hover only the icon box turns brand (.25s ease-in-out-quad) */
+.news-card {
+  background: var(--surface-darker-tertiary);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  user-select: none;
+}
+.news-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--brand);
+}
+.news-card .ui-btn {
+  pointer-events: none;
+}
+/* the icon box turns brand in .25s (ui-btn background transition) while its arrow rolls up (allow-parent-hover) */
+@media (min-width: 800px) {
+  .news-card:hover .ui-btn__icon {
+    background: var(--brand) !important;
+    color: var(--black) !important;
+  }
+}
+
+/* FAQ card (Sharplink faq-item): faint surface, tint on hover .3s ease-in-out-quad; number chip on a darker surface;
+   34px black icon box that turns brand while open, both strokes of its plus rotating −135° (.3s ease-in-out-quad) */
+.faq-item {
+  background: var(--surface-darker-secondary);
+  transition: background-color 0.3s var(--ease-in-out-quad);
+}
+@media (min-width: 800px) {
+  .faq-item:hover {
+    background: var(--hover-on-light-secondary);
+  }
+}
+.faq-item .faq-num {
+  background: var(--surface-darker);
+  color: var(--black-subtle);
+}
+.faq-item .faq-icon {
+  background: var(--black);
+  transition: background-color 0.3s var(--ease-in-out-quad);
+}
+.faq-item .faq-icon path {
+  transform-origin: center;
+  transition: transform 0.3s var(--ease-in-out-quad);
+}
+.faq-item.is-open .faq-icon {
+  background: var(--brand);
+}
+.faq-item.is-open .faq-icon path {
+  transform: rotate(-135deg);
+}
+.faq-item button:focus-visible {
+  outline: 1px solid var(--brand);
+  outline-offset: -1px;
+}
+
+/* Services statement (Sharplink opportunity-header): the eyebrow and its rule follow the site theme, which turns light
+   while the statement is pinned (Opportunity.tsx toggles data-theme on the row); colour .3s ease-in-out-quad */
+.opp-head .opp-eyebrow {
+  color: var(--off-white);
+  transition: color 0.3s var(--ease-in-out-quad);
+}
+.opp-head[data-theme="light"] .opp-eyebrow {
+  color: var(--black);
+}
+.opp-head .opp-head-line--light,
+.opp-head[data-theme="light"] .opp-head-line--dark {
+  opacity: 0;
+}
+.opp-head[data-theme="light"] .opp-head-line--light {
+  opacity: 1;
+}
+/* the fixed chrome parts beside the service cards exist only while their fade window is active (Opportunity.tsx) */
+.opp-parts-anchor:not([data-on]) .opp-parts {
+  display: none;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Form fields: square, 1px subtle stroke; border swaps to full ink on focus in
+   .2s ease-in-out-quad (Sharplink .article-filters input:focus). .field-line
+   is the underline variant of the footer newsletter (stays dashed on focus).
+   ────────────────────────────────────────────────────────────────────────── */
+.field {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  background: transparent;
+  border: 1px solid var(--stroke-black-subtle);
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.35;
+  outline: none;
+  transition:
+    border-color 0.2s var(--ease-in-out-quad),
+    background-color 0.2s var(--ease-in-out-quad);
+}
+textarea.field {
+  height: auto;
+  padding: 10px 12px;
+  resize: vertical;
+}
+select.field {
+  appearance: none;
+  cursor: pointer;
+}
+.field::placeholder {
+  color: var(--black-subtle);
+}
+.field:hover {
+  background: var(--surface-darker-secondary);
+}
+.field:focus {
+  border-color: var(--black);
+}
+[data-theme="dark"] .field {
+  border-color: var(--stroke-off-white-subtle);
+  color: var(--off-white);
+}
+[data-theme="dark"] .field::placeholder {
+  color: var(--off-white-subtle);
+}
+[data-theme="dark"] .field:hover {
+  background: var(--surface-lighter-subtle);
+}
+[data-theme="dark"] .field:focus {
+  border-color: var(--off-white);
+}
+.field-line {
+  border-bottom: 1px dashed var(--stroke-off-white-subtle);
+  transition: border-color 0.2s var(--ease-in-out-quad);
+}
+/* no focus state: Sharplink's newsletter underline stays dashed while typing (the caret shows focus) */
+.field-line input {
+  outline: none;
+}
+.field-line input::placeholder {
+  color: var(--off-white);
+  opacity: 0.4;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Mobile menu (Sharplink .mobile-menu): the panel fades .3s ease-in-out-quad,
+   its tall gradient settles from 200% to 120% height over 1.2s ease-out-quad,
+   items are staggered by GSAP (MobileMenu.tsx). Hamburger: the two bars sit
+   ±2px apart and rotate ±45° when open, .3s ease-in-out-quad.
+   ────────────────────────────────────────────────────────────────────────── */
+.mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-in-out-quad);
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu__gradient {
+  height: 200%;
+  transition: height 1.2s var(--ease-out-quad);
+}
+.mobile-menu.is-open .mobile-menu__gradient {
+  height: 120%;
+}
+.mobile-menu .stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+/* the menu is always dark (no data-theme on it: the header's theme triggers must not see fixed overlays) */
+.mobile-menu .ui-btn--primary {
+  --btn-bg: var(--off-white);
+  --btn-fg: var(--black);
+  --btn-bg-hover: var(--off-white);
+}
+.hamburger .hl {
+  transform-origin: center center;
+  transition: transform 0.3s var(--ease-in-out-quad);
+}
+.hamburger .hl--top {
+  transform: translateY(-2px);
+}
+.hamburger .hl--bottom {
+  transform: translateY(2px);
+}
+.hamburger.is-open .hl--top {
+  transform: rotate(45deg);
+}
+.hamburger.is-open .hl--bottom {
+  transform: rotate(-45deg);
+}
+
+/* small brand square used before eyebrows / card corners */
+.sq::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--brand);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Text reveals (Sharplink .text-reveal): hidden until GSAP plays the letter fade */
+.text-reveal {
+  opacity: 0;
+}
+.text-reveal .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+.text-reveal .letter {
+  display: inline-block;
+}
+.split-mask .line,
+.split-mask .word,
+.split-mask .char {
+  will-change: transform, opacity;
+}
+
+/* Infinite marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-play-state: paused; }
+}
+
+/* Sparkline stroke draw */
+.sparkline path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(34, 197, 94, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.10) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* H4 "The stack" rows (Sharplink proposition-list-item: .4 → 1 opacity, .3s ease-in-out-quad) */
+.row { opacity: 0.4; transition: opacity 0.3s var(--ease-in-out-quad); }
+.row.is-active { opacity: 1; }
+.row .blurb { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.6s var(--ease-expo), opacity 0.5s; }
+.row.is-active .blurb { max-height: 6rem; opacity: 1; }
+.row .idx { font-family: var(--font-narrow); font-size: 0.75rem; color: var(--color-green-600); padding: 0.15em 0.45em; border-radius: 2px; transition: background 0.3s, color 0.3s; }
+.row.is-active .idx { background: var(--color-green-400); color: var(--color-green-950); }
+
+/* Footer brand word: gradient per glyph (background-clip:text does not survive transformed children) */
+.fchar {
+  background-image: linear-gradient(to top, #16a34a 0%, #4ade80 55%, #cdefd9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Sharplink h1 / section headings */
+.h1 { font-size: clamp(44px, 6.1vw, 88px); letter-spacing: -0.03em; line-height: 0.96; font-weight: 400; }
+.h1-sm { font-size: clamp(36px, 4.6vw, 66px); letter-spacing: -0.03em; line-height: 1; font-weight: 400; }
+.h2 { font-size: clamp(32px, 3.6vw, 52px); letter-spacing: -0.025em; line-height: 1.02; font-weight: 400; }
+.char-reveal .ch { opacity: 0; }
+
+/* chrome text (footer brand word) */
+.chrome-text {
+  background-image: linear-gradient(180deg, #ffffff 0%, #eef5f1 20%, #c3d4ca 40%, #7d9a8b 50%, #30483d 56%, #1c3328 60%, #3f6a55 68%, #7fb597 82%, #b7dcc6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* film grain over the hero, like the rendered clip */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 220px 220px;
+}
+
+/* The Stack (Sharplink home-propositions): the row under the viewport centre is active — its eyebrow, blurb and
+   dashed line go .4 → 1 in .3s in-out-quad, the title letters are lit by GSAP in random order. */
+.stack .prop-row .eyebrow,
+.stack .prop-row .content,
+.stack .prop-row .line {
+  opacity: 0.4;
+  transition: opacity 0.3s var(--ease-in-out-quad);
+}
+.stack .prop-row.is-active .eyebrow,
+.stack .prop-row.is-active .content,
+.stack .prop-row.is-active .line {
+  opacity: 1;
+}
+.stack .prop-row .word { display: inline-block; white-space: nowrap; }
+.stack .prop-row .letter { display: inline-block; opacity: 0.4; }
+/* Honour reduced motion for the pure-CSS micro-interactions */
+@media (prefers-reduced-motion: reduce) {
+  .ui-btn *,
+  .link::after,
+  .card-hover,
+  .card-hover .card-img,
+  .mobile-menu,
+  .mobile-menu__gradient,
+  .hamburger .hl {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}

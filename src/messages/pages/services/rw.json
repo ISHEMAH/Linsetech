@@ -1,0 +1,491 @@
+{
+  "servicesPage": {
+    "meta": {
+      "title": "Serivisi",
+      "description": "Igishushanyo, imbuga na porogaramu, sisitemu no kuzihuza, porogaramu dusohora, ibikoresho n’ikwirakwizwa, na serivisi za IT: serivisi esheshatu, ikipe imwe."
+    },
+    "hero": {
+      "title": "IT yose, ahantu hamwe.",
+      "cta": "Reba serivisi zacu"
+    },
+    "statement": [
+      "Linse ishushanya, yubaka, isohora kandi icunga ikoranabuhanga ry’ibigo n’inzego mu Rwanda no mu karere.",
+      "Serivisi esheshatu ahantu hamwe: igishushanyo, imbuga na porogaramu, sisitemu no kuzihuza, porogaramu dusohora, ibikoresho n’ikwirakwizwa, na serivisi za IT.",
+      "Ikipe imwe ijyana umushinga kuva ku gishushanyo cya mbere kugeza ku gikoresho kiri ku meza, igakomeza kuwucunga."
+    ],
+    "breakthrough": {
+      "title": "Umufatanyabikorwa umwe kuri byose",
+      "blurb": "Ikipe imwe ishushanya, yubaka, itanga kandi ifasha ikoranabuhanga ryawe, ku buryo nta kintu gitakara hagati y’abatanga serivisi.",
+      "body": [
+        "Ibigo byinshi bicunga ikoranabuhanga ryabyo mu buryo bw’uduce: ikigo kimwe ku rubuga, umuhanga umwe kuri sisitemu, iduka rimwe kuri mudasobwa, undi ku muyoboro. Buri guhererekanya ni ahantu ibintu bipfira, kandi nta n’umwe ubazwa byose.",
+        "Kuri Linse, ikipe imwe ishushanya igicuruzwa, ikandika porogaramu, igatanga kandi igashyiraho ibikoresho, hanyuma igakomeza kubicunga. Amasezerano amwe, umuntu umwe uvugana nawe, ikipe imwe izi uko ibice bihuzwa.",
+        "Ibyo ni byo IT yose ahantu hamwe isobanura ku mukiriya: abatanga serivisi bake, ibyemezo byihuse, n’umufatanyabikorwa umwe ubazwa byose kuva ku gishushanyo cya mbere kugeza ku guhamagara ubufasha."
+      ]
+    },
+    "transformation": {
+      "title": "Serivisi esheshatu, ikipe imwe",
+      "blurb": "Buri serivisi irihagije. Hamwe, zuzuza ibyo ikigo gikenera byose mu ikoranabuhanga.",
+      "body": [
+        "Abashushanya porogaramu yawe ni bo bayubaka; ikipe ishyiraho umuyoboro wawe ni yo iwukurikirana; porogaramu dusohora zikora ku bikorwaremezo bimwe n’ibyo ducungira abakiriya.",
+        "Dore ibyo buri serivisi ikubiyemo:"
+      ],
+      "explore": "Reba: {service}",
+      "stats": [
+        {
+          "eyebrow": "Guhuza kwatanzwe",
+          "headline": "12+",
+          "tagline": "Kwishyura, ERP, HMIS",
+          "body": "Sisitemu twahuje kugira ngo amadosiye, kwishyura na raporo bigende nta kongera kwandika."
+        },
+        {
+          "eyebrow": "Kugezwa i Kigali",
+          "headline": "48 h",
+          "tagline": "Bitunganywa mbere yo kugezwa",
+          "body": "Mudasobwa, seriveri, umuyoboro n’imashini zo kwishyuriraho z’ibirango cumi na bibiri, bishyirwaho kandi bifite garanti hano."
+        },
+        {
+          "eyebrow": "Gusubiza ibibazo bikomeye",
+          "headline": "< 1 h",
+          "tagline": "99.9% igihe sisitemu zikora",
+          "body": "Ubufasha, imiyoboro, cloud n’umutekano mu masezerano amwe, bikurikiranwa amanywa n’ijoro."
+        }
+      ]
+    },
+    "services": {
+      "design": {
+        "title": "Igishushanyo",
+        "headline": "Ibicuruzwa abantu bishimira gukoresha.",
+        "intro": "Ikirango, ubushakashatsi bwa UX n’igishushanyo cya UI ku mbuga, telefoni n’ibikoresho by’imbere mu kigo. Dushushanya mu mucyo, hamwe n’ikipe yawe n’abakoresha, tugatanga sisitemu, si amashusho gusa.",
+        "more": "Buri mushinga utangirira ku bantu bazakoresha igicuruzwa. Tugerageza hakiri kare n’abakoresha nyabo, twandika ibyemezo, tugasigira ikipe yawe sisitemu ishobora kwagura.",
+        "bullets": [
+          {
+            "title": "Ikirango n’amabwiriza yacyo",
+            "text": "Ikirango, imyandikire, amabara n’ingero, byanditse ku buryo buri mutanga serivisi abikoresha kimwe."
+          },
+          {
+            "title": "Ubushakashatsi bwa UX, inzira n’ingero",
+            "text": "Ibiganiro, inzira n’ingero zikanda, bigeragezwa n’abakoresha nyabo mbere yo kubaka."
+          },
+          {
+            "title": "Sisitemu z’igishushanyo cya UI (Figma)",
+            "text": "Ibice, tokens n’ingero z’amapaji muri Figma, byiteguye kubakwa n’abahanga mu ikoranabuhanga."
+          },
+          {
+            "title": "Igishushanyo kigerwaho na bose (WCAG AA)",
+            "text": "Itandukaniro ry’amabara, ingano y’inyuguti n’imikoreshereze y’abatabona bigenzurwa hakurikijwe WCAG AA."
+          }
+        ],
+        "stats": [
+          {
+            "value": "Ibyumweru 2",
+            "label": "Kugera ku rugero rukanda",
+            "note": "Kuva ku nama ya mbere kugeza ku rugero abakoresha bawe bakanda bakarugerageza."
+          },
+          {
+            "value": "AA",
+            "label": "Urwego rwo kugerwaho",
+            "note": "Buri paji igenzurwa: itandukaniro ry’amabara, ingano y’inyuguti, uko umuntu agenda kuri paji n’abatabona."
+          },
+          {
+            "value": "1",
+            "label": "Sisitemu y’igishushanyo kuri buri gicuruzwa",
+            "note": "Isomero rimwe ry’ibice risangiwe rituma buri paji nshya ihura n’izindi."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Mushushanya ibicuruzwa mutubaka?",
+            "a": "Yego. Igishushanyo ni serivisi yihariye; dutanga dosiye za Figma, sisitemu y’igishushanyo n’ibisobanuro ikipe yawe yubakiraho."
+          },
+          {
+            "q": "Mushobora kuvugurura ikirango gisanzwe?",
+            "a": "Yego, kuva ku kuvugurura gato kugeza ku kirango gishya cyose: ikirango, imyandikire, amabara n’ingero."
+          }
+        ]
+      },
+      "web": {
+        "title": "Imbuga & porogaramu",
+        "headline": "Byihuta, bigerwaho na bose, biramba.",
+        "intro": "Imbuga zamamaza, ubucuruzi bwo kuri internet, porogaramu za web n’iza telefoni ku ikoranabuhanga rigezweho: Next.js na React kuri web, Flutter kuri Android na iOS. Zibikwa, zikurikiranwa kandi zikitabwaho.",
+        "more": "Twubakira ku ikoranabuhanga rizwi, dusohora mu byiciro bito, kandi dushyiraho ububiko, ikurikiranwa n’ibipimo kuva ku munsi wa mbere, kugira ngo urubuga rukomeze gukora neza nyuma yo gutangizwa.",
+        "bullets": [
+          {
+            "title": "Imbuga zamamaza n’iz’ibigo",
+            "text": "Imbuga zihuta mu ndimi nyinshi, zigaragara mu bushakashatsi kandi ikipe yawe izivugurura byoroshye."
+          },
+          {
+            "title": "Ubucuruzi bwo kuri internet n’imbuga z’abakiriya",
+            "text": "Urutonde rw’ibicuruzwa, kwishyura na mobile money n’amakarita, konti z’abakiriya no gukurikirana ibyatumijwe."
+          },
+          {
+            "title": "Porogaramu za telefoni (Flutter, Android & iOS)",
+            "text": "Kode imwe ya Android na iOS, isohoka ku masoko yombi kandi ikitabwaho."
+          },
+          {
+            "title": "CMS, SEO n’ibipimo",
+            "text": "Ibikubiye ku rubuga ikipe yawe ihindura nta muhanga, SEO ikozwe neza, n’imbonerahamwe zisobanutse."
+          }
+        ],
+        "stats": [
+          {
+            "value": "95+",
+            "label": "Intego y’imikorere ya Lighthouse",
+            "note": "Amapaji yihuta kuri telefoni na internet abakiriya bawe bakoresha koko."
+          },
+          {
+            "value": "3",
+            "label": "Indimi ziteguye",
+            "note": "Icyongereza, Igifaransa n’Ikinyarwanda kuva ku munsi wa mbere, bicungirwa muri CMS."
+          },
+          {
+            "value": "99.9%",
+            "label": "Igihe ububiko bukora",
+            "note": "Bibitswe, bikurikiranwa kandi bifite kopi, hamwe n’imenyesha mbere y’uko abasura babona ikibazo."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Kode ni iya nde?",
+            "a": "Ni iyawe. Buri mushinga utangwa mu bubiko bwawe, hamwe n’inyandiko n’isomo ryo guhererekanya."
+          },
+          {
+            "q": "Twashobora guhindura ibikubiye ku rubuga ubwacu?",
+            "a": "Yego. Dushyiraho CMS (Sanity mbere na mbere) kugira ngo ikipe yawe ihindure amapaji, amakuru n’ibicuruzwa nta muhanga."
+          }
+        ]
+      },
+      "systems": {
+        "title": "Sisitemu & guhuza",
+        "headline": "Sisitemu zivugana.",
+        "intro": "ERP, HMIS, kwishyura, serivisi za Leta zikoresha ikoranabuhanga n’izindi sisitemu zihariye, zubakwa cyangwa zihuzwa. Twihariye mu gutuma sisitemu zisanzwe zisangira amakuru yizewe, hamwe n’amateka y’ibikorwa na raporo.",
+        "more": "Dusobanukirwa uko amakuru agenda mu kigo cyawe, duhuza sisitemu usanganywe, tukongeraho raporo abayobozi bawe bakeneye, tutajugunye ibikora neza.",
+        "bullets": [
+          {
+            "title": "Sisitemu zihariye n’ibikoresho by’imbere",
+            "text": "Porogaramu zubakiye ku buryo ukora: kwemeza, inyandiko, gutegura gahunda n’imirimo yo hanze."
+          },
+          {
+            "title": "Gushyiraho no guhuza ERP / HMIS",
+            "text": "Gutunganya, kwimura amakuru n’amahugurwa kuri ERP na sisitemu z’amakuru y’ibitaro."
+          },
+          {
+            "title": "Guhuza kwishyura, mobile money na banki",
+            "text": "Kwakira, kwishyura no guhuza konti binyuze kuri API za mobile money, amakarita na banki."
+          },
+          {
+            "title": "Kwimura amakuru, raporo n’imbonerahamwe",
+            "text": "Kwimura amakuru bisukuye kandi bigenzuwe, n’imbonerahamwe zihindura amakuru ibyemezo."
+          }
+        ],
+        "stats": [
+          {
+            "value": "12+",
+            "label": "Guhuza kwatanzwe",
+            "note": "Mobile money, amabanki, serivisi za Leta, ERP na sisitemu z’ibitaro."
+          },
+          {
+            "value": "0",
+            "label": "Amakuru yatakaye mu kwimura",
+            "note": "Buri kwimura amakuru kugeragezwa, kugenzurwa no kwemezwa mbere yo gutangira gukoreshwa."
+          },
+          {
+            "value": "24/7",
+            "label": "Ikurikiranwa",
+            "note": "Guhuza gukurikiranwa amanywa n’ijoro, hakaba imenyesha iyo guhuza kunaniranye."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Mukorana na sisitemu za Leta?",
+            "a": "Yego, harimo IremboGov, RRA na API za mobile money, hubahirizwa ibisabwa byazo."
+          },
+          {
+            "q": "Mushobora gufata sisitemu yubatswe n’abandi?",
+            "a": "Yego. Dutangira n’isuzuma, tugashyira ku murongo ibiri gukora, hanyuma tugategura kunoza."
+          }
+        ]
+      },
+      "software": {
+        "title": "Porogaramu zacu",
+        "headline": "Ibicuruzwa twubaka, dutunga kandi ducunga.",
+        "intro": "Linse ishora mu bicuruzwa byayo bwite ikabitangira uruhushya ku isoko. MacyePay, urubuga rwacu rwo kwishyura mu byiciro, ni rwo rwa mbere; ibindi biri mu iterambere.",
+        "more": "Gutunga ibicuruzwa byacu bisobanura ko twirengera igiciro cyo kubikora neza. Abakiriya babona porogaramu yamaze kugeragezwa ku isoko, ifite ubufasha n’igenamigambi bafasha gushyiraho.",
+        "bullets": [
+          {
+            "title": "MacyePay — kwishyura mu byiciro hamwe no kwishyuza byemewe n’amategeko",
+            "text": "Amasezerano yo kwishyura mu byiciro yemejwe na noteri, kwibutsa no kwishyuza byikora, n’amanota y’icyizere kuri buri mukiriya."
+          },
+          {
+            "title": "Uruhushya cyangwa serivisi icungwa",
+            "text": "Yikoreshe nka serivisi icungwa wishyura buri kwezi, cyangwa uyihabwe uruhushya ku bikorwaremezo byawe."
+          },
+          {
+            "title": "Igenamigambi riyobowe n’abakiriya",
+            "text": "Ibishya biva mu bigo bikoresha igicuruzwa buri munsi, bigasuzumwa buri gihembwe."
+          },
+          {
+            "title": "Ubufasha na SLA birimo",
+            "text": "Gutangiza, amahugurwa n’igihe cyo gusubiza cyemeranyijweho biri muri buri gahunda."
+          }
+        ],
+        "stats": [
+          {
+            "value": "1",
+            "label": "Igicuruzwa gikora",
+            "note": "MacyePay, ikora kandi icungwa n’ikipe yacu."
+          },
+          {
+            "value": "5,000+",
+            "label": "Amasezerano akora kuri MacyePay",
+            "note": "Amasezerano yo kwishyura mu byiciro acungwa kuva ku ntangiriro kugeza ku iherezo kuri urwo rubuga."
+          },
+          {
+            "value": "98%",
+            "label": "Igipimo cyo kwishyuza",
+            "note": "Ku masezerano akora, bitewe n’amasezerano yemejwe na noteri no kwibutsa byikora."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "MacyePay itangwa ite?",
+            "a": "Nka serivisi icungwa yishyurwa buri kwezi kuri buri kigo, cyangwa nk’uruhushya ku mabanki n’abacuruzi banini. Saba kuyerekwa."
+          },
+          {
+            "q": "Mwakubakana natwe igicuruzwa?",
+            "a": "Yego. Twubakana kandi dufatanya gutunga ibicuruzwa n’abafatanyabikorwa bazana isoko; tuvugishe."
+          }
+        ]
+      },
+      "hardware": {
+        "title": "Ibikoresho & ikwirakwizwa",
+        "headline": "Ibikoresho by’umwuga, bigezwa kandi bigafashwa.",
+        "intro": "Mudasobwa zigendanwa n’izo ku meza, seriveri, umuyoboro, imashini zisohora inyandiko, kamera z’umutekano n’imashini zo kwishyuriraho z’ibirango byizewe. Biraboneka, bigezwa kandi bigashyirwaho mu Rwanda hose, garanti icungirwa hano.",
+        "more": "Duha igiciro cy’ibikoresho byose bikenewe, si amakarito gusa: ibikoresho bikwiye umurimo, bitunganywa mbere yo kugezwa, bigashyirwaho aho bikoreshwa kandi bigafashwa na serivisi ya garanti iri hafi.",
+        "bullets": [
+          {
+            "title": "Mudasobwa zigendanwa, izo ku meza n’iz’akazi kenshi",
+            "text": "Moderi z’umwuga z’ibirango byizewe, zitunganywa mbere yo kugera ku meza yanyu."
+          },
+          {
+            "title": "Seriveri, ububiko n’umuyoboro",
+            "text": "Seriveri, ububiko, switch, router na Wi-Fi, bihuje n’aho mukorera."
+          },
+          {
+            "title": "Imashini zisohora inyandiko, scanner, kamera & POS",
+            "text": "Gusohora inyandiko mu biro, kamera z’umutekano n’imashini zo kwishyuriraho mu maduka n’amashami."
+          },
+          {
+            "title": "Garanti, gusana n’ubufasha aho muri",
+            "text": "Garanti icungirwa hano, gusana bikurikiranwa, n’abatekinisiye baza aho muri igihe bikenewe."
+          }
+        ],
+        "stats": [
+          {
+            "value": "12",
+            "label": "Ibirango dukwirakwiza",
+            "note": "Ibikoresho by’umwuga by’abakora bizewe, garanti icungirwa hano."
+          },
+          {
+            "value": "48 h",
+            "label": "Kugezwa i Kigali",
+            "note": "Bitunganywa mbere yo kuva mu iduka ryacu, bigashyirwaho bikihagera."
+          },
+          {
+            "value": "Imyaka 2",
+            "label": "Garanti isanzwe",
+            "note": "Garanti no gusana bicungirwa hano kandi bigakurikiranwa kugeza igikoresho kigarutse."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Mugurisha ku bantu ku giti cyabo?",
+            "a": "Twibanda ku bigo, amashuri n’inzego, ariko dukorera n’abantu ku giti cyabo ku bicuruzwa bimwe."
+          },
+          {
+            "q": "Mushobora gutanga igiciro cy’ibiro byose?",
+            "a": "Yego: ibikoresho, umuyoboro, umutekano no kubishyiraho mu giciro kimwe. Saba urutonde."
+          }
+        ]
+      },
+      "it": {
+        "title": "Serivisi za IT",
+        "headline": "Gucunga, gukurikirana, kurinda.",
+        "intro": "IT icungwa ku makipe y’ingano iyo ari yo yose: ubufasha, imiyoboro, cloud, kubika kopi n’umutekano. Amasezerano amwe, umuntu umwe uvugana nawe, igihe cyo gusubiza cyemeranyijweho.",
+        "more": "Dukurikirana sisitemu zanyu amanywa n’ijoro, dukemura ibibazo mbere y’uko bikwira, kandi buri kwezi tubamenyesha ibyakozwe n’ibikurikiraho.",
+        "bullets": [
+          {
+            "title": "Ubufasha n’ubufasha aho muri",
+            "text": "Nimero imwe n’aderesi imwe kuri buri kibazo, abatekinisiye bakaza aho muri i Kigali hose."
+          },
+          {
+            "title": "Imiyoboro, Wi-Fi n’insinga ziteguwe",
+            "text": "Gutegura, gushyira insinga na Wi-Fi mu biro, amashuri, amavuriro n’ububiko."
+          },
+          {
+            "title": "Cloud, Microsoft 365 / Google Workspace, kubika kopi",
+            "text": "Imeli, dosiye n’indangamuntu za konti muri cloud, kopi zisubizwaho kandi zigeragezwa buri gihe."
+          },
+          {
+            "title": "Umutekano: mudasobwa, kamera, kugenzura kwinjira",
+            "text": "Ibikoresho birinzwe, kamera zikurikiranwa no kugenzura kwinjira, byose bicungirwa ahantu hamwe."
+          }
+        ],
+        "stats": [
+          {
+            "value": "< 1 h",
+            "label": "Igihe cyo gusubiza ibibazo bikomeye",
+            "note": "Umutekinisiye atangira gukemura ibibazo bikomeye mu isaha imwe."
+          },
+          {
+            "value": "99.9%",
+            "label": "Igihe sisitemu zikora",
+            "note": "Imiyoboro, seriveri na serivisi za cloud ducunga, bipimwa buri kwezi."
+          },
+          {
+            "value": "1",
+            "label": "Amasezerano kuri byose",
+            "note": "Ubufasha, imiyoboro, cloud n’umutekano mu masezerano amwe."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Mutanga amasezerano ya buri kwezi?",
+            "a": "Yego. Amasezerano ya buri kwezi afite amasaha azwi n’igihe cyo gusubiza cyemeranyijweho, bijyanye n’ingano y’ikipe yanyu."
+          },
+          {
+            "q": "Mufasha ku bikoresho mutagurishije?",
+            "a": "Yego, nyuma yo gusuzuma vuba ibyo mufite."
+          }
+        ]
+      }
+    },
+    "models": {
+      "title": "Uburyo bwo gukorana",
+      "blurb": "Hitamo uburyo bukwiye umurimo. Abakiriya benshi batangirira ku mushinga bagakomeza ku masezerano ya buri kwezi.",
+      "cta": "Tuvugishe",
+      "items": [
+        {
+          "title": "Umushinga",
+          "text": "Ibikorwa, igiciro n’igihe bizwi. Bikwiye urubuga rushya, porogaramu cyangwa sisitemu.",
+          "includes": [
+            "Isesengura & icyifuzo",
+            "Igishushanyo & kubaka",
+            "Guhererekanya & amahugurwa",
+            "Garanti y’iminsi 30"
+          ]
+        },
+        {
+          "title": "Amasezerano & ubufasha",
+          "text": "Amasaha ya buri kwezi n’igihe cyo gusubiza cyemeranyijweho, byo gucunga no kunoza ibyo mufite.",
+          "includes": [
+            "Ubufasha",
+            "Ikurikiranwa & ivugurura",
+            "Ubufasha ku bikoresho",
+            "Raporo ya buri kwezi"
+          ]
+        },
+        {
+          "title": "Uruhushya rw’igicuruzwa",
+          "text": "Koresha porogaramu dusohora, nka serivisi icungwa cyangwa uruhushya rw’ikigo.",
+          "includes": [
+            "Gutangiza",
+            "Ububiko & ivugurura",
+            "SLA",
+            "Igitekerezo ku igenamigambi"
+          ]
+        },
+        {
+          "title": "Kubakana",
+          "text": "Twubakana igicuruzwa n’umufatanyabikorwa uzana isoko, tugasangira ubutunzi bw’ibivuyemo.",
+          "includes": [
+            "Igenamigambi rimwe",
+            "Ubutunzi dusangiye",
+            "Ikipe yacu y’abahanga",
+            "Ubufasha bwo kugera ku isoko"
+          ]
+        }
+      ]
+    },
+    "supercycle": {
+      "title": "Ikoranabuhanga rikomeza gukora",
+      "blurb": "Agaciro kenshi k’ikoranabuhanga kaza nyuma yo kuritangiza.",
+      "body": [
+        "Urubuga, sisitemu cyangwa umuyoboro w’ibiro bigira akamaro gusa iyo bikora. Ikipe yacu ya serivisi za IT icunga ibyo twubaka n’ibyo usanganywe: ubufasha, imiyoboro, cloud, kubika kopi n’umutekano, mu masezerano amwe afite igihe cyo gusubiza cyemeranyijweho.",
+        "Dukurikirana amanywa n’ijoro, dukemura ibibazo mbere y’uko bikwira kandi buri kwezi tubamenyesha ibyakozwe. Iyo ikibazo gikomeye gikeneye umuntu aho muri i Kigali, umutekinisiye atangira kugikemura mu isaha imwe."
+      ],
+      "cta": "Reba serivisi za IT",
+      "quote": {
+        "text": "Umunsi wo gutangiza ni wo woroshye. Icyo abakiriya bacu bagura koko ni buri munsi usanzwe ukurikiraho: sisitemu zikurikiranwa, zivugururwa kandi zigakosorwa mbere y’uko hagira ubibona, n’abantu bazi neza uko zubatse.",
+        "name": "Ubuyobozi bwa Linse",
+        "role": "Linsetech, Kigali",
+        "portrait": "Ubuyobozi bwa Linse"
+      }
+    },
+    "runway": {
+      "title": "MacyePay: intangiriro ikomeye, urugendo rurerure",
+      "tagline": "Igicuruzwa cyacu cya mbere twasohoye: kwishyura mu byiciro bishingiye ku masezerano yemejwe na noteri, gicungwa n’ikipe yacu.",
+      "cta": "Reba umushinga wa MacyePay",
+      "values": [
+        "Amafaranga yanyuzemo",
+        "Amasezerano akora",
+        "Igipimo cyo kwishyuza"
+      ]
+    },
+    "process": {
+      "title": "Uko dukora",
+      "blurb": "Intambwe enye zimwe kuri buri mushinga, uko ungana kose.",
+      "body": "Ubona porogaramu ikora buri byumweru bibiri, ibyemezo byandikwa, kandi umuntu umwe ni we ubazwa umushinga wose, kuva ku nama ya mbere kugeza ku munsi wo gutangiza n’inyuma yawo.",
+      "steps": [
+        {
+          "title": "Gusesengura",
+          "text": "Dusobanukirwa ikibazo, abakoresha n’imbogamizi mbere yo kwandika umurongo umwe."
+        },
+        {
+          "title": "Gushushanya",
+          "text": "Inzira, imigaragarire n’imiterere, bisuzumwa hamwe nawe."
+        },
+        {
+          "title": "Kubaka",
+          "text": "Ibyiciro bigufi, porogaramu ikora buri byumweru bibiri, igeragezwa aho ikoreshwa."
+        },
+        {
+          "title": "Gukoresha",
+          "text": "Turashyira mu bikorwa, dukurikirana kandi dufasha, tugakomeza kunoza."
+        }
+      ],
+      "cta": "Tangira umushinga"
+    },
+    "faq": {
+      "eyebrow": "Ibibazo",
+      "title": "Ibibazo kuri serivisi zacu",
+      "serviceTitle": "Ibibazo: {service}"
+    },
+    "sub": {
+      "eyebrow": "Serivisi · {n} / {total}",
+      "allServices": "Serivisi zose",
+      "talk": "Tuvugishe",
+      "included": "Ibikubiyemo",
+      "includedBlurb": "Ibintu bine wizera iyo dukorana kuri: {service}.",
+      "includedBody": "Buri mushinga usobanurwa mu nyandiko, ugatangwa n’ikipe izawufasha, kandi ugapimwa hakurikijwe imibare iri hepfo.",
+      "related": "Imirimo ijyanye",
+      "relatedBlurb": "Imishinga iyi serivisi yakoreyemo akazi kanini.",
+      "viewCase": "Reba umushinga",
+      "previous": "Serivisi ibanza",
+      "next": "Serivisi ikurikira"
+    },
+    "projects": {
+      "macyepay": {
+        "tag": "Fintech · Igicuruzwa twasohoye",
+        "blurb": "Kwishyura mu byiciro ku bigo byo mu Rwanda, bishingiye ku masezerano yemejwe na noteri, kwishyuza byikora no guhuzwa na CRB."
+      },
+      "clinic-hmis": {
+        "tag": "Sisitemu · Ubuzima",
+        "blurb": "Amadosiye y’abarwayi, farumasi, kwishyuza n’ubwishingizi muri sisitemu imwe y’imicungire y’ibitaro."
+      },
+      "retail-rollout": {
+        "tag": "Ibikoresho · Ikwirakwizwa",
+        "blurb": "Imashini zo kwishyuriraho, umuyoboro n’ubufasha aho bari ku mucuruzi ufite amashami menshi."
+      }
+    }
+  }
+}

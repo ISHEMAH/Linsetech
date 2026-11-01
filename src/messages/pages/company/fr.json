@@ -1,0 +1,616 @@
+{
+  "careersPage": {
+    "meta": {
+      "title": "Carrières",
+      "description": "Postes ouverts chez Linse à Kigali, notre façon de recruter et comment postuler."
+    },
+    "hero": {
+      "title": "Construire des choses qui tournent.",
+      "lead": "Nous sommes une petite équipe au large périmètre. Si vous aimez livrer de vrais produits à de vrais utilisateurs, parlons-en.",
+      "cta": "Voir les postes"
+    },
+    "cards": {
+      "hire": {
+        "eyebrow": "Notre recrutement",
+        "tag": "4 étapes",
+        "title": "Appel, exercice pratique, journée d’équipe, offre."
+      },
+      "roles": "Postes ouverts",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "pause": "Mettre le défilement en pause",
+      "play": "Reprendre le défilement"
+    },
+    "rail": {
+      "label": "Sur cette page",
+      "roles": "Postes ouverts",
+      "perks": "Avantages",
+      "hiring": "Recrutement",
+      "life": "La vie chez Linse",
+      "apply": "Postuler"
+    },
+    "roles": {
+      "title": "Postes ouverts",
+      "search": "Rechercher…",
+      "allTeams": "Toutes les équipes",
+      "empty": "Aucun poste ne correspond à votre recherche. Envoyez plutôt une candidature spontanée.",
+      "view": "Voir le poste"
+    },
+    "teams": {
+      "engineering": "Ingénierie",
+      "field": "Services terrain",
+      "any": "Toutes équipes"
+    },
+    "types": {
+      "fullTime": "Temps plein",
+      "open": "Toujours ouvert"
+    },
+    "role": {
+      "fullstack": {
+        "title": "Ingénieur full-stack (Next.js / Node)",
+        "summary": "Vous construirez et ferez tourner les applications web, portails et API que nos clients utilisent chaque jour, du premier croquis au support en production.",
+        "do": [
+          "Développer des fonctionnalités sur toute la pile en TypeScript, Next.js et Node",
+          "Concevoir modèles de données et API avec le reste de l’équipe",
+          "Mettre en production, surveiller et corriger ce qui casse",
+          "Échanger avec les clients pour comprendre le problème derrière une demande"
+        ],
+        "bring": [
+          "Au moins deux ans d’expérience en applications web",
+          "Une bonne maîtrise de TypeScript ou JavaScript, de SQL et de Git",
+          "Le souci des détails que les utilisateurs remarquent",
+          "Un français ou un anglais écrit clair ; le kinyarwanda est un plus"
+        ]
+      },
+      "technician": {
+        "title": "Technicien terrain (matériel et réseaux)",
+        "summary": "Vous installerez, entretiendrez et réparerez les équipements et réseaux dont dépendent nos clients, à Kigali et dans tout le pays.",
+        "do": [
+          "Installer et configurer ordinateurs, imprimantes et équipements réseau",
+          "Diagnostiquer et réparer le matériel sur site et à l’atelier",
+          "Assurer les visites de maintenance préventive des clients sous contrat",
+          "Documenter chaque intervention dans le help desk"
+        ],
+        "bring": [
+          "Une expérience en réparation de matériel et en réseaux de base",
+          "Une méthode de travail rigoureuse et du calme face aux clients",
+          "La disponibilité pour se déplacer sur site",
+          "Le permis de conduire est un plus"
+        ]
+      },
+      "open": {
+        "title": "Candidature spontanée",
+        "summary": "Aucun poste ne vous correspond aujourd’hui ? Dites-nous ce que vous faites le mieux et où vous voulez progresser ; nous conservons chaque candidature.",
+        "do": [
+          "Indiquez l’équipe que vous rejoindriez : ingénierie, design, services terrain ou vente",
+          "Montrez un travail dont vous êtes fier : code, maquettes, projets ou références",
+          "Dites ce que vous voulez apprendre ensuite"
+        ],
+        "bring": [
+          "De la curiosité et l’habitude de finir ce que vous commencez",
+          "Du respect pour les personnes qui utilisent ce que nous construisons"
+        ]
+      }
+    },
+    "drawer": {
+      "heading": "Poste ouvert",
+      "close": "Fermer",
+      "about": "Le poste",
+      "do": "Vos missions",
+      "bring": "Votre profil",
+      "apply": "Postuler",
+      "email": "Nous écrire",
+      "note": "Les candidatures sont adressées à l’équipe recrutement : {email}."
+    },
+    "perks": {
+      "title": "Pourquoi Linse",
+      "items": {
+        "products": {
+          "title": "De vrais produits",
+          "label": "Impact",
+          "text": "Livrer des logiciels sur lesquels tournent des entreprises, et les voir utilisés."
+        },
+        "scope": {
+          "title": "Un large périmètre",
+          "label": "Progression",
+          "text": "Web, mobile, systèmes, matériel : apprendre sur toute la pile."
+        },
+        "team": {
+          "title": "Une petite équipe",
+          "label": "Culture",
+          "text": "Des décisions rapides, un accès direct aux clients et aux fondateurs."
+        },
+        "tools": {
+          "title": "Les outils",
+          "label": "Équipement",
+          "text": "Ordinateur professionnel, licences et budget formation."
+        }
+      }
+    },
+    "hiring": {
+      "title": "Notre recrutement",
+      "steps": {
+        "apply": {
+          "title": "Candidature",
+          "text": "Envoyez un CV ou un portfolio et quelques lignes sur ce qui vous motive."
+        },
+        "call": {
+          "title": "Premier appel",
+          "text": "Trente minutes avec le responsable du recrutement : le poste, l’équipe et vos questions."
+        },
+        "task": {
+          "title": "Exercice pratique",
+          "text": "Un court exercice proche du vrai travail, puis une revue ensemble."
+        },
+        "team": {
+          "title": "Journée d’équipe et offre",
+          "text": "Rencontrez vos futurs collègues, puis une réponse claire dans un sens ou dans l’autre."
+        }
+      }
+    },
+    "life": {
+      "title": "La vie chez Linse",
+      "statement": "Ingénieurs, designers, techniciens et commerciaux partagent les mêmes clients et la même salle à Kigali. Un problème traverse un bureau, pas cinq services.",
+      "photos": "Photos à venir",
+      "tiles": {
+        "engineering": "Ingénierie",
+        "design": "Design",
+        "field": "Services terrain",
+        "sales": "Vente et matériel"
+      }
+    },
+    "apply": {
+      "title": "Postuler",
+      "careers": {
+        "title": "Carrières",
+        "who": "Équipe recrutement",
+        "text": "Votre CV, portfolio ou GitHub, et le poste visé.",
+        "cta": "Nous écrire"
+      },
+      "open": {
+        "title": "Candidature spontanée",
+        "who": "Toutes équipes",
+        "text": "Aucun poste ne vous correspond ? Dites-nous ce que vous faites le mieux et où vous voulez progresser.",
+        "cta": "Nous écrire"
+      },
+      "office": {
+        "title": "Bureau",
+        "cta": "Itinéraire"
+      }
+    },
+    "band": {
+      "symbol": "Pourquoi Linse",
+      "asOf": "Petite équipe, large périmètre · octobre 2026",
+      "card": {
+        "label": "Postes ouverts",
+        "note": "+ candidature spontanée, toujours"
+      },
+      "facts": [
+        {
+          "label": "Équipes",
+          "value": "4"
+        },
+        {
+          "label": "Étapes de recrutement",
+          "value": "4"
+        },
+        {
+          "label": "Bureau",
+          "value": "Kigali"
+        },
+        {
+          "label": "Contrat",
+          "value": "Temps plein"
+        },
+        {
+          "label": "Nos métiers",
+          "value": "Logiciel · Matériel · IT"
+        },
+        {
+          "label": "Langues",
+          "value": "EN · FR · RW"
+        },
+        {
+          "label": "Terrain",
+          "value": "Tout le pays"
+        },
+        {
+          "label": "Candidatures",
+          "value": "careers@linsetech.com"
+        }
+      ]
+    }
+  },
+  "supportPage": {
+    "meta": {
+      "title": "Support",
+      "description": "Assistance, délais de réponse, assistance à distance et téléchargements pour les logiciels, systèmes et matériels Linse."
+    },
+    "hero": {
+      "title": "Nous sommes là quand ça compte.",
+      "lead": "Assistance pour les logiciels que nous éditons, les systèmes que nous maintenons et le matériel que nous fournissons.",
+      "cta": "Obtenir de l’aide"
+    },
+    "cards": {
+      "hours": {
+        "eyebrow": "Horaires du support",
+        "tag": "Lun–Sam",
+        "title": "Lun–Ven 08:00–18:00, Sam 09:00–13:00"
+      },
+      "slider": "Ligne d’urgence",
+      "emergency": {
+        "eyebrow": "Critique (P1)",
+        "tag": "Moins d’1 heure",
+        "title": "Système à l’arrêt ? Appelez le help desk : {phone}"
+      },
+      "remote": {
+        "eyebrow": "Session à distance",
+        "tag": "Sur demande",
+        "title": "Un technicien corrige le problème sur votre écran, sous vos yeux."
+      },
+      "prev": "Précédent",
+      "next": "Suivant",
+      "pause": "Mettre le défilement en pause",
+      "play": "Reprendre le défilement"
+    },
+    "rail": {
+      "label": "Sur cette page",
+      "channels": "Canaux",
+      "sla": "SLA",
+      "remote": "À distance",
+      "downloads": "Téléchargements",
+      "contacts": "Contacts",
+      "faq": "FAQ"
+    },
+    "channels": {
+      "title": "Canaux",
+      "items": {
+        "desk": {
+          "chip": "E-mail",
+          "title": "Assistance : {value}",
+          "text": "Tickets suivis selon le SLA"
+        },
+        "phone": {
+          "chip": "Téléphone",
+          "title": "Téléphone et WhatsApp : {value}",
+          "text": "Lun–Ven 08:00–18:00, Sam 09:00–13:00"
+        },
+        "remote": {
+          "chip": "À distance",
+          "title": "Session d’assistance à distance",
+          "text": "Partage d’écran avec un technicien, sur demande"
+        },
+        "onsite": {
+          "chip": "Sur site",
+          "title": "Interventions à Kigali et dans tout le pays",
+          "text": "Planifiées ou en urgence, sous contrat"
+        }
+      }
+    },
+    "sla": {
+      "title": "Niveaux de service",
+      "cols": {
+        "priority": "Priorité",
+        "example": "Exemple",
+        "response": "Première réponse",
+        "resolution": "Objectif de résolution"
+      },
+      "rows": {
+        "p1": {
+          "level": "Critique",
+          "example": "Système à l’arrêt, sans solution de contournement",
+          "response": "< 1 heure",
+          "resolution": "4 heures"
+        },
+        "p2": {
+          "level": "Élevée",
+          "example": "Une fonction clé échoue, un contournement existe",
+          "response": "4 heures",
+          "resolution": "1 jour ouvré"
+        },
+        "p3": {
+          "level": "Normale",
+          "example": "Questions, petits problèmes et demandes",
+          "response": "1 jour ouvré",
+          "resolution": "3 jours ouvrés"
+        }
+      },
+      "note": "Ces objectifs s’appliquent aux clients sous contrat de support et se comptent en heures de support."
+    },
+    "remote": {
+      "title": "Assistance à distance",
+      "lead": "La plupart des problèmes se règlent sans déplacement. Avec votre accord, un technicien se connecte à votre ordinateur, vous montre ce qu’il fait et se déconnecte une fois le travail terminé.",
+      "steps": {
+        "call": {
+          "title": "Appelez ou ouvrez un ticket",
+          "text": "Décrivez le problème ; nous vous disons si l’assistance à distance convient."
+        },
+        "tool": {
+          "title": "Lancez l’outil de support",
+          "text": "Communiquez le code de session affiché à l’écran."
+        },
+        "fix": {
+          "title": "Suivez la correction",
+          "text": "Vous pouvez arrêter la session à tout moment."
+        }
+      },
+      "tool": {
+        "eyebrow": "Outil d’assistance",
+        "tag": "Bientôt",
+        "title": "Linse Quick Support pour Windows et macOS"
+      },
+      "cta": "Demander une session"
+    },
+    "downloads": {
+      "title": "Téléchargements",
+      "note": "Fichiers provisoires : les documents définitifs seront publiés ici.",
+      "soon": "Bientôt disponible",
+      "items": {
+        "winTool": "Outil d’assistance à distance pour Windows",
+        "macTool": "Outil d’assistance à distance pour macOS",
+        "handbook": "Guide du support",
+        "slaTerms": "Contrat de niveau de service (modèle)",
+        "warranty": "Garantie et retours matériel",
+        "onboarding": "Liste de mise en service d’un appareil",
+        "macyepay": "Démarrage rapide MacyePay pour marchands",
+        "inventory": "Modèle d’inventaire réseau"
+      },
+      "download": "Télécharger"
+    },
+    "pager": {
+      "first": "Début",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "last": "Fin"
+    },
+    "contacts": {
+      "title": "Autres contacts",
+      "support": {
+        "title": "Support",
+        "who": "Assistance Linse",
+        "text": "Tickets, incidents et questions sur un système que nous gérons pour vous.",
+        "cta": "E-mail"
+      },
+      "sales": {
+        "title": "Ventes",
+        "who": "Projets et matériel",
+        "text": "Devis, commandes d’appareils, licences et nouveaux projets.",
+        "cta": "E-mail"
+      },
+      "accounts": {
+        "title": "Comptabilité",
+        "who": "Facturation",
+        "text": "Factures, contrats et paiements.",
+        "cta": "E-mail"
+      },
+      "press": {
+        "title": "Presse et médias",
+        "media": "Demandes des médias"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "more": "Toujours bloqué ?",
+      "reach": "Nous contacter",
+      "items": [
+        {
+          "q": "Que couvre un contrat de support ?",
+          "a": "Les systèmes, logiciels et appareils listés dans votre contrat : accès au help desk, les délais ci-dessus, la maintenance préventive et les interventions sur site lorsqu’elles sont prévues."
+        },
+        {
+          "q": "Comment ouvrir un ticket ?",
+          "a": "Écrivez au help desk ou appelez-nous pendant les horaires de support. Indiquez votre entreprise, ce qui s’est passé et l’urgence ; vous recevez un numéro de ticket en retour."
+        },
+        {
+          "q": "Prenez-vous en charge du matériel que vous n’avez pas fourni ?",
+          "a": "Souvent, oui. Nous vérifions d’abord l’appareil et vous indiquons ce que nous pouvons prendre en charge, et à quel coût, avant tout travail."
+        },
+        {
+          "q": "Intervenez-vous hors de Kigali ?",
+          "a": "Oui, dans tout le pays. Les visites hors de Kigali sont planifiées avec vous ; le déplacement est chiffré à part sauf s’il est inclus dans votre contrat."
+        },
+        {
+          "q": "L’assistance à distance est-elle sûre ?",
+          "a": "Une session ne démarre que lorsque vous donnez le code affiché à l’écran, vous voyez tout ce que fait le technicien et vous pouvez l’arrêter à tout moment."
+        }
+      ]
+    },
+    "band": {
+      "symbol": "Horaires du support",
+      "asOf": "Heure de Kigali, CAT (UTC+2) · octobre 2026",
+      "card": {
+        "label": "Incidents critiques",
+        "value": "< 1 h",
+        "note": "Première réponse sous contrat (P1)"
+      },
+      "facts": [
+        {
+          "label": "Lun–Ven",
+          "value": "08:00–18:00"
+        },
+        {
+          "label": "Samedi",
+          "value": "09:00–13:00"
+        },
+        {
+          "label": "Canaux",
+          "value": "4"
+        },
+        {
+          "label": "Sur site",
+          "value": "Tout le pays"
+        },
+        {
+          "label": "Résolution P1",
+          "value": "4 heures"
+        },
+        {
+          "label": "Réponse P2",
+          "value": "4 heures"
+        },
+        {
+          "label": "Réponse P3",
+          "value": "1 jour ouvré"
+        },
+        {
+          "label": "Assistance",
+          "value": "support@linsetech.com"
+        }
+      ]
+    }
+  },
+  "legalPage": {
+    "privacy": {
+      "meta": {
+        "title": "Politique de confidentialité",
+        "description": "Comment Linse collecte, utilise et protège les données personnelles (plan provisoire)."
+      },
+      "title": "Politique de confidentialité",
+      "intro": {
+        "heading": "Votre vie privée compte pour nous.",
+        "body": [
+          "Texte provisoire. La politique de confidentialité sera fournie et modifiée dans le Studio.",
+          "Le plan ci-dessous liste les sections que couvrira la politique définitive. D’ici sa publication, vos questions sur les données personnelles peuvent être adressées à {email}."
+        ]
+      },
+      "sections": [
+        {
+          "title": "Qui sommes-nous",
+          "body": [
+            "Cette section identifiera Linsetech Ltd (« Linse »), Kigali, Rwanda, comme responsable des données personnelles collectées via ce site, et indiquera comment nous joindre."
+          ]
+        },
+        {
+          "title": "Données collectées",
+          "body": [
+            "Cette section listera les informations collectées : ce que vous envoyez via le formulaire de contact (nom, e-mail, entreprise et message) et des données techniques comme les pages consultées et le type d’appareil."
+          ]
+        },
+        {
+          "title": "Utilisation des données",
+          "body": [
+            "Cette section expliquera pourquoi nous les utilisons : répondre aux demandes, fournir les services sous contrat, améliorer le site et respecter nos obligations légales."
+          ]
+        },
+        {
+          "title": "Partage",
+          "body": [
+            "Cette section précisera les types de prestataires qui nous aident à faire fonctionner le site et nos services, ainsi que les cas où la loi impose une communication."
+          ]
+        },
+        {
+          "title": "Conservation",
+          "body": [
+            "Cette section indiquera la durée de conservation de chaque type d’information et la façon dont elle est supprimée."
+          ]
+        },
+        {
+          "title": "Sécurité",
+          "body": [
+            "Cette section décrira les mesures prises pour protéger les informations contre la perte et les accès non autorisés."
+          ]
+        },
+        {
+          "title": "Vos droits",
+          "body": [
+            "Cette section expliquera comment accéder à vos informations, les corriger ou les supprimer, vous opposer à leur utilisation et déposer une plainte auprès de l’autorité compétente au Rwanda."
+          ]
+        },
+        {
+          "title": "Cookies",
+          "body": [
+            "Cette section listera les cookies et technologies similaires utilisés sur ce site et la manière de les contrôler."
+          ]
+        },
+        {
+          "title": "Modifications de la politique",
+          "body": [
+            "Cette section expliquera comment les mises à jour sont annoncées et quand elles prennent effet."
+          ]
+        },
+        {
+          "title": "Contact",
+          "body": [
+            "Questions sur cette politique : {email}."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "meta": {
+        "title": "Conditions d’utilisation",
+        "description": "Les conditions applicables au site Linse (plan provisoire)."
+      },
+      "title": "Conditions d’utilisation",
+      "intro": {
+        "heading": "Merci de lire attentivement ces conditions.",
+        "body": [
+          "Texte provisoire. Les conditions d’utilisation seront fournies et modifiées dans le Studio.",
+          "Le plan ci-dessous liste les sections que couvriront les conditions définitives. D’ici leur publication, vos questions peuvent être adressées à {email}."
+        ]
+      },
+      "sections": [
+        {
+          "title": "Acceptation",
+          "body": [
+            "Cette section expliquera qu’utiliser ce site vaut acceptation de ces conditions."
+          ]
+        },
+        {
+          "title": "Utilisation du site",
+          "body": [
+            "Cette section définira l’usage acceptable : aucun abus, ni tentative de perturber le site ou d’accéder à nos systèmes sans autorisation."
+          ]
+        },
+        {
+          "title": "Services et devis",
+          "body": [
+            "Cette section expliquera que les projets, produits et ventes de matériel relèvent d’accords écrits et de devis distincts."
+          ]
+        },
+        {
+          "title": "Propriété intellectuelle",
+          "body": [
+            "Cette section indiquera à qui appartiennent les contenus, la marque et les logiciels présentés sur ce site."
+          ]
+        },
+        {
+          "title": "Liens externes",
+          "body": [
+            "Cette section traitera des liens vers d’autres sites, que nous ne contrôlons pas."
+          ]
+        },
+        {
+          "title": "Avertissement",
+          "body": [
+            "Cette section expliquera que les informations du site sont fournies à titre général et peuvent évoluer."
+          ]
+        },
+        {
+          "title": "Limitation de responsabilité",
+          "body": [
+            "Cette section fixera les limites de notre responsabilité liée à l’utilisation de ce site."
+          ]
+        },
+        {
+          "title": "Droit applicable",
+          "body": [
+            "Cette section indiquera le droit qui régit ces conditions et les juridictions compétentes."
+          ]
+        },
+        {
+          "title": "Modification des conditions",
+          "body": [
+            "Cette section expliquera comment et quand ces conditions peuvent être mises à jour."
+          ]
+        },
+        {
+          "title": "Contact",
+          "body": [
+            "Questions sur ces conditions : {email}."
+          ]
+        }
+      ]
+    }
+  }
+}

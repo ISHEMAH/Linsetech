@@ -1,0 +1,151 @@
+{
+  "newsPage": {
+    "metaTitle": "Actualités",
+    "metaDescription": "Actualités de l’entreprise, nouveautés produits, guides matériel, analyses et communiqués de Linse.",
+    "title": "Dernières actualités",
+    "featured": "Article à la une",
+    "recent": "Les plus récents",
+    "readMore": "Lire la suite",
+    "allPosts": "Tous les articles",
+    "press": "Communiqués de presse",
+    "categories": {
+      "company": "Entreprise",
+      "product": "Produit",
+      "hardware": "Matériel",
+      "insights": "Analyses",
+      "press": "Communiqué"
+    },
+    "cover": {
+      "company": "Actualités",
+      "product": "MacyePay",
+      "hardware": "Matériel",
+      "insights": "Analyses",
+      "press": "Presse"
+    },
+    "filters": {
+      "category": "Filtrer par catégorie",
+      "allCategories": "Toutes catégories",
+      "year": "Filtrer par année",
+      "allYears": "Toutes années",
+      "selectYear": "Choisir l’année",
+      "search": "Rechercher…",
+      "searchLabel": "Rechercher un communiqué",
+      "searchArticles": "Rechercher un article"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {n}",
+      "prev": "Préc.",
+      "next": "Suivant",
+      "first": "Début",
+      "previous": "Précédent",
+      "last": "Fin",
+      "showing": "Éléments {from} à {to} sur {total}",
+      "showingOne": "Élément {from} sur {total}"
+    },
+    "empty": "Aucun résultat pour ces filtres pour le moment.",
+    "reset": "Réinitialiser",
+    "download": "Télécharger le PDF",
+    "open": "Lire le communiqué",
+    "newsletter": {
+      "eyebrow": "Les analyses Linse dans votre boîte mail",
+      "title": "Inscrivez-vous aux nouveautés produits et analyses",
+      "continue": "Continuer",
+      "placeholder": "Votre e-mail professionnel",
+      "submit": "S’abonner",
+      "done": "Merci, vous êtes inscrit.",
+      "close": "Fermer",
+      "fields": {
+        "email": "E-mail",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "company": "Entreprise"
+      },
+      "configure": "Choisissez ce que vous souhaitez recevoir *",
+      "helper": "Sélectionnez au moins une option pour vous abonner",
+      "topics": {
+        "product": "Nouveautés produits",
+        "insights": "Analyses",
+        "press": "Communiqués de presse",
+        "careers": "Carrières"
+      },
+      "unsubscribeText": "Se désabonner de toutes nos communications par e-mail.",
+      "unsubscribe": "Se désabonner",
+      "unsubscribed": "C’est fait : cette adresse ne recevra plus nos e-mails.",
+      "unsubLater": "Nous n’avons pas pu vous désinscrire automatiquement. Écrivez à <link>{email}</link> et nous le ferons."
+    },
+    "article": {
+      "back": "Tous les articles",
+      "share": "Partager :",
+      "download": "Télécharger :",
+      "pdf": "PDF",
+      "copyLink": "Copier le lien",
+      "copied": "Copié",
+      "minRead": "{min} min de lecture",
+      "by": "Par {author}",
+      "prev": "Article précédent",
+      "next": "Article suivant",
+      "related": "À lire aussi",
+      "more": "Plus d’articles",
+      "prevSlide": "Diapositive précédente",
+      "nextSlide": "Diapositive suivante"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "E-mail, téléphone, horaires et formulaire de projet pour joindre Linse à Kigali.",
+    "title": "Contacter Linse",
+    "office": "Bureau",
+    "phone": "Téléphone / WhatsApp",
+    "hours": "Horaires",
+    "hoursLines": {
+      "week": "Lundi – vendredi · 08:00 – 18:00",
+      "sat": "Samedi · 09:00 – 13:00",
+      "sun": "Dimanche · Fermé"
+    },
+    "timezone": "Heure de Kigali (CAT, UTC+2)",
+    "general": "Demandes générales",
+    "support": "Support",
+    "careers": "Carrières",
+    "copy": "Copier",
+    "copied": "Copié",
+    "call": "Appeler",
+    "map": "Ouvrir dans Plans",
+    "formEyebrow": "Demandes de projet",
+    "formTitle": "Lancer un projet",
+    "formSub": "Parlez-nous de votre besoin. Nous répondons sous deux jours ouvrés.",
+    "form": {
+      "name": "Votre nom",
+      "email": "E-mail professionnel",
+      "company": "Entreprise",
+      "need": "De quoi avez-vous besoin ?",
+      "needs": {
+        "build": "Développer un logiciel",
+        "buy": "Acheter du matériel",
+        "support": "Support IT",
+        "other": "Autre chose"
+      },
+      "message": "Quelques lignes sur le projet",
+      "send": "Envoyer",
+      "sending": "Envoi…",
+      "sent": "Merci, nous avons reçu votre brief. Nous revenons vers vous rapidement.",
+      "later": "L’envoi en ligne est indisponible pour le moment : votre message ne nous est pas parvenu. Écrivez-nous à <link>{email}</link>.",
+      "again": "Envoyer un autre message"
+    },
+    "links": {
+      "eyebrow": "Ailleurs",
+      "supportTitle": "Besoin d’aide sur un système que nous gérons ?",
+      "supportText": "Ouvrez un ticket auprès du centre d’assistance, suivi avec un SLA.",
+      "supportCta": "Support",
+      "careersTitle": "Envie de construire avec nous ?",
+      "careersText": "Découvrez les postes ouverts en développement, matériel et support.",
+      "careersCta": "Carrières"
+    }
+  },
+  "notFoundPage": {
+    "metaTitle": "Page introuvable",
+    "eyebrow": "Page introuvable",
+    "title": "Nous sommes désolés, la page\ndemandée est introuvable",
+    "cta": "Retour à l’accueil"
+  }
+}

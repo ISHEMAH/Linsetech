@@ -1,0 +1,491 @@
+{
+  "servicesPage": {
+    "meta": {
+      "title": "Services",
+      "description": "Design, sites et applications, systèmes et intégration, nos logiciels, matériel et distribution, services IT : six services, une seule équipe."
+    },
+    "hero": {
+      "title": "Tout l’IT, sous un même toit.",
+      "cta": "Découvrir nos services"
+    },
+    "statement": [
+      "Linse conçoit, développe, édite et exploite des technologies pour les entreprises et les institutions au Rwanda et dans la région.",
+      "Six services sous un même toit : design, sites et applications, systèmes et intégration, les logiciels que nous éditons, matériel et distribution, et services IT.",
+      "Une seule équipe mène un projet du premier croquis jusqu’à l’appareil posé sur le bureau, et reste pour le faire tourner."
+    ],
+    "breakthrough": {
+      "title": "Un seul partenaire, de bout en bout",
+      "blurb": "Une seule équipe conçoit, développe, fournit et supporte votre technologie : rien ne se perd entre deux prestataires.",
+      "body": [
+        "La plupart des organisations gèrent leur technologie en patchwork : une agence pour le site, un développeur pour le système, une boutique pour les ordinateurs, quelqu’un d’autre pour le réseau. Chaque passation est un endroit où les choses glissent, et personne n’est responsable de l’ensemble.",
+        "Avec Linse, la même équipe conçoit le produit, écrit le logiciel, fournit et installe les équipements, puis fait tout tourner ensuite. Un contrat, un interlocuteur, une équipe qui sait comment les pièces s’assemblent.",
+        "Voilà ce que signifie « tout l’IT sous un même toit » pour un client : moins de prestataires, des décisions plus rapides et un seul partenaire responsable, du premier croquis à l’appel au support."
+      ]
+    },
+    "transformation": {
+      "title": "Six services, une seule équipe",
+      "blurb": "Chaque service tient seul. Ensemble, ils couvrent tout ce qu’une entreprise attend de sa technologie.",
+      "body": [
+        "Ceux qui conçoivent votre application la développent aussi ; l’équipe qui installe votre réseau le supervise ; les logiciels que nous éditons tournent sur la même infrastructure que celle que nous gérons pour nos clients.",
+        "Voici ce que couvre chaque service :"
+      ],
+      "explore": "Découvrir : {service}",
+      "stats": [
+        {
+          "eyebrow": "Intégrations livrées",
+          "headline": "12+",
+          "tagline": "Paiements, ERP, HMIS",
+          "body": "Des systèmes connectés pour que dossiers, paiements et rapports circulent sans ressaisie."
+        },
+        {
+          "eyebrow": "Livraison à Kigali",
+          "headline": "48 h",
+          "tagline": "Configuré avant l’arrivée",
+          "body": "Ordinateurs, serveurs, réseau et terminaux de paiement de douze marques, installés et garantis localement."
+        },
+        {
+          "eyebrow": "Intervention critique",
+          "headline": "< 1 h",
+          "tagline": "99,9 % de disponibilité gérée",
+          "body": "Support, réseaux, cloud et sécurité dans un seul contrat, supervisés jour et nuit."
+        }
+      ]
+    },
+    "services": {
+      "design": {
+        "title": "Design",
+        "headline": "Des produits qu’on aime vraiment utiliser.",
+        "intro": "Identité de marque, recherche UX et design d’interface pour le web, le mobile et les outils internes. Nous concevons à découvert, avec votre équipe et vos utilisateurs, et livrons des systèmes, pas seulement des écrans.",
+        "more": "Chaque mission commence par les personnes qui utiliseront le produit. Nous testons tôt avec de vrais utilisateurs, consignons les décisions et laissons à votre équipe un système qu’elle peut faire évoluer.",
+        "bullets": [
+          {
+            "title": "Identité de marque & charte",
+            "text": "Logo, typographie, couleurs et modèles, documentés pour que chaque prestataire les applique de la même façon."
+          },
+          {
+            "title": "Recherche UX, parcours & prototypes",
+            "text": "Entretiens, parcours et prototypes cliquables, testés avec de vrais utilisateurs avant toute construction."
+          },
+          {
+            "title": "Design systems d’interface (Figma)",
+            "text": "Composants, tokens et gabarits de pages dans Figma, prêts à être développés."
+          },
+          {
+            "title": "Design accessible (WCAG AA)",
+            "text": "Contrastes, tailles de texte, états de focus et lecteurs d’écran vérifiés selon le niveau WCAG AA."
+          }
+        ],
+        "stats": [
+          {
+            "value": "2 sem.",
+            "label": "Jusqu’à un prototype cliquable",
+            "note": "Du premier atelier à un prototype que vos utilisateurs peuvent cliquer et tester."
+          },
+          {
+            "value": "AA",
+            "label": "Niveau d’accessibilité",
+            "note": "Chaque écran est vérifié : contrastes, tailles de texte, ordre du focus et lecteurs d’écran."
+          },
+          {
+            "value": "1",
+            "label": "Design system par produit",
+            "note": "Une bibliothèque de composants partagée garde chaque nouvel écran cohérent."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Concevez-vous pour des produits que vous ne développez pas ?",
+            "a": "Oui. Le design est un service à part entière ; nous livrons les fichiers Figma, un design system et des spécifications à partir desquels votre équipe peut développer."
+          },
+          {
+            "q": "Pouvez-vous moderniser une marque existante ?",
+            "a": "Oui, d’un simple rafraîchissement à une identité complète : logo, typographie, couleurs et modèles."
+          }
+        ]
+      },
+      "web": {
+        "title": "Sites & applications",
+        "headline": "Rapides, accessibles, faits pour durer.",
+        "intro": "Sites vitrines, e-commerce, applications web et mobiles sur des stacks modernes : Next.js et React pour le web, Flutter pour Android et iOS. Hébergés, surveillés et maintenus.",
+        "more": "Nous construisons sur des technologies éprouvées, livrons par petites versions et mettons en place hébergement, supervision et mesure d’audience dès le premier jour, pour que le site reste performant bien après sa mise en ligne.",
+        "bullets": [
+          {
+            "title": "Sites vitrines & institutionnels",
+            "text": "Des sites rapides et multilingues, bien référencés, qui convertissent et que votre équipe met à jour facilement."
+          },
+          {
+            "title": "E-commerce et portails clients",
+            "text": "Catalogues, paiement par mobile money et carte, comptes clients et suivi des commandes."
+          },
+          {
+            "title": "Applications mobiles (Flutter, Android & iOS)",
+            "text": "Un seul code pour Android et iOS, publié sur les deux stores et maintenu."
+          },
+          {
+            "title": "CMS headless, SEO et analytics",
+            "text": "Des contenus que votre équipe modifie sans développeur, un référencement bien posé et des tableaux de bord clairs."
+          }
+        ],
+        "stats": [
+          {
+            "value": "95+",
+            "label": "Objectif de performance Lighthouse",
+            "note": "Des pages rapides sur les téléphones et les connexions qu’utilisent vraiment vos clients."
+          },
+          {
+            "value": "3",
+            "label": "Langues prêtes à l’emploi",
+            "note": "Anglais, français et kinyarwanda dès le premier jour, gérés dans le CMS."
+          },
+          {
+            "value": "99,9 %",
+            "label": "Disponibilité de l’hébergement",
+            "note": "Hébergé, supervisé et sauvegardé, avec des alertes avant que les visiteurs ne remarquent quoi que ce soit."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "À qui appartient le code ?",
+            "a": "À vous. Chaque projet est livré dans un dépôt qui vous appartient, avec la documentation et une séance de passation."
+          },
+          {
+            "q": "Pouvons-nous modifier les contenus nous-mêmes ?",
+            "a": "Oui. Nous installons un CMS (Sanity par défaut) pour que votre équipe modifie pages, actualités et produits sans développeur."
+          }
+        ]
+      },
+      "systems": {
+        "title": "Systèmes & intégration",
+        "headline": "Des systèmes qui se parlent.",
+        "intro": "ERP, HMIS, paiements, e-gouvernement et plateformes sur mesure, construits ou intégrés. Notre spécialité : faire partager des données fiables à des systèmes existants, avec traçabilité et reporting.",
+        "more": "Nous cartographions la circulation des données dans votre organisation, connectons les systèmes que vous avez déjà et ajoutons le reporting dont vos responsables ont besoin, sans jeter ce qui fonctionne.",
+        "bullets": [
+          {
+            "title": "Plateformes sur mesure & outils internes",
+            "text": "Des logiciels taillés pour vos processus : validations, dossiers, planification et travail de terrain."
+          },
+          {
+            "title": "Mise en place & intégration ERP / HMIS",
+            "text": "Paramétrage, migration des données et formation pour les ERP et les systèmes d’information hospitaliers."
+          },
+          {
+            "title": "Intégrations paiement, mobile money et banque",
+            "text": "Encaissements, décaissements et rapprochements via les API mobile money, carte et bancaires."
+          },
+          {
+            "title": "Migration de données, reporting et tableaux de bord",
+            "text": "Des migrations propres et vérifiées, et les tableaux de bord qui transforment les données en décisions."
+          }
+        ],
+        "stats": [
+          {
+            "value": "12+",
+            "label": "Intégrations livrées",
+            "note": "Mobile money, banques, services publics, ERP et systèmes hospitaliers."
+          },
+          {
+            "value": "0",
+            "label": "Enregistrement perdu en migration",
+            "note": "Chaque migration est répétée, rapprochée et validée avant la mise en production."
+          },
+          {
+            "value": "24/7",
+            "label": "Supervision",
+            "note": "Les intégrations sont surveillées jour et nuit, avec une alerte à chaque synchronisation échouée."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Travaillez-vous avec les systèmes publics ?",
+            "a": "Oui, notamment IremboGov, la RRA et les API mobile money, dans le respect de leurs exigences de conformité."
+          },
+          {
+            "q": "Pouvez-vous reprendre un système développé par un autre ?",
+            "a": "Oui. Nous commençons par un audit, stabilisons ce qui est en production, puis planifions les améliorations."
+          }
+        ]
+      },
+      "software": {
+        "title": "Nos logiciels",
+        "headline": "Des produits que nous développons, possédons et exploitons.",
+        "intro": "Linse investit dans ses propres produits et les commercialise sous licence. MacyePay, notre plateforme de paiement échelonné, est le premier ; d’autres sont en développement.",
+        "more": "Posséder nos produits, c’est assumer le coût de bien les faire. Nos clients obtiennent un logiciel déjà éprouvé sur le marché, avec un support et une feuille de route qu’ils contribuent à définir.",
+        "bullets": [
+          {
+            "title": "MacyePay — paiement échelonné avec recouvrement légal",
+            "text": "Contrats d’échelonnement notariés, relances et recouvrement automatisés, et un score de confiance pour chaque client."
+          },
+          {
+            "title": "Licence ou service géré",
+            "text": "En service géré contre un abonnement mensuel, ou sous licence sur votre propre infrastructure."
+          },
+          {
+            "title": "Feuille de route pilotée par les clients",
+            "text": "Les nouvelles fonctionnalités viennent des entreprises qui utilisent le produit chaque jour, revues chaque trimestre."
+          },
+          {
+            "title": "Support et SLA inclus",
+            "text": "Mise en route, formation et délais d’intervention garantis font partie de chaque offre."
+          }
+        ],
+        "stats": [
+          {
+            "value": "1",
+            "label": "Produit en production",
+            "note": "MacyePay, en production et exploité par notre propre équipe."
+          },
+          {
+            "value": "5 000+",
+            "label": "Contrats actifs sur MacyePay",
+            "note": "Des contrats d’échelonnement gérés de bout en bout sur la plateforme."
+          },
+          {
+            "value": "98 %",
+            "label": "Taux de recouvrement",
+            "note": "Sur les contrats actifs, grâce aux contrats notariés et aux relances automatisées."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Comment MacyePay est-il commercialisé ?",
+            "a": "En service géré avec un abonnement mensuel par entreprise, ou sous licence pour les banques et les grands distributeurs. Demandez une démo."
+          },
+          {
+            "q": "Développeriez-vous un produit avec nous ?",
+            "a": "Oui. Nous co-développons et co-détenons des produits avec des partenaires qui apportent le marché ; parlons-en."
+          }
+        ]
+      },
+      "hardware": {
+        "title": "Matériel & distribution",
+        "headline": "Des équipements professionnels, livrés et supportés.",
+        "intro": "Ordinateurs portables et fixes, serveurs, réseau, imprimantes, caméras de sécurité et terminaux de point de vente de marques reconnues. Sourcés, livrés et installés partout au Rwanda, avec une garantie gérée localement.",
+        "more": "Nous chiffrons des installations complètes, pas des cartons : les bons équipements pour l’usage, configurés avant livraison, installés sur site et couverts par un service de garantie local.",
+        "bullets": [
+          {
+            "title": "Portables, postes fixes & stations de travail",
+            "text": "Des modèles professionnels de marques reconnues, préparés et configurés avant d’arriver sur vos bureaux."
+          },
+          {
+            "title": "Serveurs, stockage & réseau",
+            "text": "Serveurs rack et tour, stockage, commutateurs, routeurs et Wi-Fi, dimensionnés pour votre site."
+          },
+          {
+            "title": "Imprimantes, scanners, caméras & TPV",
+            "text": "Impression bureautique, caméras de sécurité et terminaux de point de vente pour boutiques et agences."
+          },
+          {
+            "title": "Garantie, réparations & support sur site",
+            "text": "Garanties traitées localement, réparations suivies et techniciens sur site si nécessaire."
+          }
+        ],
+        "stats": [
+          {
+            "value": "12",
+            "label": "Marques distribuées",
+            "note": "Des gammes professionnelles de fabricants reconnus, avec une garantie gérée localement."
+          },
+          {
+            "value": "48 h",
+            "label": "Livraison à Kigali",
+            "note": "Configuré avant de quitter notre atelier, installé à l’arrivée."
+          },
+          {
+            "value": "2 ans",
+            "label": "Garantie standard",
+            "note": "Réclamations et réparations traitées localement et suivies jusqu’au retour de l’appareil."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Vendez-vous aux particuliers ?",
+            "a": "Nous servons d’abord les entreprises, écoles et institutions, mais aussi les particuliers pour une sélection de produits."
+          },
+          {
+            "q": "Pouvez-vous chiffrer l’équipement complet d’un bureau ?",
+            "a": "Oui : postes, réseau, sécurité et installation dans un seul devis. Demandez le catalogue."
+          }
+        ]
+      },
+      "it": {
+        "title": "Services IT",
+        "headline": "Exploiter, surveiller, sécuriser.",
+        "intro": "L’IT géré pour les équipes de toute taille : support, réseaux, cloud, sauvegardes et sécurité. Un contrat, un interlocuteur, des délais d’intervention garantis.",
+        "more": "Nous surveillons vos systèmes jour et nuit, corrigeons les incidents avant qu’ils ne se propagent et rendons compte chaque mois de ce qui a été fait et de ce qui vient.",
+        "bullets": [
+          {
+            "title": "Support & assistance sur site",
+            "text": "Un numéro et une adresse pour chaque problème, avec des techniciens sur site partout à Kigali."
+          },
+          {
+            "title": "Réseaux, Wi-Fi & câblage structuré",
+            "text": "Conception, câblage et couverture Wi-Fi pour bureaux, écoles, cliniques et entrepôts."
+          },
+          {
+            "title": "Cloud, Microsoft 365 / Google Workspace, sauvegardes",
+            "text": "Messagerie, fichiers et identités dans le cloud, avec des sauvegardes restaurées et testées régulièrement."
+          },
+          {
+            "title": "Sécurité : postes, caméras, contrôle d’accès",
+            "text": "Postes protégés, caméras supervisées et contrôle des accès, gérés depuis un seul endroit."
+          }
+        ],
+        "stats": [
+          {
+            "value": "< 1 h",
+            "label": "Délai d’intervention critique",
+            "note": "Un technicien travaille sur les incidents critiques en moins d’une heure."
+          },
+          {
+            "value": "99,9 %",
+            "label": "Disponibilité gérée",
+            "note": "Réseaux, serveurs et services cloud que nous exploitons, mesurés chaque mois."
+          },
+          {
+            "value": "1",
+            "label": "Contrat pour tout",
+            "note": "Support, réseaux, cloud et sécurité dans un seul contrat."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Proposez-vous des forfaits ?",
+            "a": "Oui. Des forfaits mensuels avec un volume d’heures fixe et des délais d’intervention garantis, adaptés à votre équipe."
+          },
+          {
+            "q": "Assurez-vous le support de matériel que vous n’avez pas vendu ?",
+            "a": "Oui, après un rapide audit de votre parc."
+          }
+        ]
+      }
+    },
+    "models": {
+      "title": "Comment travailler ensemble",
+      "blurb": "Choisissez le modèle adapté au travail. La plupart de nos clients commencent par un projet et restent sur un forfait.",
+      "cta": "Parlons-en",
+      "items": [
+        {
+          "title": "Projet",
+          "text": "Périmètre, prix et délai fixes. Idéal pour un nouveau site, une application ou un système.",
+          "includes": [
+            "Cadrage & proposition",
+            "Design & développement",
+            "Passation & formation",
+            "Garantie 30 jours"
+          ]
+        },
+        {
+          "title": "Forfait & support",
+          "text": "Un volume d’heures mensuel et des délais d’intervention garantis pour exploiter et améliorer l’existant.",
+          "includes": [
+            "Support",
+            "Supervision & mises à jour",
+            "Support matériel",
+            "Rapport mensuel"
+          ]
+        },
+        {
+          "title": "Licence produit",
+          "text": "Utilisez les logiciels que nous éditons, en service géré ou en licence entreprise.",
+          "includes": [
+            "Mise en route",
+            "Hébergement & mises à jour",
+            "SLA",
+            "Avis sur la feuille de route"
+          ]
+        },
+        {
+          "title": "Co-développement",
+          "text": "Nous construisons un produit avec un partenaire qui apporte le marché, et partageons la propriété du résultat.",
+          "includes": [
+            "Feuille de route commune",
+            "Propriété partagée",
+            "Notre équipe technique",
+            "Appui à la mise sur le marché"
+          ]
+        }
+      ]
+    },
+    "supercycle": {
+      "title": "Une technologie qui tourne",
+      "blurb": "L’essentiel de la valeur d’une technologie arrive après sa mise en service.",
+      "body": [
+        "Un site, un système ou un réseau de bureau n’est utile que s’il fonctionne. Notre équipe de services IT exploite ce que nous construisons et ce que vous avez déjà : support, réseaux, cloud, sauvegardes et sécurité, dans un seul contrat avec des délais d’intervention garantis.",
+        "Nous surveillons jour et nuit, corrigeons les incidents avant qu’ils ne se propagent et rendons compte chaque mois. Quand un incident critique demande quelqu’un sur site à Kigali, un technicien s’en occupe en moins d’une heure."
+      ],
+      "cta": "Découvrir les services IT",
+      "quote": {
+        "text": "Le jour du lancement, c’est la partie facile. Ce que nos clients achètent vraiment, ce sont tous les jours ordinaires qui suivent : des systèmes surveillés, mis à jour et réparés avant que quiconque ne s’en aperçoive, par des gens qui connaissent leur installation par cœur.",
+        "name": "La direction de Linse",
+        "role": "Linsetech, Kigali",
+        "portrait": "La direction de Linse"
+      }
+    },
+    "runway": {
+      "title": "MacyePay : des débuts solides, une longue piste",
+      "tagline": "Notre premier produit édité : le paiement échelonné appuyé sur des contrats notariés, exploité par notre équipe.",
+      "cta": "Voir le projet MacyePay",
+      "values": [
+        "Transactions traitées",
+        "Contrats actifs",
+        "Taux de recouvrement"
+      ]
+    },
+    "process": {
+      "title": "Notre méthode",
+      "blurb": "Les mêmes quatre étapes pour chaque projet, quelle que soit sa taille.",
+      "body": "Vous voyez un logiciel fonctionnel toutes les deux semaines, les décisions sont écrites et une seule personne répond de tout le projet, du premier atelier au jour du lancement, et après.",
+      "steps": [
+        {
+          "title": "Découvrir",
+          "text": "Nous cartographions le problème, les utilisateurs et les contraintes avant d’écrire une ligne."
+        },
+        {
+          "title": "Concevoir",
+          "text": "Parcours, interfaces et architecture, revus avec vous, pas à votre place."
+        },
+        {
+          "title": "Construire",
+          "text": "Cycles courts, logiciel fonctionnel toutes les deux semaines, testé sur le terrain."
+        },
+        {
+          "title": "Exploiter",
+          "text": "Nous déployons, surveillons et supportons, et continuons d’améliorer."
+        }
+      ],
+      "cta": "Démarrer un projet"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions sur nos services",
+      "serviceTitle": "Questions : {service}"
+    },
+    "sub": {
+      "eyebrow": "Services · {n} / {total}",
+      "allServices": "Tous les services",
+      "talk": "Parlons-en",
+      "included": "Ce qui est inclus",
+      "includedBlurb": "Quatre engagements sur lesquels compter quand nous travaillons ensemble : {service}.",
+      "includedBody": "Chaque mission est cadrée par écrit, livrée par l’équipe qui en assurera le support et mesurée selon les chiffres ci-dessous.",
+      "related": "Réalisations liées",
+      "relatedBlurb": "Des projets où ce service a fait l’essentiel du travail.",
+      "viewCase": "Voir le projet",
+      "previous": "Service précédent",
+      "next": "Service suivant"
+    },
+    "projects": {
+      "macyepay": {
+        "tag": "Fintech · Produit édité",
+        "blurb": "Paiement échelonné pour les entreprises rwandaises, appuyé sur des contrats notariés, un recouvrement automatisé et l’intégration au bureau de crédit."
+      },
+      "clinic-hmis": {
+        "tag": "Systèmes · Santé",
+        "blurb": "Dossiers patients, pharmacie, facturation et demandes d’assurance dans un seul système de gestion hospitalière."
+      },
+      "retail-rollout": {
+        "tag": "Matériel · Distribution",
+        "blurb": "Terminaux de point de vente, réseau et support sur site pour un distributeur multi-agences."
+      }
+    }
+  }
+}

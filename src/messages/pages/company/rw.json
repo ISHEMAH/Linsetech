@@ -1,0 +1,616 @@
+{
+  "careersPage": {
+    "meta": {
+      "title": "Akazi",
+      "description": "Imyanya ifunguye muri Linse i Kigali, uko dutoranya abakozi n’uko wasaba."
+    },
+    "hero": {
+      "title": "Twubake ibintu bikora.",
+      "lead": "Turi ikipe nto ifite ibikorwa byinshi. Niba ukunda gutanga ibicuruzwa nyabyo ku bakoresha nyabo, tuvugane.",
+      "cta": "Reba imyanya"
+    },
+    "cards": {
+      "hire": {
+        "eyebrow": "Uko dutoranya",
+        "tag": "Intambwe 4",
+        "title": "Ikiganiro, umukoro, umunsi n’ikipe, igisubizo."
+      },
+      "roles": "Imyanya ifunguye",
+      "prev": "Ibanziriza",
+      "next": "Ikurikira",
+      "pause": "Hagarika guhinduranya",
+      "play": "Komeza guhinduranya"
+    },
+    "rail": {
+      "label": "Kuri uru rupapuro",
+      "roles": "Imyanya ifunguye",
+      "perks": "Ibyiza",
+      "hiring": "Uko dutoranya",
+      "life": "Ubuzima muri Linse",
+      "apply": "Saba"
+    },
+    "roles": {
+      "title": "Imyanya ifunguye",
+      "search": "Shakisha…",
+      "allTeams": "Amakipe yose",
+      "empty": "Nta mwanya uhuye n’ibyo washakishije. Ohereza ubusabe ku bushake.",
+      "view": "Reba umwanya"
+    },
+    "teams": {
+      "engineering": "Ubuhanga mu ikoranabuhanga",
+      "field": "Serivisi zo hanze",
+      "any": "Ikipe iyo ari yo yose"
+    },
+    "types": {
+      "fullTime": "Igihe cyose",
+      "open": "Burigihe birafunguye"
+    },
+    "role": {
+      "fullstack": {
+        "title": "Injeniyeri full-stack (Next.js / Node)",
+        "summary": "Uzubaka kandi ukurikirane porogaramu za web, portals na API abakiriya bacu bakoresha buri munsi, kuva ku gishushanyo cya mbere kugeza ku bufasha mu ikoreshwa.",
+        "do": [
+          "Kubaka ibikorwa ku mpande zose ukoresheje TypeScript, Next.js na Node",
+          "Gutegura imiterere y’amakuru na API hamwe n’ikipe",
+          "Gushyira mu ikoreshwa, gukurikirana no gukosora ibipfuye",
+          "Kuganira n’abakiriya ngo wumve ikibazo kiri inyuma y’icyifuzo"
+        ],
+        "bring": [
+          "Nibura imyaka ibiri wubaka porogaramu za web",
+          "Ubumenyi buhamye bwa TypeScript cyangwa JavaScript, SQL na Git",
+          "Kwita ku tuntu duto abakoresha babona",
+          "Kwandika neza Igifaransa cyangwa Icyongereza; Ikinyarwanda ni akarusho"
+        ]
+      },
+      "technician": {
+        "title": "Umutekinisiye wo hanze (ibikoresho n’imiyoboro)",
+        "summary": "Uzashyiraho, ufate neza kandi usane ibikoresho n’imiyoboro abakiriya bacu bishingikirizaho, i Kigali no mu gihugu hose.",
+        "do": [
+          "Gushyiraho no gutunganya mudasobwa, imashini zisohora impapuro n’ibikoresho by’imiyoboro",
+          "Gusuzuma no gusana ibikoresho aho biri no mu igaraje",
+          "Gukora gahunda zo kubungabunga ku bakiriya bafite amasezerano",
+          "Kwandika buri gikorwa muri help desk"
+        ],
+        "bring": [
+          "Uburambe mu gusana ibikoresho no mu miyoboro y’ibanze",
+          "Gukora kuri gahunda no gutuza imbere y’abakiriya",
+          "Kwemera gukora ingendo ujya ku bakiriya",
+          "Uruhushya rwo gutwara ni akarusho"
+        ]
+      },
+      "open": {
+        "title": "Ubusabe ku bushake",
+        "summary": "Nta mwanya ukubereye uyu munsi? Tubwire icyo ukora neza n’aho ushaka gutera imbere; tubika buri busabe.",
+        "do": [
+          "Tubwire ikipe wakwinjiramo: ikoranabuhanga, igishushanyo, serivisi zo hanze cyangwa ubucuruzi",
+          "Dusangize umurimo wishimira: code, ibishushanyo, imishinga cyangwa abakwemeza",
+          "Tubwire icyo ushaka kwiga ubutaha"
+        ],
+        "bring": [
+          "Amatsiko n’umuco wo kurangiza ibyo utangiye",
+          "Kubaha abantu bakoresha ibyo twubaka"
+        ]
+      }
+    },
+    "drawer": {
+      "heading": "Umwanya ufunguye",
+      "close": "Funga",
+      "about": "Ibyerekeye umwanya",
+      "do": "Ibyo uzakora",
+      "bring": "Ibyo usabwa",
+      "apply": "Saba",
+      "email": "Twandikire",
+      "note": "Ubusabe bwoherezwa ku ikipe ishinzwe gutoranya: {email}."
+    },
+    "perks": {
+      "title": "Kuki Linse",
+      "items": {
+        "products": {
+          "title": "Ibicuruzwa nyabyo",
+          "label": "Umusaruro",
+          "text": "Gutanga porogaramu ibigo bikoresha, no kuzibona zikoreshwa."
+        },
+        "scope": {
+          "title": "Ibikorwa byagutse",
+          "label": "Gukura",
+          "text": "Web, telefoni, sisitemu, ibikoresho: wige ku mpande zose."
+        },
+        "team": {
+          "title": "Ikipe nto",
+          "label": "Umuco",
+          "text": "Ibyemezo byihuse, kugera ku bakiriya no ku bashinze ikigo nta nkomyi."
+        },
+        "tools": {
+          "title": "Ibikoresho",
+          "label": "Ibikoresho",
+          "text": "Mudasobwa y’akazi, licences n’ingengo y’imari y’amahugurwa."
+        }
+      }
+    },
+    "hiring": {
+      "title": "Uko dutoranya",
+      "steps": {
+        "apply": {
+          "title": "Saba",
+          "text": "Ohereza CV cyangwa portfolio n’amagambo make ku byo ushaka gukora."
+        },
+        "call": {
+          "title": "Ikiganiro cya mbere",
+          "text": "Iminota mirongo itatu n’ushinzwe gutoranya: umwanya, ikipe n’ibibazo byawe."
+        },
+        "task": {
+          "title": "Umukoro ngiro",
+          "text": "Umukoro muto wegereye akazi nyako, hanyuma tuwusuzumira hamwe."
+        },
+        "team": {
+          "title": "Umunsi n’ikipe n’igisubizo",
+          "text": "Hura n’abo muzakorana, hanyuma ubone igisubizo gisobanutse."
+        }
+      }
+    },
+    "life": {
+      "title": "Ubuzima muri Linse",
+      "statement": "Abenjeniyeri, abashushanya, abatekinisiye n’abacuruzi basangiye abakiriya bamwe n’icyumba kimwe i Kigali. Ikibazo kinyura ku meza imwe, si mu mashami atanu.",
+      "photos": "Amafoto aracyaza",
+      "tiles": {
+        "engineering": "Ikoranabuhanga",
+        "design": "Igishushanyo",
+        "field": "Serivisi zo hanze",
+        "sales": "Ubucuruzi n’ibikoresho"
+      }
+    },
+    "apply": {
+      "title": "Saba",
+      "careers": {
+        "title": "Akazi",
+        "who": "Ikipe ishinzwe gutoranya",
+        "text": "CV yawe, portfolio cyangwa GitHub, n’umwanya usaba.",
+        "cta": "Twandikire"
+      },
+      "open": {
+        "title": "Ubusabe ku bushake",
+        "who": "Ikipe iyo ari yo yose",
+        "text": "Nta mwanya ukubereye? Tubwire icyo ukora neza n’aho ushaka gutera imbere.",
+        "cta": "Twandikire"
+      },
+      "office": {
+        "title": "Ibiro",
+        "cta": "Inzira"
+      }
+    },
+    "band": {
+      "symbol": "Kuki Linse",
+      "asOf": "Ikipe nto, ibikorwa byagutse · Ukwakira 2026",
+      "card": {
+        "label": "Imyanya ifunguye",
+        "note": "+ ubusabe ku bushake, burigihe"
+      },
+      "facts": [
+        {
+          "label": "Amakipe",
+          "value": "4"
+        },
+        {
+          "label": "Intambwe zo gutoranya",
+          "value": "4"
+        },
+        {
+          "label": "Ibiro",
+          "value": "Kigali"
+        },
+        {
+          "label": "Amasezerano",
+          "value": "Igihe cyose"
+        },
+        {
+          "label": "Ibyo dukora",
+          "value": "Porogaramu · Ibikoresho · IT"
+        },
+        {
+          "label": "Indimi",
+          "value": "EN · FR · RW"
+        },
+        {
+          "label": "Akazi ko hanze",
+          "value": "Igihugu cyose"
+        },
+        {
+          "label": "Ubusabe",
+          "value": "careers@linsetech.com"
+        }
+      ]
+    }
+  },
+  "supportPage": {
+    "meta": {
+      "title": "Ubufasha",
+      "description": "Ishami ry’ubufasha, igihe cyo gusubiza, ubufasha bwa kure n’ibyo gukuramo kuri porogaramu, sisitemu n’ibikoresho bya Linse."
+    },
+    "hero": {
+      "title": "Turahari igihe bikenewe.",
+      "lead": "Ishami ry’ubufasha ku porogaramu dusohora, sisitemu dufasha n’ibikoresho dutanga.",
+      "cta": "Saba ubufasha"
+    },
+    "cards": {
+      "hours": {
+        "eyebrow": "Amasaha y’ubufasha",
+        "tag": "Kuwa 1–6",
+        "title": "Kuwa 1–5 08:00–18:00, Kuwa 6 09:00–13:00"
+      },
+      "slider": "Umurongo w’ibyihutirwa",
+      "emergency": {
+        "eyebrow": "Bikomeye (P1)",
+        "tag": "Munsi y’isaha 1",
+        "title": "Sisitemu yahagaze? Hamagara help desk: {phone}"
+      },
+      "remote": {
+        "eyebrow": "Ubufasha bwa kure",
+        "tag": "Ubisabye",
+        "title": "Umutekinisiye akosora ikibazo kuri ecran yawe ureba."
+      },
+      "prev": "Ibanziriza",
+      "next": "Ikurikira",
+      "pause": "Hagarika guhinduranya",
+      "play": "Komeza guhinduranya"
+    },
+    "rail": {
+      "label": "Kuri uru rupapuro",
+      "channels": "Inzira",
+      "sla": "SLA",
+      "remote": "Ubufasha bwa kure",
+      "downloads": "Ibyo gukuramo",
+      "contacts": "Aho mwatubariza",
+      "faq": "Ibibazo"
+    },
+    "channels": {
+      "title": "Inzira",
+      "items": {
+        "desk": {
+          "chip": "Imeyili",
+          "title": "Ishami ry’ubufasha: {value}",
+          "text": "Tickets zikurikiranwa hakurikijwe SLA"
+        },
+        "phone": {
+          "chip": "Telefoni",
+          "title": "Telefoni na WhatsApp: {value}",
+          "text": "Kuwa 1–5 08:00–18:00, Kuwa 6 09:00–13:00"
+        },
+        "remote": {
+          "chip": "Kure",
+          "title": "Ubufasha bwa kure",
+          "text": "Gusangira ecran n’umutekinisiye, ubisabye"
+        },
+        "onsite": {
+          "chip": "Aho muri",
+          "title": "Gusura i Kigali no mu gihugu hose",
+          "text": "Biteganyijwe cyangwa byihutirwa, ku masezerano"
+        }
+      }
+    },
+    "sla": {
+      "title": "Urwego rwa serivisi",
+      "cols": {
+        "priority": "Icyihutirwa",
+        "example": "Urugero",
+        "response": "Igisubizo cya mbere",
+        "resolution": "Igihe cyo gukemura"
+      },
+      "rows": {
+        "p1": {
+          "level": "Bikomeye",
+          "example": "Sisitemu yahagaze, nta yindi nzira",
+          "response": "< isaha 1",
+          "resolution": "Amasaha 4"
+        },
+        "p2": {
+          "level": "Byihutirwa",
+          "example": "Igikorwa cy’ingenzi cyanze, hari indi nzira",
+          "response": "Amasaha 4",
+          "resolution": "Umunsi 1 w’akazi"
+        },
+        "p3": {
+          "level": "Bisanzwe",
+          "example": "Ibibazo, utubazo duto n’ibyifuzo",
+          "response": "Umunsi 1 w’akazi",
+          "resolution": "Iminsi 3 y’akazi"
+        }
+      },
+      "note": "Izi ntego zireba abakiriya bafite amasezerano y’ubufasha kandi zibarwa mu masaha y’ubufasha."
+    },
+    "remote": {
+      "title": "Ubufasha bwa kure",
+      "lead": "Ibibazo byinshi bikemuka nta gusura. Ubyemeye, umutekinisiye yinjira muri mudasobwa yawe, akwereka ibyo akora kandi agasohoka iyo akazi karangiye.",
+      "steps": {
+        "call": {
+          "title": "Hamagara cyangwa ufungure ticket",
+          "text": "Sobanura ikibazo; tukubwira niba ubufasha bwa kure bukwiye."
+        },
+        "tool": {
+          "title": "Fungura porogaramu y’ubufasha",
+          "text": "Tubwire kode igaragara kuri ecran yawe."
+        },
+        "fix": {
+          "title": "Kurikira ikosorwa",
+          "text": "Ushobora guhagarika igihe icyo ari cyo cyose."
+        }
+      },
+      "tool": {
+        "eyebrow": "Porogaramu y’ubufasha bwa kure",
+        "tag": "Iraje vuba",
+        "title": "Linse Quick Support ya Windows na macOS"
+      },
+      "cta": "Saba ubufasha bwa kure"
+    },
+    "downloads": {
+      "title": "Ibyo gukuramo",
+      "note": "Amadosiye y’agateganyo: inyandiko za nyuma zizashyirwa hano.",
+      "soon": "Iraje vuba",
+      "items": {
+        "winTool": "Porogaramu y’ubufasha bwa kure ya Windows",
+        "macTool": "Porogaramu y’ubufasha bwa kure ya macOS",
+        "handbook": "Igitabo cy’ubufasha",
+        "slaTerms": "Amasezerano y’urwego rwa serivisi (icyitegererezo)",
+        "warranty": "Garanti n’isubizwa ry’ibikoresho",
+        "onboarding": "Urutonde rwo gutangiza igikoresho gishya",
+        "macyepay": "Intangiriro yihuse ya MacyePay ku bacuruzi",
+        "inventory": "Icyitegererezo cy’ibarura ry’imiyoboro"
+      },
+      "download": "Kuramo"
+    },
+    "pager": {
+      "first": "Intangiriro",
+      "prev": "Ibanziriza",
+      "next": "Ikurikira",
+      "last": "Iherezo"
+    },
+    "contacts": {
+      "title": "Abandi mwavugana",
+      "support": {
+        "title": "Ubufasha",
+        "who": "Ishami ry’ubufasha rya Linse",
+        "text": "Tickets, ibibazo n’ibyerekeye sisitemu tugucungira.",
+        "cta": "Imeyili"
+      },
+      "sales": {
+        "title": "Ubucuruzi",
+        "who": "Imishinga mishya n’ibikoresho",
+        "text": "Ibiciro, gutumiza ibikoresho, licences n’imishinga mishya.",
+        "cta": "Imeyili"
+      },
+      "accounts": {
+        "title": "Ibaruramari",
+        "who": "Inyemezabuguzi",
+        "text": "Inyemezabuguzi, amasezerano n’ubwishyu.",
+        "cta": "Imeyili"
+      },
+      "press": {
+        "title": "Itangazamakuru",
+        "media": "Ibibazo by’itangazamakuru"
+      }
+    },
+    "faq": {
+      "title": "Ibibazo bikunze kubazwa",
+      "more": "Biracyanga?",
+      "reach": "Twandikire",
+      "items": [
+        {
+          "q": "Amasezerano y’ubufasha akubiyemo iki?",
+          "a": "Sisitemu, porogaramu n’ibikoresho byanditse mu masezerano yawe: kugera kuri help desk, igihe cyo gusubiza kiri hejuru, kubungabunga no gusura aho biteganyijwe."
+        },
+        {
+          "q": "Nafungura ticket nte?",
+          "a": "Andikira help desk cyangwa uduhamagare mu masaha y’ubufasha. Tanga izina ry’ikigo, icyabaye n’uko byihutirwa; uhabwa nomero ya ticket."
+        },
+        {
+          "q": "Mufasha ku bikoresho mutatanze?",
+          "a": "Akenshi yego. Tubanza gusuzuma igikoresho tukakubwira icyo dushobora gufasha n’igiciro mbere y’uko akazi gatangira."
+        },
+        {
+          "q": "Mushobora kuza hanze ya Kigali?",
+          "a": "Yego, mu gihugu hose. Gusura hanze ya Kigali biteganywa nawe mbere; urugendo rubarwa ukwarwo keretse rubarirwa mu masezerano yawe."
+        },
+        {
+          "q": "Ubufasha bwa kure bufite umutekano?",
+          "a": "Igihe gitangira ari uko utanze kode igaragara kuri ecran yawe, ubona ibyo umutekinisiye akora byose, kandi ushobora guhagarika igihe icyo ari cyo cyose."
+        }
+      ]
+    },
+    "band": {
+      "symbol": "Amasaha y’ubufasha",
+      "asOf": "Isaha ya Kigali, CAT (UTC+2) · Ukwakira 2026",
+      "card": {
+        "label": "Ibibazo bikomeye",
+        "value": "< isaha 1",
+        "note": "Igisubizo cya mbere ku masezerano (P1)"
+      },
+      "facts": [
+        {
+          "label": "Kuwa 1–5",
+          "value": "08:00–18:00"
+        },
+        {
+          "label": "Kuwa 6",
+          "value": "09:00–13:00"
+        },
+        {
+          "label": "Inzira",
+          "value": "4"
+        },
+        {
+          "label": "Aho muri",
+          "value": "Igihugu cyose"
+        },
+        {
+          "label": "Gukemura P1",
+          "value": "Amasaha 4"
+        },
+        {
+          "label": "Igisubizo P2",
+          "value": "Amasaha 4"
+        },
+        {
+          "label": "Igisubizo P3",
+          "value": "Umunsi 1 w’akazi"
+        },
+        {
+          "label": "Ishami ry’ubufasha",
+          "value": "support@linsetech.com"
+        }
+      ]
+    }
+  },
+  "legalPage": {
+    "privacy": {
+      "meta": {
+        "title": "Politiki y’ibanga",
+        "description": "Uko Linse ikusanya, ikoresha kandi irinda amakuru bwite (imbanzirizamushinga)."
+      },
+      "title": "Politiki y’ibanga",
+      "intro": {
+        "heading": "Ibanga ryawe rifite agaciro kuri twe.",
+        "body": [
+          "Inyandiko y’agateganyo. Politiki y’ibanga izatangwa kandi ihindurirwe muri Studio.",
+          "Urutonde rukurikira rugaragaza ibice politiki ya nyuma izaba ikubiyemo. Mbere y’uko isohoka, ibibazo ku makuru bwite byoherezwa kuri {email}."
+        ]
+      },
+      "sections": [
+        {
+          "title": "Abo turi bo",
+          "body": [
+            "Iki gice kizagaragaza Linsetech Ltd (“Linse”), Kigali, u Rwanda, nk’ishinzwe amakuru bwite akusanywa binyuze kuri uru rubuga, n’uko wayigeraho."
+          ]
+        },
+        {
+          "title": "Amakuru dukusanya",
+          "body": [
+            "Iki gice kizerekana amakuru dukusanya: ayo wohereza ukoresheje ifishi (izina, imeyili, ikigo n’ubutumwa) n’amakuru y’ikoranabuhanga nk’impapuro wasuye n’ubwoko bw’igikoresho."
+          ]
+        },
+        {
+          "title": "Uko dukoresha amakuru",
+          "body": [
+            "Iki gice kizasobanura impamvu tuyakoresha: gusubiza ibibazo, gutanga serivisi ku masezerano, kunoza urubuga no kubahiriza amategeko."
+          ]
+        },
+        {
+          "title": "Gusangiza abandi",
+          "body": [
+            "Iki gice kizavuga ubwoko bw’abatanga serivisi badufasha gukoresha urubuga na serivisi zacu, n’igihe amategeko adusaba gutanga amakuru."
+          ]
+        },
+        {
+          "title": "Igihe tubika amakuru",
+          "body": [
+            "Iki gice kizagaragaza igihe buri bwoko bw’amakuru bubikwa n’uko busibwa."
+          ]
+        },
+        {
+          "title": "Umutekano",
+          "body": [
+            "Iki gice kizasobanura ingamba dufata mu kurinda amakuru kubura cyangwa kugerwaho n’abatabyemerewe."
+          ]
+        },
+        {
+          "title": "Uburenganzira bwawe",
+          "body": [
+            "Iki gice kizasobanura uko wabona amakuru yawe, uko wayakosora cyangwa ukayasiba, uko wanga ikoreshwa ryayo n’uko watanga ikirego ku rwego rubishinzwe mu Rwanda."
+          ]
+        },
+        {
+          "title": "Cookies",
+          "body": [
+            "Iki gice kizerekana cookies n’ikoranabuhanga risa nazo bikoreshwa kuri uru rubuga n’uko wabigenzura."
+          ]
+        },
+        {
+          "title": "Impinduka kuri iyi politiki",
+          "body": [
+            "Iki gice kizasobanura uko impinduka zitangazwa n’igihe zitangira gukurikizwa."
+          ]
+        },
+        {
+          "title": "Twandikire",
+          "body": [
+            "Ibibazo kuri iyi politiki: {email}."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "meta": {
+        "title": "Amabwiriza y’ikoreshwa",
+        "description": "Amabwiriza agenga urubuga rwa Linse (imbanzirizamushinga)."
+      },
+      "title": "Amabwiriza y’ikoreshwa",
+      "intro": {
+        "heading": "Turagusaba gusoma aya mabwiriza witonze.",
+        "body": [
+          "Inyandiko y’agateganyo. Amabwiriza y’ikoreshwa azatangwa kandi ahindurirwe muri Studio.",
+          "Urutonde rukurikira rugaragaza ibice amabwiriza ya nyuma azaba akubiyemo. Mbere y’uko asohoka, ibibazo byoherezwa kuri {email}."
+        ]
+      },
+      "sections": [
+        {
+          "title": "Kwemera",
+          "body": [
+            "Iki gice kizasobanura ko gukoresha uru rubuga bivuze kwemera aya mabwiriza."
+          ]
+        },
+        {
+          "title": "Ikoreshwa ry’urubuga",
+          "body": [
+            "Iki gice kizagaragaza ikoreshwa ryemewe: nta gukoresha nabi, nta kugerageza guhungabanya urubuga cyangwa kwinjira muri sisitemu zacu nta ruhushya."
+          ]
+        },
+        {
+          "title": "Serivisi n’ibiciro",
+          "body": [
+            "Iki gice kizasobanura ko imishinga, ibicuruzwa n’igurisha ry’ibikoresho bigengwa n’amasezerano yanditse n’inyemezabiciro byihariye."
+          ]
+        },
+        {
+          "title": "Umutungo bwite mu by’ubwenge",
+          "body": [
+            "Iki gice kizagaragaza nyir’ibikubiye ku rubuga, ikirango na porogaramu zigaragara kuri uru rubuga."
+          ]
+        },
+        {
+          "title": "Imiyoboro y’izindi mbuga",
+          "body": [
+            "Iki gice kizavuga ku miyoboro ijya ku zindi mbuga tutagenzura."
+          ]
+        },
+        {
+          "title": "Itangazo",
+          "body": [
+            "Iki gice kizasobanura ko amakuru ari ku rubuga atangwa muri rusange kandi ashobora guhinduka."
+          ]
+        },
+        {
+          "title": "Imbibi z’uburyozwe",
+          "body": [
+            "Iki gice kizagaragaza imbibi z’uburyozwe bwacu ku ikoreshwa ry’uru rubuga."
+          ]
+        },
+        {
+          "title": "Amategeko akurikizwa",
+          "body": [
+            "Iki gice kizagaragaza amategeko agenga aya mabwiriza n’inkiko zikemura amakimbirane."
+          ]
+        },
+        {
+          "title": "Impinduka ku mabwiriza",
+          "body": [
+            "Iki gice kizasobanura uko n’igihe aya mabwiriza ashobora kuvugururwa."
+          ]
+        },
+        {
+          "title": "Twandikire",
+          "body": [
+            "Ibibazo kuri aya mabwiriza: {email}."
+          ]
+        }
+      ]
+    }
+  }
+}

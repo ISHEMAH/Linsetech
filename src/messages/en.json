@@ -1,0 +1,480 @@
+{
+  "meta": {
+    "title": "Linse — Software, systems and hardware",
+    "description": "Linse designs, builds and owns software, integrates systems and distributes hardware — all IT activities, engineered in Rwanda."
+  },
+  "cookies": {
+    "label": "Cookie notice",
+    "text": "This website uses cookies to improve your experience. By continuing to browse the site you agree to our",
+    "link": "Privacy policy",
+    "close": "Close the cookie notice"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "services": "Services",
+    "news": "News",
+    "careers": "Careers",
+    "support": "Support",
+    "cta": "Start a project",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "Language",
+    "contact": "Contact",
+    "homeLabel": "Linse — home",
+    "primary": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "pagination": "Pagination"
+  },
+  "chapters": {
+    "kicker": "Chapter",
+    "welcome": "Welcome",
+    "about": "About",
+    "services": "Services",
+    "stack": "The stack",
+    "work": "Work",
+    "numbers": "Numbers",
+    "process": "Process",
+    "products": "Products",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Software · Systems · Hardware",
+    "title": "Everything IT, under one roof.",
+    "sub": "Linse designs and builds software, publishes its own products, supplies business-grade hardware and keeps it all running — from Kigali, for Africa.",
+    "cta1": "See our work",
+    "cta2": "Start a project",
+    "latest": "Latest",
+    "scroll": "Scroll",
+    "proudly": "Publisher of",
+    "news": "Company news"
+  },
+  "statement": {
+    "text": "We design, build and own the software your business runs on, and we deliver the hardware to run it.",
+    "highlights": "design,build,own,hardware"
+  },
+  "whatWeDo": {
+    "eyebrow": "What we do",
+    "title": "Everything IT, under one roof.",
+    "explore": "Explore",
+    "items": {
+      "design": {
+        "title": "Design",
+        "blurb": "Brand, UX and UI for products people actually enjoy using."
+      },
+      "web": {
+        "title": "Websites & apps",
+        "blurb": "Fast, accessible websites and mobile apps on modern stacks."
+      },
+      "systems": {
+        "title": "Systems & integration",
+        "blurb": "ERP, HMIS, payments and custom platforms that talk to each other."
+      },
+      "software": {
+        "title": "Software we publish",
+        "blurb": "Products we build, own and operate, like MacyePay."
+      },
+      "hardware": {
+        "title": "Hardware & distribution",
+        "blurb": "Laptops, servers, networking and devices: sourced, delivered, supported."
+      },
+      "it": {
+        "title": "IT services",
+        "blurb": "Support, networks, cloud and security for teams of any size."
+      }
+    }
+  },
+  "stack": {
+    "eyebrow": "The stack",
+    "title": "The Stack for Running a Business",
+    "rows": {
+      "build": {
+        "title": "Built by People Who Ship",
+        "blurb": "Websites, apps and systems designed and engineered to your brief by a team that has shipped products of its own.",
+        "eyebrow": "Software"
+      },
+      "own": {
+        "title": "Software We Own",
+        "blurb": "We invest in our own platforms, such as MacyePay, and license them to the market, so our roadmap is driven by real users.",
+        "eyebrow": "Products"
+      },
+      "supply": {
+        "title": "Devices, Delivered",
+        "blurb": "We source and distribute business-grade laptops, servers and networking from trusted brands, nationwide, with local warranty.",
+        "eyebrow": "Hardware"
+      },
+      "support": {
+        "title": "Run, Monitored, Supported",
+        "blurb": "We operate, monitor and support what we ship, and what you already have, under one contract with agreed response times.",
+        "eyebrow": "Services"
+      }
+    }
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "Products that are live, in use, today.",
+    "all": "See all work",
+    "view": "View project",
+    "client": "Client",
+    "category": "Category",
+    "result": "Result",
+    "year": "Year",
+    "award": {
+      "headline": "We built and run MacyePay,\nthe installment platform behind\n[RWF 500M+] in payments",
+      "kicker": "What is MacyePay?",
+      "explainer": "Installment payments for Rwandan businesses. Every plan is a notary-verified agreement; reminders, penalties and escalation run automatically, and payment history builds each customer's trust score.",
+      "facts": [
+        {
+          "label": "Recovery rate",
+          "value": "98%"
+        },
+        {
+          "label": "Agreements",
+          "value": "5,000+"
+        },
+        {
+          "label": "Businesses",
+          "value": "200+"
+        }
+      ],
+      "cta": "See MacyePay"
+    },
+    "tiles": [
+      "Hardware",
+      "Engineering",
+      "Architecture",
+      "Data",
+      "Networks",
+      "Monitoring",
+      "Automation",
+      "Support",
+      "Interfaces",
+      "Infrastructure",
+      "Security",
+      "Launch"
+    ]
+  },
+  "numbers": {
+    "eyebrow": "Numbers",
+    "title": "Built to run.",
+    "items": {
+      "projects": "Projects shipped",
+      "products": "Products we own",
+      "devices": "Devices distributed",
+      "uptime": "Uptime, last 12 months"
+    }
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "From idea to something that runs.",
+    "intro": "We check every step ourselves, and ship one working system at a time.",
+    "outro": "The details\nmake the product.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "blurb": "We map the problem, the users and the constraints before writing a line.",
+        "line": "One clear problem.",
+        "log": [
+          "> discover — users, data, constraints",
+          "interviews → one clear problem",
+          "out — scope and success measures"
+        ]
+      },
+      "design": {
+        "title": "Design",
+        "blurb": "Flows, interfaces and architecture, reviewed with you, not for you.",
+        "line": "A plan you can see.",
+        "log": [
+          "> design — flows, screens, architecture",
+          "sketch → review → refine",
+          "out — a plan you signed off"
+        ]
+      },
+      "build": {
+        "title": "Build",
+        "blurb": "Short cycles, working software every two weeks, tested in the field.",
+        "line": "Software that works.",
+        "log": [
+          "> build — two-week cycles",
+          "code → test → ship",
+          "out — software running in the field"
+        ]
+      },
+      "run": {
+        "title": "Run",
+        "blurb": "We deploy, monitor and support, and keep improving.",
+        "line": "Running, and improving.",
+        "log": [
+          "> run — deploy, monitor, support",
+          "watch → learn → improve",
+          "out — a system that keeps running"
+        ]
+      }
+    }
+  },
+  "products": {
+    "eyebrow": "Products & hardware",
+    "softwareTitle": "Software we publish",
+    "softwareBlurb": "Platforms we build, own and operate for the market.",
+    "hardwareTitle": "Hardware we distribute",
+    "hardwareBlurb": "Authorised supply of business-grade devices, with warranty and on-site support.",
+    "catalogue": "Request the catalogue",
+    "learn": "Learn more"
+  },
+  "partners": {
+    "eyebrow": "Partners",
+    "title": "Partnered with the best."
+  },
+  "news": {
+    "eyebrow": "Insights from the blog",
+    "title": "Latest News",
+    "all": "Visit our blog",
+    "read": "Read",
+    "minRead": "{min} min read",
+    "readMore": "Read more",
+    "prev": "Previous slide",
+    "next": "Next slide"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions, answered.",
+    "items": [
+      {
+        "q": "How do we start a project with Linse?",
+        "a": "Send us a short brief through “Start a project”. We reply within two working days with questions, then a scoped proposal with timeline and price."
+      },
+      {
+        "q": "Do you maintain the systems you build?",
+        "a": "Yes. Every build comes with a support option: monitoring, updates, hosting and a help desk with agreed response times."
+      },
+      {
+        "q": "Do you deliver hardware nationwide?",
+        "a": "Yes. We deliver and install across Rwanda, and ship to the region on request. Warranty is handled by us, locally."
+      },
+      {
+        "q": "Can you work with our existing software?",
+        "a": "That is most of what we do: integrating ERP, HMIS, payment and government systems so they share data reliably."
+      },
+      {
+        "q": "Do you license your own products?",
+        "a": "Yes. Products we publish, such as MacyePay, are available under licence or as a managed service."
+      },
+      {
+        "q": "Where are you based?",
+        "a": "Kigali, Rwanda. We work with clients across East Africa and remotely."
+      }
+    ],
+    "more": "Got more questions?",
+    "reach": "Reach us"
+  },
+  "cta": {
+    "title": "Your next system, with Linse.",
+    "sub": "Tell us what you need to build, buy or fix.",
+    "button": "Start a project"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Stay in the loop",
+      "placeholder": "Your email",
+      "button": "Subscribe",
+      "note": "Product news and insights, about once a month.",
+      "done": "Thanks, you are on the list."
+    },
+    "columns": {
+      "navigate": "Navigate",
+      "company": "Company",
+      "social": "Social"
+    },
+    "company": {
+      "contact": "Contact",
+      "careers": "Careers",
+      "partners": "Partners",
+      "support": "Support"
+    },
+    "legal": {
+      "rights": "© {year} Linsetech Ltd. All rights reserved.",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "top": "Back to top",
+      "address": "Kigali, Rwanda"
+    }
+  },
+  "contact": {
+    "title": "Start a project",
+    "sub": "Tell us a little about what you need. We reply within two working days.",
+    "name": "Your name",
+    "email": "Work email",
+    "company": "Company",
+    "need": "What do you need?",
+    "needs": {
+      "build": "Build software",
+      "buy": "Buy hardware",
+      "support": "IT support",
+      "other": "Something else",
+      "careers": "Job application"
+    },
+    "message": "A few lines about the project",
+    "send": "Send",
+    "sent": "Thanks, we have your brief. We will be in touch shortly.",
+    "later": "Online delivery is unavailable right now, so your message has not reached us. Please write to us at <link>{email}</link>.",
+    "cvUrl": "CV or portfolio link (optional)",
+    "careers": {
+      "title": "Apply to Linse",
+      "sub": "Tell us about yourself and add a link to your CV or portfolio. We read every application.",
+      "role": "Role",
+      "email": "Email",
+      "message": "A few lines about you",
+      "sent": "Thanks, we have your application. The hiring team will get back to you."
+    }
+  },
+  "pages": {
+    "about": {
+      "eyebrow": "About",
+      "title": "Building the digital backbone of growing businesses.",
+      "sub": "Linse is a Kigali-based technology company. We design and build software, publish our own products, distribute hardware and run IT for organisations that need all of it to work together.",
+      "cta1": "Our work",
+      "cta2": "Contact",
+      "story": "Our story",
+      "pillars": "What we are",
+      "rail": {
+        "leadership": "Leadership",
+        "team": "Team",
+        "partners": "Partners & certifications",
+        "documents": "Company documents",
+        "contacts": "Contacts"
+      },
+      "timeline": "Milestones",
+      "join": "Work with us"
+    },
+    "work": {
+      "eyebrow": "Work",
+      "title": "Selected work",
+      "sub": "Products and systems we have designed, built and shipped.",
+      "filter": "Filter",
+      "all": "All",
+      "archive": "Archive",
+      "next": "Next project",
+      "prev": "Previous project",
+      "scope": "Scope",
+      "period": "Period",
+      "role": "Role",
+      "stack": "Stack",
+      "delivered": "What we delivered",
+      "screens": "Screens",
+      "journey": "How a user journey goes",
+      "engineering": "Key engineering",
+      "comingSoon": "Case study in preparation"
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Everything IT, under one roof.",
+      "sub": "Six services, one team, one point of contact.",
+      "related": "Related work",
+      "models": "Engagement models",
+      "talk": "Talk to us",
+      "allServices": "All services"
+    },
+    "news": {
+      "eyebrow": "News & insights",
+      "title": "News & insights",
+      "featured": "Featured",
+      "recent": "Most recent",
+      "all": "All posts",
+      "press": "Press releases",
+      "search": "Search",
+      "back": "All news",
+      "share": "Share",
+      "related": "Related",
+      "download": "Download PDF",
+      "contents": "Contents",
+      "categories": {
+        "company": "Company",
+        "product": "Product",
+        "hardware": "Hardware",
+        "insights": "Insights",
+        "press": "Press"
+      }
+    },
+    "careers": {
+      "eyebrow": "Careers",
+      "title": "Build things that run.",
+      "sub": "We are a small team with a wide scope. If you like shipping real products for real users, let us talk.",
+      "open": "Open roles",
+      "none": "No open roles right now. Send a spontaneous application to careers@linsetech.com.",
+      "apply": "Apply",
+      "perks": "Why Linse"
+    },
+    "support": {
+      "eyebrow": "Support",
+      "title": "We are here when it matters.",
+      "sub": "Help desk for software we publish, systems we maintain and hardware we supply.",
+      "channels": "Channels",
+      "hours": "Hours",
+      "sla": "Response times",
+      "status": "System status",
+      "operational": "All systems operational"
+    }
+  },
+  "productivity": {
+    "eyebrow": "Products",
+    "title": "Software We Publish",
+    "desc": "MacyePay is the first platform we built, own and operate: installment payments for Rwandan businesses, backed by notarised agreements and automated recovery. More products are in development.",
+    "chart": "Recovery rate",
+    "chartSub": "Active agreements, trailing 12 months",
+    "cta": "See the case study",
+    "stats": {
+      "processed": "Transactions processed",
+      "agreements": "Active agreements",
+      "businesses": "Registered businesses",
+      "recovery": "Recovery rate"
+    },
+    "cards": {
+      "agreements": "5,000+ active agreements",
+      "businesses": "200+ registered businesses",
+      "recovery": "Notarised agreements, automated recovery"
+    }
+  },
+  "banner": {
+    "title": "Built in Kigali, Engineered to Run.",
+    "cta1": "Our services",
+    "cta2": "Start a project"
+  },
+  "opportunity": {
+    "eyebrow": "Our services",
+    "statement": "Software that fits, hardware that lasts and support that answers. We build all three, so they work as one.",
+    "cta": "All services"
+  },
+  "seo": {
+    "skipToContent": "Skip to content",
+    "ogTitle": "Software, systems and hardware, engineered in Rwanda",
+    "error": {
+      "eyebrow": "Error",
+      "title": "Something went wrong",
+      "text": "This page could not be displayed. Try again, or go back to the home page.",
+      "retry": "Try again",
+      "home": "Return home",
+      "reference": "Error reference: {digest}"
+    }
+  },
+  "forms": {
+    "sending": "Sending…",
+    "loading": "Loading...",
+    "retry": "Try again",
+    "error": "Something went wrong and nothing was sent. Try again, or write to us at <link>{email}</link>.",
+    "limited": "Too many attempts from your connection. Wait a few minutes and try again, or write to us at <link>{email}</link>.",
+    "errors": {
+      "required": "Please fill in this field.",
+      "email": "Enter a complete email address, like name@company.com.",
+      "tooLong": "Too long: {max} characters at most.",
+      "url": "Enter a full web address, like https://…",
+      "invalid": "Choose one of the options."
+    },
+    "newsletter": {
+      "later": "We could not add you automatically. Write to <link>{email}</link> to join the list.",
+      "error": "Something went wrong. Please try again.",
+      "limited": "Too many attempts. Try again in a few minutes."
+    }
+  }
+}

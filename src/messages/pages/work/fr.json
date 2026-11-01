@@ -1,0 +1,306 @@
+{
+  "workPage": {
+    "meta": {
+      "title": "Réalisations",
+      "description": "Les produits et systèmes conçus, développés et livrés par Linse : nos logiciels, des systèmes pour nos clients et le matériel que nous fournissons."
+    },
+    "chapter": "Réalisations",
+    "index": {
+      "label": "Réalisations",
+      "title": "Des produits en ligne, utilisés, aujourd’hui.",
+      "highlight": "ligne,",
+      "kicker": "À propos de ces projets",
+      "about": "Des logiciels que nous publions et exploitons nous-mêmes, des systèmes conçus pour nos clients et du matériel que nous livrons et maintenons. Faites défiler les projets, puis ouvrez-en un pour l’étude de cas complète.",
+      "factProjects": "Projets",
+      "factFields": "Domaines",
+      "factFlagship": "Projet phare",
+      "browse": "Voir l’archive",
+      "scroll": "Défiler"
+    },
+    "cursor": "Voir le projet",
+    "archive": {
+      "label": "Archive",
+      "title": "Tous les projets",
+      "sub": "Filtrez par domaine et ouvrez un projet pour l’étude de cas complète.",
+      "all": "Tous",
+      "filter": "Filtrer par domaine",
+      "project": "Projet",
+      "client": "Client",
+      "category": "Domaine",
+      "year": "Année",
+      "sample": "Exemple",
+      "empty": "Aucun projet dans ce domaine pour le moment.",
+      "count": "{count, plural, one {# projet} other {# projets}}"
+    },
+    "categories": {
+      "software": "Logiciel",
+      "web": "Web",
+      "systems": "Systèmes",
+      "design": "Design",
+      "hardware": "Matériel"
+    },
+    "case": {
+      "selectedWork": "Réalisation",
+      "client": "Client",
+      "where": "Où",
+      "when": "Quand",
+      "part": "Notre rôle",
+      "sample": "Projet exemple",
+      "inPreparation": "Étude de cas en préparation",
+      "live": "En ligne",
+      "visit": "Visiter {host}",
+      "deliveredLabel": "Livré",
+      "deliveredTitle": "Ce que nous avons livré",
+      "recorded": "Écrans tirés du produit lui-même",
+      "sampleScreens": "Écrans d’exemple en attendant l’étude de cas réelle",
+      "comingSoon": "Écran à venir",
+      "screens": "Écrans",
+      "screensTitle": "Écran par écran",
+      "app": "Mobile",
+      "journeyLabel": "Parcours",
+      "journeyTitle": "Le parcours d’un utilisateur",
+      "systemLabel": "Système",
+      "systemTitle": "Ingénierie clé",
+      "stack": "Technologies",
+      "previous": "Projet précédent",
+      "next": "Projet suivant",
+      "nextSection": "Section suivante",
+      "archiveName": "Toutes les réalisations",
+      "archiveMeta": "Archive",
+      "more": "Autres projets",
+      "open": "Ouvrir l’écran",
+      "close": "Fermer",
+      "previousScreen": "Écran précédent",
+      "nextScreen": "Écran suivant"
+    },
+    "content": {
+      "macyepay": {
+        "place": "Kigali, Rwanda · commerçants dans tout le pays",
+        "tag": "Fintech · Produit publié",
+        "blurb": "Le paiement échelonné pour les entreprises rwandaises, garanti par des contrats notariés, un recouvrement automatisé et l’intégration au bureau de crédit.",
+        "summary": "MacyePay permet aux commerçants et aux prêteurs de vendre à crédit sans renoncer à leurs revenus. Chaque plan est un contrat juridiquement contraignant, vérifié par un notaire ; rappels, pénalités et relances s’exécutent automatiquement ; et l’historique de paiement construit un score de confiance pour chaque client. Nous avons conçu, développé et exploitons aujourd’hui la plateforme : un portail web pour les commerçants, une application mobile et le circuit notarial qui les relie.",
+        "result": {
+          "label": "Taux de recouvrement des contrats actifs"
+        },
+        "stats": [
+          {
+            "label": "Transactions traitées"
+          },
+          {
+            "label": "Contrats actifs"
+          },
+          {
+            "label": "Entreprises inscrites"
+          }
+        ],
+        "meta": {
+          "scope": "Conception produit · Portail web commerçant · Application mobile client · Circuit notarial · Backend et intégrations",
+          "period": "2024 — en cours",
+          "role": "Propriétaire, concepteur et éditeur"
+        },
+        "year": "2024 — en cours",
+        "delivered": [
+          "Portail commerçant : catalogue de produits, vérification des clients, création des contrats, suivi des paiements, statistiques et rapports.",
+          "Application client : échéanciers clairs, plusieurs moyens de paiement, rappels, score de confiance et accès aux documents.",
+          "Circuit notarial : vérification numérique, signature sécurisée, gestion des documents et piste d’audit complète.",
+          "Recouvrement automatisé : rappels, calcul des pénalités, relances et déclaration au bureau de crédit."
+        ],
+        "screens": [
+          {
+            "caption": "Tableau de bord commerçant : encaissements, taux de recouvrement et durée des plans en un coup d’œil"
+          },
+          {
+            "caption": "Vue d’un contrat avec l’échéancier, les signatures et le statut de notarisation"
+          },
+          {
+            "caption": "File d’approbation des nouveaux plans de paiement échelonné"
+          },
+          {
+            "caption": "Recouvrement : rappels, pénalités et étapes de relance"
+          }
+        ],
+        "phone": {
+          "title": "Application portefeuille entreprise",
+          "text": "Les encaissements arrivent sur un portefeuille entreprise. Le propriétaire consulte le solde et les détails de la carte, demande un retrait vers le mobile money, et un collègue habilité l’approuve.",
+          "screens": [
+            {
+              "caption": "Portefeuille : solde, détails de la carte et derniers retraits"
+            },
+            {
+              "caption": "Retrait : montant, confirmation et statut d’approbation"
+            }
+          ]
+        },
+        "journey": [
+          {
+            "title": "Créer",
+            "text": "Le commerçant choisit un produit, vérifie le client et fixe un échéancier hebdomadaire, bimensuel ou mensuel."
+          },
+          {
+            "title": "Signer et notarier",
+            "text": "Les deux parties signent en ligne ; un notaire agréé vérifie le contrat, qui devient exécutoire."
+          },
+          {
+            "title": "Payer",
+            "text": "Le client paie par mobile money ou par carte ; un rappel part avant chaque échéance."
+          },
+          {
+            "title": "Recouvrer",
+            "text": "Les retards déclenchent automatiquement pénalités et relances ; l’historique alimente le score de confiance."
+          }
+        ],
+        "engineering": [
+          {
+            "title": "Trois portails, une API",
+            "text": "Les espaces commerçant, client et notaire partagent un même backend, avec des accès par rôle et un modèle de contrat commun."
+          },
+          {
+            "title": "Signatures intégrées au PDF",
+            "text": "Les signatures du client et du commerçant sont intégrées au PDF du contrat côté serveur : le document notarié porte les deux."
+          },
+          {
+            "title": "Rapprochement des paiements",
+            "text": "Les webhooks des opérateurs peuvent arriver après le retour de l’utilisateur ; les dépôts sont interrogés et rapprochés pour que l’écran de succès ne soit jamais faux."
+          },
+          {
+            "title": "Mobile d’abord",
+            "text": "L’application client est développée en Flutter pour Android et iOS, avec le même système de design que le portail web."
+          }
+        ]
+      },
+      "clinic-hmis": {
+        "client": "Client exemple",
+        "tag": "Systèmes · Santé",
+        "blurb": "Dossiers patients, pharmacie, facturation et assurances réunis dans un seul système de gestion hospitalière.",
+        "summary": "Une étude de cas d’exemple qui montre comment un projet de systèmes est présenté ici : accueil, consultations, pharmacie, facturation et demandes de remboursement réunis dans un seul système de gestion hospitalière. Elle tient la place d’un projet réel jusqu’à sa publication depuis le Studio.",
+        "result": {
+          "label": "De temps par visite patient (chiffre d’exemple)"
+        },
+        "stats": [
+          {
+            "label": "Services connectés"
+          },
+          {
+            "label": "Assureurs intégrés"
+          },
+          {
+            "label": "Assistance"
+          }
+        ],
+        "meta": {
+          "scope": "Cadrage · UX · Application web · Intégrations",
+          "role": "Conception et développement"
+        },
+        "delivered": [
+          "Accueil : un dossier patient unique, retrouvé par identifiant ou numéro de téléphone à chaque visite.",
+          "Consultation et pharmacie : les ordonnances passent du médecin à la pharmacie et au stock.",
+          "Facturation et assurances : factures réparties entre patient et assureur, demandes envoyées en ligne."
+        ],
+        "screens": [
+          {
+            "caption": "Vue des consultations externes (écran d’exemple)"
+          },
+          {
+            "caption": "Pharmacie et stock"
+          },
+          {
+            "caption": "Facturation et assurances"
+          }
+        ],
+        "journey": [
+          {
+            "title": "Enregistrer",
+            "text": "Le patient est identifié une fois ; son dossier le suit dans chaque service."
+          },
+          {
+            "title": "Consulter",
+            "text": "Le médecin voit l’historique, les résultats et les ordonnances sur un seul écran."
+          },
+          {
+            "title": "Facturer",
+            "text": "La visite se clôt par une facture unique et une demande de remboursement automatique."
+          }
+        ],
+        "engineering": [
+          {
+            "title": "Un seul dossier patient",
+            "text": "Chaque service lit et écrit le même dossier, avec des accès par rôle."
+          },
+          {
+            "title": "Les standards d’abord",
+            "text": "Les échanges avec le laboratoire et les assureurs passent par HL7 / FHIR plutôt que par des exports ponctuels."
+          }
+        ]
+      },
+      "retail-rollout": {
+        "title": "Déploiement de caisses",
+        "client": "Client exemple",
+        "place": "Kigali, Rwanda · 38 agences",
+        "tag": "Matériel · Distribution",
+        "blurb": "Terminaux de caisse, réseau et assistance sur site pour un distributeur multi-agences.",
+        "summary": "Une étude de cas d’exemple qui montre comment un projet matériel est présenté ici : achat, livraison, installation et maintenance de terminaux de caisse et du réseau dans un ensemble d’agences. Elle tient la place d’un projet réel jusqu’à sa publication depuis le Studio.",
+        "result": {
+          "label": "Agences équipées (chiffre d’exemple)"
+        },
+        "stats": [
+          {
+            "value": "210",
+            "label": "Appareils livrés"
+          },
+          {
+            "value": "6 sem.",
+            "label": "Déploiement"
+          },
+          {
+            "value": "2 ans",
+            "label": "Garantie et assistance"
+          }
+        ],
+        "meta": {
+          "scope": "Achat · Livraison · Installation · Assistance",
+          "role": "Fournisseur et intégrateur"
+        },
+        "delivered": [
+          "Achat : terminaux, imprimantes et lecteurs auprès de distributeurs agréés, avec garantie.",
+          "Installation : câblage, Wi-Fi et un terminal configuré à chaque caisse, agence par agence.",
+          "Assistance : un support et des appareils de rechange pour remplacer une caisse en panne le jour même."
+        ],
+        "screens": [
+          {
+            "caption": "Terminal de caisse (écran d’exemple)"
+          },
+          {
+            "caption": "Réseau des agences"
+          },
+          {
+            "caption": "Assistance sur site"
+          }
+        ],
+        "journey": [
+          {
+            "title": "Auditer",
+            "text": "Chaque agence est visitée : caisses, alimentation, réseau et personnel."
+          },
+          {
+            "title": "Livrer",
+            "text": "Les appareils arrivent configurés, sont installés et testés sur place."
+          },
+          {
+            "title": "Assister",
+            "text": "Les pannes passent par un seul support ; les rechanges gardent chaque caisse en service."
+          }
+        ],
+        "engineering": [
+          {
+            "title": "Configurés avant livraison",
+            "text": "Les terminaux sont préparés et enrôlés à distance : une agence est opérationnelle en quelques heures."
+          },
+          {
+            "title": "Réseau supervisé",
+            "text": "Routeurs et points d’accès des agences sont suivis depuis un seul tableau de bord."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+/* Sharplink's thumbnails are dotted line drawings with square nodes; ours are SVG (styled by presentation
+   attributes in LineArt.tsx). They stay still on hover, like theirs. */
+.art {
+  overflow: visible;
+}

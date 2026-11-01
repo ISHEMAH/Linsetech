@@ -1,0 +1,365 @@
+/*
+ * Plain global CSS (next.config routes every .css through the Tailwind loader as "*.css", so CSS modules are
+ * not processed in this project): every class is prefixed nw-.
+ *
+ * News / article / contact / 404 helpers measured on sharplink.com (news.css, contact.css):
+ * every control is a 34px squared surface; tints swap in .25s ease-in-out-quad; rows tint in .2s.
+ * Theme follows the nearest [data-theme] like the shared .ui-btn.
+ */
+
+.nw-surface {
+  --sf: var(--surface-lighter);
+  --sf-hover: var(--hover-on-dark);
+  --fg: var(--off-white);
+  --fg-subtle: var(--off-white-subtle);
+  --stroke: var(--stroke-off-white-subtle);
+}
+[data-theme="light"] .nw-surface {
+  --sf: var(--surface-darker);
+  --sf-hover: var(--hover-on-light);
+  --fg: var(--black);
+  --fg-subtle: var(--black-subtle);
+  --stroke: var(--stroke-black-subtle);
+}
+
+/* ── "hide-text" icon button (Sharplink .ui-button.hide-text) ───────────────
+   Only the 32px arrow box shows. Hovering the button or its parent link drops the
+   hidden label in from below (top 100% → 0) while the arrow box slides right by the
+   label's measured width (margin-left, .5s ease-in-out-circ); both turn brand. */
+.nw-readmore {
+  position: relative;
+  display: inline-flex;
+  height: 34px;
+  overflow: hidden;
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  vertical-align: top;
+}
+.nw-rm-content {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 34px;
+  padding: 0 16px;
+  overflow: hidden;
+  background: var(--sf);
+  color: var(--fg);
+  backdrop-filter: blur(20px);
+  transition:
+    top 0.5s var(--ease-in-out-circ) 0s,
+    background-color 0.25s var(--ease-in-out-quad);
+}
+.nw-rm-content > span,
+.nw-rm-icon > span {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  transition: transform 0.5s var(--ease-in-out-circ) 0s;
+}
+.nw-rm-content > span:first-child {
+  opacity: 0;
+}
+.nw-rm-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 32px;
+  height: 34px;
+  overflow: hidden;
+  background: var(--sf);
+  color: var(--fg);
+  backdrop-filter: blur(20px);
+  transition:
+    margin-left 0.5s var(--ease-in-out-circ) 0s,
+    background-color 0.25s var(--ease-in-out-quad);
+}
+.nw-rm-icon > span {
+  width: 100%;
+  transition-delay: 0.07s;
+}
+@media (min-width: 800px) {
+  .nw-readmore:hover .nw-rm-content,
+  a:hover .nw-readmore .nw-rm-content {
+    top: 0;
+    background: var(--brand);
+    color: var(--black);
+  }
+  .nw-readmore:hover .nw-rm-content > span,
+  a:hover .nw-readmore .nw-rm-content > span {
+    transform: translateY(-100%);
+    transition-delay: 0.1s;
+  }
+  .nw-readmore:hover .nw-rm-icon,
+  a:hover .nw-readmore .nw-rm-icon {
+    margin-left: calc(2px + var(--rm-w, 80px));
+    background: var(--brand);
+    color: var(--black);
+  }
+  .nw-readmore:hover .nw-rm-icon > span,
+  a:hover .nw-readmore .nw-rm-icon > span {
+    transform: translateY(-100%);
+    transition-delay: 0s;
+  }
+}
+
+/* ── filters (Sharplink .article-filters / b2i #TagDDL) ─────────────────── */
+.nw-control {
+  height: 34px;
+  padding: 0 12px;
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--fg);
+  border: 1px solid transparent;
+  outline: none;
+  transition:
+    background-color 0.25s var(--ease-in-out-quad),
+    border-color 0.2s var(--ease-in-out-quad);
+}
+.nw-control::placeholder {
+  color: var(--fg);
+  opacity: 1;
+}
+.nw-control:focus-visible {
+  border-color: var(--fg);
+}
+.nw-search {
+  background: var(--sf);
+  backdrop-filter: blur(20px);
+}
+.nw-select-wrap {
+  position: relative;
+  display: inline-flex;
+  height: 34px;
+  cursor: pointer;
+}
+.nw-select-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0 34px 0 0;
+  background: var(--sf);
+  backdrop-filter: blur(20px);
+  transition: background-color 0.25s var(--ease-in-out-quad);
+}
+.nw-select {
+  position: relative;
+  z-index: 1;
+  min-width: 126px;
+  padding-right: 46px;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.nw-select option {
+  background: #fff;
+  color: #000;
+  text-transform: none;
+}
+.nw-chevron {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 34px;
+  background: var(--sf);
+  color: var(--fg);
+  pointer-events: none;
+  backdrop-filter: blur(20px);
+  transition: background-color 0.25s var(--ease-in-out-quad);
+}
+@media (min-width: 800px) {
+  .nw-select-wrap:hover::before,
+  .nw-select-wrap:hover .nw-chevron,
+  .nw-search:hover {
+    background: var(--sf-hover);
+  }
+}
+
+/* ── list rows (Sharplink .card-article-link: padding 20px 0, tint .2s) ──── */
+.nw-row {
+  transition: background-color 0.2s var(--ease-in-out-quad);
+}
+@media (min-width: 800px) {
+  .nw-row:hover {
+    background-color: var(--surface-lighter-subtle);
+  }
+  [data-theme="light"] .nw-row:hover {
+    background-color: var(--hover-on-light-secondary);
+  }
+}
+
+/* squared pager / press nav buttons (b2iNav a: surface-lighter, hover-on-dark .25s) */
+.nw-pager {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 34px;
+  min-width: 34px;
+  padding: 0 16px;
+  background: var(--sf);
+  color: var(--fg);
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+  transition: background-color 0.25s var(--ease-in-out-quad);
+}
+.nw-pager.nw-pager--square {
+  padding: 0;
+  width: 34px;
+}
+.nw-pager[aria-current="page"] {
+  background: var(--fg);
+  color: var(--sf-current, #020a07);
+  pointer-events: none;
+}
+[data-theme="light"] .nw-pager[aria-current="page"] {
+  --sf-current: var(--off-white);
+}
+@media (min-width: 800px) {
+  .nw-pager:hover {
+    background: var(--sf-hover);
+  }
+}
+
+/* small 34px icon box (press download / arrow) */
+.nw-iconbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  background: var(--sf);
+  color: var(--fg);
+  backdrop-filter: blur(20px);
+  transition:
+    background-color 0.25s var(--ease-in-out-quad),
+    color 0.25s var(--ease-in-out-quad);
+}
+@media (min-width: 800px) {
+  .nw-iconbox:hover,
+  a:hover > .nw-iconbox,
+  a:hover .nw-iconbox {
+    background: var(--brand);
+    color: var(--black);
+  }
+}
+
+/* ── article body (Sharplink .article-section-content) ─────────────────── */
+.nw-prose {
+  color: rgba(11, 20, 17, 0.62);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.56;
+}
+.nw-prose > * + * {
+  margin-top: 24px;
+}
+.nw-prose h2 {
+  margin-top: 48px;
+  color: var(--black);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+  scroll-margin-top: 120px;
+}
+.nw-prose blockquote {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  padding: 28px 0 0 0;
+  color: var(--black);
+  font-size: clamp(22px, 1.8vw, 28px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.nw-prose blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--brand);
+}
+.nw-prose ul {
+  list-style: none;
+  padding: 0;
+}
+.nw-prose li {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding: 24px 12px 24px 0;
+  border-top: 1px solid var(--stroke-black-subtle);
+}
+.nw-prose li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: rgba(11, 20, 17, 0.06);
+}
+.nw-prose li::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 33px;
+  width: 6px;
+  height: 6px;
+  background: var(--brand);
+}
+.nw-prose li:last-child {
+  border-bottom: 1px solid var(--stroke-black-subtle);
+}
+
+/* ── contact copy button (Sharplink .contact .nw-copy: 12px icon + narrow label) */
+.nw-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--black);
+  cursor: pointer;
+  transition: color 0.2s var(--ease-in-out-quad);
+}
+.nw-copy:hover {
+  color: var(--black-subtle);
+}
+
+/* iPhone Safari zooms the whole page into any focused field set under 16px: on touch screens keep the 34px box but
+   use 16px text (desktop keeps Sharplink's 13px) */
+@media (pointer: coarse) {
+  .nw-control {
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

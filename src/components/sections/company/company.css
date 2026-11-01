@@ -1,0 +1,283 @@
+/*
+ * Company pages (Careers, Support, Privacy, Terms) in Sharplink's investors / legal treatment.
+ * Plain CSS (not a module: next.config's turbopack *.css rule turns modules global), every class prefixed co-.
+ * Tone classes set the colour tokens for everything inside a section (nearest ancestor wins, by inheritance):
+ * Sharplink's theme-dark / theme-light pairs (off-white-subtle, stroke-*-subtle, surface-lighter / darker …).
+ */
+.co-dark {
+  --c-fg: var(--off-white);
+  --c-sub: var(--off-white-subtle);
+  --c-stroke: var(--stroke-off-white-subtle);
+  --c-glass: var(--surface-lighter);
+  --c-glass-hover: var(--hover-on-dark);
+  --c-grey: rgba(243, 243, 243, 0.6);
+  color: var(--off-white);
+}
+.co-light {
+  --c-fg: var(--black);
+  --c-sub: var(--black-subtle);
+  --c-stroke: var(--stroke-black-subtle);
+  --c-glass: var(--surface-darker);
+  --c-glass-hover: var(--hover-on-light);
+  --c-grey: #5b6661;
+  color: var(--black);
+}
+
+/* PressItem38 / b2iSECDataRow separator: 2px dashes every 6px, 1px tall, on the row's top edge */
+.co-dash {
+  background-image: repeating-linear-gradient(to right, var(--c-stroke) 0, var(--c-stroke) 2px, transparent 2px, transparent 6px);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+/* dashed rule on the bottom edge (b2i quote lastUpdate / quote rows) */
+.co-dash-bottom,
+.co-fact {
+  background-image: repeating-linear-gradient(to right, var(--c-stroke) 0, var(--c-stroke) 2px, transparent 2px, transparent 6px);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+@media (min-width: 800px) {
+  /* desktop: only the first row of cells is ruled, and the rules bridge the 28px gutter */
+  .co-fact {
+    background-image: none;
+  }
+  .co-fact--row1 {
+    background-image: repeating-linear-gradient(to right, var(--c-stroke) 0, var(--c-stroke) 2px, transparent 2px, transparent 6px);
+    width: calc(100% + 28px);
+  }
+  .co-bleed {
+    width: calc(100% + 28px);
+  }
+}
+
+/* PressItem38Date / card-document .doc-type: bordered narrow uppercase chip, 30px tall */
+.co-chip {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid var(--c-stroke);
+  color: var(--c-sub);
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.co-chip--date {
+  min-width: 100px;
+}
+.co-chip--doc {
+  min-width: 42px;
+  padding: 5px 8px 4px;
+}
+
+/* glass surfaces: secondary ui-button tint + blur 20 (search box, select, pager, icon boxes) */
+.co-glass {
+  background-color: var(--c-glass);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: background-color 0.25s var(--ease-in-out-quad);
+}
+
+.co-glass-btn {
+  cursor: pointer;
+}
+@media (min-width: 800px) {
+  .co-glass-btn:hover {
+    background-color: var(--c-glass-hover);
+  }
+}
+
+/* standalone 34px icon box (PressItem38PDF): tint on hover, .25s */
+.co-icon-box {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: var(--c-fg);
+  background-color: var(--c-glass);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: background-color 0.25s var(--ease-in-out-quad);
+}
+.co-icon-box[aria-disabled="true"] {
+  opacity: 0.45;
+}
+
+/* press-row / tool filters (b2iLibToolsContainer): glass input + select with a 34px chevron box */
+.co-field {
+  height: 34px;
+  padding: 8px 12px;
+  color: var(--c-fg);
+  background-color: var(--c-glass);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  font-family: var(--font-narrow);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  transition: background-color 0.25s var(--ease-in-out-quad);
+}
+.co-field::placeholder {
+  color: var(--c-fg);
+  opacity: 0.7;
+}
+.co-field:focus-visible {
+  outline: 1px solid var(--brand);
+  outline-offset: 1px;
+}
+.co-select {
+  appearance: none;
+  cursor: pointer;
+  min-width: 110px;
+}
+.co-select-icon {
+  width: 34px;
+  padding: 0;
+}
+.co-select option {
+  color: var(--black);
+}
+.co-select-wrap:hover .co-select,
+.co-select-wrap:hover .co-select-icon,
+.co-field:hover {
+  background-color: var(--c-glass-hover);
+}
+
+/* card-investor-presentation / card-event: hovering the card turns its icon box brand */
+@media (min-width: 800px) {
+  .co-brand-hover:hover .ui-btn__icon {
+    background-color: var(--brand) !important;
+    color: var(--black) !important;
+  }
+}
+
+/* events-slider controls: secondary icon buttons stretched to half the card height, twin chevrons slide */
+.co-ctl {
+  position: relative;
+  flex: 1 1 0;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--off-white);
+  background-color: var(--surface-lighter);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: background-color 0.25s var(--ease-in-out-quad);
+}
+.co-ctl > span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s var(--ease-in-out-circ);
+}
+.co-ctl > span + span {
+  transform: translateY(100%);
+}
+@media (min-width: 800px) {
+  .co-ctl:hover {
+    background-color: var(--hover-on-dark);
+  }
+  .co-ctl:hover > span {
+    transform: translateY(-100%);
+  }
+  .co-ctl:hover > span + span {
+    transform: translateY(0);
+  }
+}
+
+/* rail track: the sticky nav lives inside it; its bottom stops the pin when the page bottom reaches mid-screen
+   (Sharplink: pin start "top 95px", end "bottom center", pinSpacing false) */
+.co-rail-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+.co-rail-nav {
+  position: sticky;
+  top: 66px;
+}
+@media (min-width: 800px) {
+  .co-rail-nav {
+    top: 95px;
+  }
+}
+.co-rail-nav .ui-btn {
+  pointer-events: auto;
+}
+/* phone section picker (Sharplink anchors-dropdown): toggle = btn-primary theme-light (black, off-white) with an
+   icon-style ACCENT box (brand, off-white chevron); current item = btn-accent (brand, off-white, no active square).
+   Three classes deep so it beats `[data-theme="dark"] .ui-btn--primary` coming from the dark nav around it. */
+.co-rail-drop .ui-btn.co-drop-toggle {
+  --btn-bg: var(--black);
+  --btn-fg: var(--off-white);
+  --btn-bg-hover: var(--black);
+  --icon-bg: var(--brand);
+  --icon-fg: var(--off-white);
+  --icon-bg-hover: var(--brand);
+}
+.co-rail-drop .ui-btn.co-drop-accent {
+  --btn-bg: var(--brand);
+  --btn-fg: var(--off-white);
+  --btn-bg-hover: var(--brand);
+}
+
+/* legal body copy (Sharplink .wrapper .body) */
+.co-legal-body p {
+  color: var(--black-subtle);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.co-legal-body a {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+/* drawer scroller: fades top / bottom 24px, hidden scrollbar (team-drawer .co-scroller) */
+.co-scroller {
+  -webkit-mask-image: linear-gradient(transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  mask-image: linear-gradient(transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  scrollbar-width: none;
+}
+.co-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* contact card body (card-investor-contact .body .content) */
+.co-contact-body a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.co-contact-body strong {
+  color: var(--c-fg);
+  font-weight: 500;
+}
+
+/* iPhone Safari zooms the whole page into any focused field set under 16px: on touch screens keep the 34px box but
+   use 16px text (desktop keeps Sharplink's 13px) */
+@media (pointer: coarse) {
+  .co-field {
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

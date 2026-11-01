@@ -1,0 +1,491 @@
+{
+  "servicesPage": {
+    "meta": {
+      "title": "Services",
+      "description": "Design, websites and apps, systems and integration, the software we publish, hardware and distribution, and IT services: six services, one team."
+    },
+    "hero": {
+      "title": "Everything IT, under one roof.",
+      "cta": "Explore our services"
+    },
+    "statement": [
+      "Linse designs, builds, publishes and runs technology for businesses and institutions in Rwanda and the region.",
+      "Six services under one roof: design, websites and apps, systems and integration, the software we publish, hardware and distribution, and IT services.",
+      "One team carries a project from the first sketch to the device on the desk, and stays to keep it running."
+    ],
+    "breakthrough": {
+      "title": "One partner, end to end",
+      "blurb": "One team designs, builds, supplies and supports your technology, so nothing falls between suppliers.",
+      "body": [
+        "Most organisations run their technology through a patchwork: an agency for the website, a developer for the system, a shop for the laptops, someone else for the network. Every hand-over is a place where things slip, and nobody owns the whole.",
+        "With Linse, the same team designs the product, writes the software, supplies and installs the devices, and keeps everything running afterwards. One contract, one point of contact, one team that knows how the pieces fit together.",
+        "That is what everything IT under one roof means for a client: fewer suppliers, faster decisions, and a single partner accountable from the first sketch to the help-desk call."
+      ]
+    },
+    "transformation": {
+      "title": "Six services, one team",
+      "blurb": "Each service stands on its own. Together they cover everything a business needs from its technology.",
+      "body": [
+        "The people who design your app also build it; the team that installs your network also monitors it; the software we publish runs on the same infrastructure we manage for clients.",
+        "Here is what each service covers:"
+      ],
+      "explore": "Explore {service}",
+      "stats": [
+        {
+          "eyebrow": "Integrations shipped",
+          "headline": "12+",
+          "tagline": "Payments, ERP, HMIS",
+          "body": "Systems we connected so records, payments and reports move without re-typing."
+        },
+        {
+          "eyebrow": "Delivery in Kigali",
+          "headline": "48 h",
+          "tagline": "Configured before arrival",
+          "body": "Laptops, servers, networking and POS terminals from twelve brands, installed and under local warranty."
+        },
+        {
+          "eyebrow": "Critical response",
+          "headline": "< 1 h",
+          "tagline": "99.9% managed uptime",
+          "body": "Help desk, networks, cloud and security under one contract, monitored around the clock."
+        }
+      ]
+    },
+    "services": {
+      "design": {
+        "title": "Design",
+        "headline": "Products people actually enjoy using.",
+        "intro": "Brand identity, UX research and UI design for web, mobile and internal tools. We design in the open, with your team and your users, and hand over systems, not just screens.",
+        "more": "Every engagement starts with the people who will use the product. We test early with real users, write the decisions down, and leave your team with a system it can extend.",
+        "bullets": [
+          {
+            "title": "Brand identity & guidelines",
+            "text": "Logo, typography, colour and templates, documented so every supplier applies them the same way."
+          },
+          {
+            "title": "UX research, flows & prototypes",
+            "text": "Interviews, journeys and clickable prototypes, tested with real users before anything is built."
+          },
+          {
+            "title": "UI design systems (Figma)",
+            "text": "Components, tokens and page templates in Figma, ready for developers to build from."
+          },
+          {
+            "title": "Design for accessibility (WCAG AA)",
+            "text": "Contrast, type sizes, focus states and screen-reader flows checked against WCAG AA."
+          }
+        ],
+        "stats": [
+          {
+            "value": "2 wks",
+            "label": "To a clickable prototype",
+            "note": "From the first workshop to a prototype your users can click through and test."
+          },
+          {
+            "value": "AA",
+            "label": "Accessibility baseline",
+            "note": "Every screen is checked for contrast, type size, focus order and screen-reader flow."
+          },
+          {
+            "value": "1",
+            "label": "Design system per product",
+            "note": "One shared library of components keeps every new screen consistent."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Do you design for products you do not build?",
+            "a": "Yes. Design is a stand-alone service; we hand over Figma files, a design system and specifications your team can build from."
+          },
+          {
+            "q": "Can you refresh an existing brand?",
+            "a": "Yes, from a light refresh to a full identity, including logo, typography, colour and templates."
+          }
+        ]
+      },
+      "web": {
+        "title": "Websites & apps",
+        "headline": "Fast, accessible, built to last.",
+        "intro": "Marketing sites, e-commerce, web applications and mobile apps on modern stacks: Next.js and React on the web, Flutter for Android and iOS. Hosted, monitored and maintained.",
+        "more": "We build on well-supported stacks, ship in small releases, and set up hosting, monitoring and analytics from day one, so the site keeps performing long after launch.",
+        "bullets": [
+          {
+            "title": "Marketing & corporate websites",
+            "text": "Fast, multilingual sites that rank, convert and are easy for your team to update."
+          },
+          {
+            "title": "E-commerce and customer portals",
+            "text": "Catalogues, checkout with mobile money and cards, customer accounts and order tracking."
+          },
+          {
+            "title": "Mobile apps (Flutter, Android & iOS)",
+            "text": "One codebase for Android and iOS, published to both stores and maintained."
+          },
+          {
+            "title": "Headless CMS, SEO and analytics",
+            "text": "Content your team edits without a developer, search basics done right, and clear dashboards."
+          }
+        ],
+        "stats": [
+          {
+            "value": "95+",
+            "label": "Lighthouse performance target",
+            "note": "Fast pages on the phones and connections your customers actually use."
+          },
+          {
+            "value": "3",
+            "label": "Languages out of the box",
+            "note": "English, French and Kinyarwanda from day one, managed in the CMS."
+          },
+          {
+            "value": "99.9%",
+            "label": "Hosting uptime",
+            "note": "Hosted, monitored and backed up, with alerts before visitors notice anything."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Who owns the code?",
+            "a": "You do. Every project is delivered in a repository you own, with documentation and a hand-over session."
+          },
+          {
+            "q": "Can we edit the content ourselves?",
+            "a": "Yes. We set up a CMS (Sanity by default) so your team can edit pages, news and products without a developer."
+          }
+        ]
+      },
+      "systems": {
+        "title": "Systems & integration",
+        "headline": "Systems that talk to each other.",
+        "intro": "ERP, HMIS, payments, e-government and custom platforms, built or integrated. We specialise in making existing systems share data reliably, with audit trails and reporting on top.",
+        "more": "We map how data moves through your organisation, connect the systems you already have, and add the reporting your managers need, without throwing away what works.",
+        "bullets": [
+          {
+            "title": "Custom platforms & internal tools",
+            "text": "Software shaped around your process: approvals, records, scheduling and field work."
+          },
+          {
+            "title": "ERP / HMIS implementation & integration",
+            "text": "Configuration, data migration and training for ERP and hospital information systems."
+          },
+          {
+            "title": "Payment, mobile money and bank integrations",
+            "text": "Collections, payouts and reconciliation through mobile-money, card and bank APIs."
+          },
+          {
+            "title": "Data migration, reporting and dashboards",
+            "text": "Clean, verified migrations and the dashboards that turn records into decisions."
+          }
+        ],
+        "stats": [
+          {
+            "value": "12+",
+            "label": "Integrations shipped",
+            "note": "Mobile money, banks, government services, ERP and hospital systems."
+          },
+          {
+            "value": "0",
+            "label": "Lost records in migrations",
+            "note": "Every migration is rehearsed, reconciled and signed off before go-live."
+          },
+          {
+            "value": "24/7",
+            "label": "Monitoring",
+            "note": "Integrations are watched around the clock, with an alert on any failed sync."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Do you work with government systems?",
+            "a": "Yes, including IremboGov, RRA and mobile-money APIs, within their compliance requirements."
+          },
+          {
+            "q": "Can you take over a system someone else built?",
+            "a": "Yes. We start with an audit, stabilise what is in production, then plan improvements."
+          }
+        ]
+      },
+      "software": {
+        "title": "Software we publish",
+        "headline": "Products we build, own and operate.",
+        "intro": "Linse invests in its own products and licenses them to the market. MacyePay, our installment-payment platform, is the first; more are in development.",
+        "more": "Owning our products means we carry the cost of getting them right. Customers get software that is already proven in the market, with support and a roadmap they help shape.",
+        "bullets": [
+          {
+            "title": "MacyePay — installment payments with legal recovery",
+            "text": "Notarised installment agreements, automated reminders and recovery, and a trust score for every customer."
+          },
+          {
+            "title": "Licensing or managed service",
+            "text": "Run it as a managed service for a monthly fee, or license it on your own infrastructure."
+          },
+          {
+            "title": "Roadmap driven by customers",
+            "text": "New features come from the businesses using the product every day, reviewed every quarter."
+          },
+          {
+            "title": "Support and SLAs included",
+            "text": "Onboarding, training and agreed response times are part of every plan."
+          }
+        ],
+        "stats": [
+          {
+            "value": "1",
+            "label": "Product live",
+            "note": "MacyePay, in production and operated by our own team."
+          },
+          {
+            "value": "5,000+",
+            "label": "Active agreements on MacyePay",
+            "note": "Installment agreements managed end to end on the platform."
+          },
+          {
+            "value": "98%",
+            "label": "Recovery rate",
+            "note": "On active agreements, thanks to notarised contracts and automated follow-up."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "How is MacyePay licensed?",
+            "a": "As a managed service with a monthly fee per business, or as a licence for banks and large retailers. Ask for a demo."
+          },
+          {
+            "q": "Will you build a product with us?",
+            "a": "Yes. We co-develop and co-own products with partners who bring the market; talk to us."
+          }
+        ]
+      },
+      "hardware": {
+        "title": "Hardware & distribution",
+        "headline": "Business-grade devices, delivered and supported.",
+        "intro": "Laptops, desktops, servers, networking, printers, security cameras and point-of-sale terminals from trusted brands. Sourced, delivered and installed across Rwanda, with warranty handled locally.",
+        "more": "We quote complete setups, not boxes: the right devices for the job, configured before delivery, installed on site and backed by a local warranty desk.",
+        "bullets": [
+          {
+            "title": "Laptops, desktops & workstations",
+            "text": "Business models from trusted brands, imaged and configured before they reach your desks."
+          },
+          {
+            "title": "Servers, storage & networking",
+            "text": "Rack and tower servers, storage, switches, routers and Wi-Fi, sized for your site."
+          },
+          {
+            "title": "Printers, scanners, cameras & POS",
+            "text": "Office printing, security cameras and point-of-sale terminals for shops and branches."
+          },
+          {
+            "title": "Warranty, repairs & on-site support",
+            "text": "Warranty claims handled locally, repairs tracked, and technicians on site when needed."
+          }
+        ],
+        "stats": [
+          {
+            "value": "12",
+            "label": "Brands distributed",
+            "note": "Business ranges from trusted manufacturers, with warranty handled locally."
+          },
+          {
+            "value": "48 h",
+            "label": "Delivery in Kigali",
+            "note": "Configured before it leaves our workshop, installed on arrival."
+          },
+          {
+            "value": "2 yrs",
+            "label": "Standard warranty",
+            "note": "Claims and repairs handled locally and tracked until the device is back."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Do you sell to individuals?",
+            "a": "Our focus is businesses, schools and institutions, but we do serve individuals for selected products."
+          },
+          {
+            "q": "Can you quote a full office setup?",
+            "a": "Yes: devices, networking, security and installation in one quote. Request the catalogue."
+          }
+        ]
+      },
+      "it": {
+        "title": "IT services",
+        "headline": "Run, monitor, secure.",
+        "intro": "Managed IT for teams of any size: help desk, networks, cloud, backups and security. One contract, one contact, agreed response times.",
+        "more": "We watch your systems around the clock, fix issues before they spread, and report every month on what was done and what comes next.",
+        "bullets": [
+          {
+            "title": "Help desk & on-site support",
+            "text": "One number and one address for every problem, with technicians on site across Kigali."
+          },
+          {
+            "title": "Networks, Wi-Fi & structured cabling",
+            "text": "Design, cabling and Wi-Fi coverage for offices, schools, clinics and warehouses."
+          },
+          {
+            "title": "Cloud, Microsoft 365 / Google Workspace, backups",
+            "text": "Mail, files and identity in the cloud, with backups restored and tested on a schedule."
+          },
+          {
+            "title": "Security: endpoints, cameras, access control",
+            "text": "Protected devices, monitored cameras and door access, managed from one place."
+          }
+        ],
+        "stats": [
+          {
+            "value": "< 1 h",
+            "label": "Critical response time",
+            "note": "A technician is working on critical issues within the hour."
+          },
+          {
+            "value": "99.9%",
+            "label": "Managed uptime",
+            "note": "Networks, servers and cloud services we run, measured every month."
+          },
+          {
+            "value": "1",
+            "label": "Contract for everything",
+            "note": "Help desk, networks, cloud and security on a single agreement."
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Do you offer retainers?",
+            "a": "Yes. Monthly retainers with a fixed number of hours and agreed response times, scaled to your team."
+          },
+          {
+            "q": "Do you support hardware you did not sell?",
+            "a": "Yes, after a quick audit of what you have."
+          }
+        ]
+      }
+    },
+    "models": {
+      "title": "Ways to work with us",
+      "blurb": "Pick the model that fits the work. Most clients start with a project and stay on a retainer.",
+      "cta": "Talk to us",
+      "items": [
+        {
+          "title": "Project",
+          "text": "Fixed scope, fixed price, fixed timeline. Best for a new website, app or system.",
+          "includes": [
+            "Discovery & proposal",
+            "Design & build",
+            "Hand-over & training",
+            "30-day warranty"
+          ]
+        },
+        {
+          "title": "Retainer & support",
+          "text": "A monthly block of hours and agreed response times for running and improving what you have.",
+          "includes": [
+            "Help desk",
+            "Monitoring & updates",
+            "Hardware support",
+            "Monthly report"
+          ]
+        },
+        {
+          "title": "Product licence",
+          "text": "Use software we publish, as a managed service or an enterprise licence.",
+          "includes": [
+            "Onboarding",
+            "Hosting & upgrades",
+            "SLA",
+            "Roadmap input"
+          ]
+        },
+        {
+          "title": "Co-development",
+          "text": "We build a product with a partner who brings the market, and share ownership of the result.",
+          "includes": [
+            "Shared roadmap",
+            "Joint ownership",
+            "Our engineering team",
+            "Go-to-market support"
+          ]
+        }
+      ]
+    },
+    "supercycle": {
+      "title": "Technology that keeps running",
+      "blurb": "Most of the value of technology comes after launch.",
+      "body": [
+        "A website, a system or an office network is only useful while it works. Our IT services team runs what we build and what you already have: help desk, networks, cloud, backups and security, under one contract with agreed response times.",
+        "We monitor around the clock, fix issues before they spread and report every month on what was done. When a critical issue needs someone on site in Kigali, a technician is working on it within the hour."
+      ],
+      "cta": "Explore IT services",
+      "quote": {
+        "text": "Launch day is the easy part. What our clients really buy is every ordinary day after it: systems that are watched, patched and fixed before anyone notices, by people who know their setup by name.",
+        "name": "Linse leadership",
+        "role": "Linsetech, Kigali",
+        "portrait": "Linse leadership"
+      }
+    },
+    "runway": {
+      "title": "MacyePay: early scale, long runway",
+      "tagline": "Our first published product: installment payments backed by notarised agreements, run by our own team.",
+      "cta": "See the MacyePay case",
+      "values": [
+        "Transactions processed",
+        "Active agreements",
+        "Recovery rate"
+      ]
+    },
+    "process": {
+      "title": "How we work",
+      "blurb": "The same four steps on every project, whatever its size.",
+      "body": "You see working software every two weeks, decisions are written down, and one person answers for the whole project, from the first workshop to launch day and after.",
+      "steps": [
+        {
+          "title": "Discover",
+          "text": "We map the problem, the users and the constraints before writing a line."
+        },
+        {
+          "title": "Design",
+          "text": "Flows, interfaces and architecture, reviewed with you, not for you."
+        },
+        {
+          "title": "Build",
+          "text": "Short cycles, working software every two weeks, tested in the field."
+        },
+        {
+          "title": "Run",
+          "text": "We deploy, monitor and support, and keep improving."
+        }
+      ],
+      "cta": "Start a project"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions about our services",
+      "serviceTitle": "Questions about {service}"
+    },
+    "sub": {
+      "eyebrow": "Services · {n} / {total}",
+      "allServices": "All services",
+      "talk": "Talk to us",
+      "included": "What’s included",
+      "includedBlurb": "Four things you can count on when you work with us on {service}.",
+      "includedBody": "Every engagement is scoped in writing, delivered by the team that will support it, and measured against the figures below.",
+      "related": "Related work",
+      "relatedBlurb": "Projects where this service did the heavy lifting.",
+      "viewCase": "View case",
+      "previous": "Previous service",
+      "next": "Next service"
+    },
+    "projects": {
+      "macyepay": {
+        "tag": "Fintech · Published product",
+        "blurb": "Installment payments for Rwandan businesses, backed by notarised agreements, automated enforcement and credit-bureau integration."
+      },
+      "clinic-hmis": {
+        "tag": "Systems · Health",
+        "blurb": "Patient records, pharmacy, billing and insurance claims in one hospital management system."
+      },
+      "retail-rollout": {
+        "tag": "Hardware · Distribution",
+        "blurb": "Point-of-sale terminals, networking and on-site support for a multi-branch retailer."
+      }
+    }
+  }
+}

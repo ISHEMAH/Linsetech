@@ -1,0 +1,77 @@
+{
+  "workPage": {
+    "meta": {
+      "title": "Work",
+      "description": "Products and systems Linse has designed, built and shipped: software we publish, systems for clients and hardware we deliver."
+    },
+    "chapter": "Work",
+    "index": {
+      "label": "Selected work",
+      "title": "Products that are live, in use, today.",
+      "highlight": "live,",
+      "kicker": "About this work",
+      "about": "Software we publish and operate ourselves, systems we build for clients and hardware we deliver and support. Scroll through the projects, then open any of them for the full case study.",
+      "factProjects": "Projects",
+      "factFields": "Fields",
+      "factFlagship": "Flagship",
+      "browse": "Browse the archive",
+      "scroll": "Scroll"
+    },
+    "cursor": "View project",
+    "archive": {
+      "label": "Archive",
+      "title": "All projects",
+      "sub": "Filter by field and open any project for the full case study.",
+      "all": "All",
+      "filter": "Filter by field",
+      "project": "Project",
+      "client": "Client",
+      "category": "Field",
+      "year": "Year",
+      "sample": "Sample",
+      "empty": "No project in this field yet.",
+      "count": "{count, plural, one {# project} other {# projects}}"
+    },
+    "categories": {
+      "software": "Software",
+      "web": "Web",
+      "systems": "Systems",
+      "design": "Design",
+      "hardware": "Hardware"
+    },
+    "case": {
+      "selectedWork": "Selected work",
+      "client": "Client",
+      "where": "Where",
+      "when": "When",
+      "part": "Our part",
+      "sample": "Sample project",
+      "inPreparation": "Case study in preparation",
+      "live": "Live",
+      "visit": "Visit {host}",
+      "deliveredLabel": "Delivered",
+      "deliveredTitle": "What we delivered",
+      "recorded": "Screens from the product itself",
+      "sampleScreens": "Sample screens until the real case study is published",
+      "comingSoon": "Screen coming soon",
+      "screens": "Screens",
+      "screensTitle": "Screen by screen",
+      "app": "Mobile",
+      "journeyLabel": "Journey",
+      "journeyTitle": "How a user journey goes",
+      "systemLabel": "System",
+      "systemTitle": "Key engineering",
+      "stack": "Technology",
+      "previous": "Previous project",
+      "next": "Next project",
+      "nextSection": "Next section",
+      "archiveName": "All work",
+      "archiveMeta": "Archive",
+      "more": "More work",
+      "open": "Open screen",
+      "close": "Close",
+      "previousScreen": "Previous screen",
+      "nextScreen": "Next screen"
+    }
+  }
+}

@@ -1,0 +1,616 @@
+{
+  "careersPage": {
+    "meta": {
+      "title": "Careers",
+      "description": "Open roles at Linse in Kigali, how we hire and how to apply."
+    },
+    "hero": {
+      "title": "Build things that run.",
+      "lead": "We are a small team with a wide scope. If you like shipping real products for real users, let us talk.",
+      "cta": "View open roles"
+    },
+    "cards": {
+      "hire": {
+        "eyebrow": "How we hire",
+        "tag": "4 steps",
+        "title": "Intro call, practical task, team day, offer."
+      },
+      "roles": "Open roles",
+      "prev": "Previous",
+      "next": "Next",
+      "pause": "Pause rotation",
+      "play": "Resume rotation"
+    },
+    "rail": {
+      "label": "On this page",
+      "roles": "Open roles",
+      "perks": "Perks",
+      "hiring": "How we hire",
+      "life": "Life at Linse",
+      "apply": "Apply"
+    },
+    "roles": {
+      "title": "Open roles",
+      "search": "Search roles…",
+      "allTeams": "All teams",
+      "empty": "No role matches your search. Send an open application instead.",
+      "view": "View role"
+    },
+    "teams": {
+      "engineering": "Engineering",
+      "field": "Field services",
+      "any": "Any team"
+    },
+    "types": {
+      "fullTime": "Full-time",
+      "open": "Always open"
+    },
+    "role": {
+      "fullstack": {
+        "title": "Full-stack engineer (Next.js / Node)",
+        "summary": "You will build and run the web apps, portals and APIs our clients use every day, from the first sketch to production support.",
+        "do": [
+          "Build features across the stack in TypeScript, Next.js and Node",
+          "Design data models and APIs with the rest of the team",
+          "Ship to production, monitor and fix what breaks",
+          "Talk to clients to understand the problem behind a request"
+        ],
+        "bring": [
+          "Two or more years building web applications",
+          "Solid TypeScript or JavaScript, SQL and Git",
+          "Care for the details users notice",
+          "Clear written French or English; Kinyarwanda is a plus"
+        ]
+      },
+      "technician": {
+        "title": "Field technician (hardware & networks)",
+        "summary": "You will install, maintain and repair the devices and networks our clients rely on, in Kigali and across the country.",
+        "do": [
+          "Install and configure computers, printers and network equipment",
+          "Diagnose and repair hardware on site and in the workshop",
+          "Run preventive maintenance visits for contract clients",
+          "Document every intervention in the help desk"
+        ],
+        "bring": [
+          "Experience with hardware repair and basic networking",
+          "A methodical way of working and a calm manner with clients",
+          "Willingness to travel for on-site visits",
+          "A driving licence is a plus"
+        ]
+      },
+      "open": {
+        "title": "Open application",
+        "summary": "No opening that fits today? Tell us what you do best and where you want to grow; we keep every application on file.",
+        "do": [
+          "Tell us which team you would join: engineering, design, field services or sales",
+          "Share work you are proud of: code, designs, projects or references",
+          "Say what you want to learn next"
+        ],
+        "bring": [
+          "Curiosity and a habit of finishing what you start",
+          "Respect for the people who use what we build"
+        ]
+      }
+    },
+    "drawer": {
+      "heading": "Open role",
+      "close": "Close",
+      "about": "About the role",
+      "do": "What you will do",
+      "bring": "What you bring",
+      "apply": "Apply",
+      "email": "Email us",
+      "note": "Applications go to the hiring team at {email}."
+    },
+    "perks": {
+      "title": "Why Linse",
+      "items": {
+        "products": {
+          "title": "Real products",
+          "label": "Impact",
+          "text": "Ship software that businesses run on, and see it used."
+        },
+        "scope": {
+          "title": "Wide scope",
+          "label": "Growth",
+          "text": "Web, mobile, systems, hardware: learn across the stack."
+        },
+        "team": {
+          "title": "Small team",
+          "label": "Culture",
+          "text": "Short decisions, direct access to clients and founders."
+        },
+        "tools": {
+          "title": "Tools",
+          "label": "Equipment",
+          "text": "Business-grade laptop, licences and training budget."
+        }
+      }
+    },
+    "hiring": {
+      "title": "How we hire",
+      "steps": {
+        "apply": {
+          "title": "Apply",
+          "text": "Send a CV or portfolio and a few lines on what you want to work on."
+        },
+        "call": {
+          "title": "Intro call",
+          "text": "Thirty minutes with the hiring lead: the role, the team and your questions."
+        },
+        "task": {
+          "title": "Practical task",
+          "text": "A short exercise close to the real work, then a review together."
+        },
+        "team": {
+          "title": "Team day and offer",
+          "text": "Meet the people you would work with, then a clear answer either way."
+        }
+      }
+    },
+    "life": {
+      "title": "Life at Linse",
+      "statement": "Engineers, designers, technicians and sales share the same clients and the same room in Kigali. A problem crosses one desk, not five departments.",
+      "photos": "Photos coming soon",
+      "tiles": {
+        "engineering": "Engineering",
+        "design": "Design",
+        "field": "Field services",
+        "sales": "Sales & hardware"
+      }
+    },
+    "apply": {
+      "title": "Apply",
+      "careers": {
+        "title": "Careers",
+        "who": "Hiring team",
+        "text": "Your CV, portfolio or GitHub, and the role you are applying for.",
+        "cta": "Email us"
+      },
+      "open": {
+        "title": "Open application",
+        "who": "Any team",
+        "text": "No role that fits? Tell us what you do best and where you want to grow.",
+        "cta": "Write to us"
+      },
+      "office": {
+        "title": "Office",
+        "cta": "Directions"
+      }
+    },
+    "band": {
+      "symbol": "Why Linse",
+      "asOf": "Small team, wide scope · October 2026",
+      "card": {
+        "label": "Open roles",
+        "note": "+ open application, always"
+      },
+      "facts": [
+        {
+          "label": "Teams",
+          "value": "4"
+        },
+        {
+          "label": "Hiring steps",
+          "value": "4"
+        },
+        {
+          "label": "Office",
+          "value": "Kigali"
+        },
+        {
+          "label": "Contract",
+          "value": "Full-time"
+        },
+        {
+          "label": "What we do",
+          "value": "Software · Hardware · IT"
+        },
+        {
+          "label": "Languages",
+          "value": "EN · FR · RW"
+        },
+        {
+          "label": "Field work",
+          "value": "Nationwide"
+        },
+        {
+          "label": "Applications",
+          "value": "careers@linsetech.com"
+        }
+      ]
+    }
+  },
+  "supportPage": {
+    "meta": {
+      "title": "Support",
+      "description": "Help desk, response times, remote help and downloads for Linse software, systems and hardware."
+    },
+    "hero": {
+      "title": "We are here when it matters.",
+      "lead": "Help desk for software we publish, systems we maintain and hardware we supply.",
+      "cta": "Get help"
+    },
+    "cards": {
+      "hours": {
+        "eyebrow": "Support hours",
+        "tag": "Mon–Sat",
+        "title": "Mon–Fri 08:00–18:00, Sat 09:00–13:00"
+      },
+      "slider": "Emergency line",
+      "emergency": {
+        "eyebrow": "Critical (P1)",
+        "tag": "Under 1 hour",
+        "title": "System down? Call the help desk: {phone}"
+      },
+      "remote": {
+        "eyebrow": "Remote session",
+        "tag": "On request",
+        "title": "A technician fixes it on your screen while you watch."
+      },
+      "prev": "Previous",
+      "next": "Next",
+      "pause": "Pause rotation",
+      "play": "Resume rotation"
+    },
+    "rail": {
+      "label": "On this page",
+      "channels": "Channels",
+      "sla": "SLA",
+      "remote": "Remote help",
+      "downloads": "Downloads",
+      "contacts": "Contacts",
+      "faq": "FAQ"
+    },
+    "channels": {
+      "title": "Channels",
+      "items": {
+        "desk": {
+          "chip": "Email",
+          "title": "Help desk: {value}",
+          "text": "Tickets, tracked against the SLA"
+        },
+        "phone": {
+          "chip": "Phone",
+          "title": "Phone and WhatsApp: {value}",
+          "text": "Mon–Fri 08:00–18:00, Sat 09:00–13:00"
+        },
+        "remote": {
+          "chip": "Remote",
+          "title": "Remote help session",
+          "text": "Screen sharing with a technician, on request"
+        },
+        "onsite": {
+          "chip": "On-site",
+          "title": "Visits in Kigali and nationwide",
+          "text": "Scheduled or emergency, on contract"
+        }
+      }
+    },
+    "sla": {
+      "title": "Service levels",
+      "cols": {
+        "priority": "Priority",
+        "example": "Example",
+        "response": "First response",
+        "resolution": "Resolution target"
+      },
+      "rows": {
+        "p1": {
+          "level": "Critical",
+          "example": "System down, no workaround",
+          "response": "< 1 hour",
+          "resolution": "4 hours"
+        },
+        "p2": {
+          "level": "High",
+          "example": "A key feature fails, a workaround exists",
+          "response": "4 hours",
+          "resolution": "1 business day"
+        },
+        "p3": {
+          "level": "Normal",
+          "example": "Questions, small issues and requests",
+          "response": "1 business day",
+          "resolution": "3 business days"
+        }
+      },
+      "note": "Targets apply to customers on a support contract and are counted in support hours."
+    },
+    "remote": {
+      "title": "Remote help",
+      "lead": "Most problems are solved without a visit. With your permission, a technician connects to your computer, shows you what they do and disconnects when the job is done.",
+      "steps": {
+        "call": {
+          "title": "Call or open a ticket",
+          "text": "Describe the problem; we tell you whether remote help fits."
+        },
+        "tool": {
+          "title": "Run the support tool",
+          "text": "Read out the session code shown on your screen."
+        },
+        "fix": {
+          "title": "Watch the fix",
+          "text": "You can end the session at any moment."
+        }
+      },
+      "tool": {
+        "eyebrow": "Remote support tool",
+        "tag": "Coming soon",
+        "title": "Linse Quick Support for Windows and macOS"
+      },
+      "cta": "Request a session"
+    },
+    "downloads": {
+      "title": "Downloads",
+      "note": "Placeholder files: the final documents will be published here.",
+      "soon": "Coming soon",
+      "items": {
+        "winTool": "Remote support tool for Windows",
+        "macTool": "Remote support tool for macOS",
+        "handbook": "Support handbook",
+        "slaTerms": "Service level agreement (template)",
+        "warranty": "Hardware warranty and returns",
+        "onboarding": "New device onboarding checklist",
+        "macyepay": "MacyePay merchant quick start",
+        "inventory": "Network inventory template"
+      },
+      "download": "Download"
+    },
+    "pager": {
+      "first": "First",
+      "prev": "Previous",
+      "next": "Next",
+      "last": "Last"
+    },
+    "contacts": {
+      "title": "Other contacts",
+      "support": {
+        "title": "Support",
+        "who": "Linse help desk",
+        "text": "Tickets, incidents and questions about a system we run for you.",
+        "cta": "Email"
+      },
+      "sales": {
+        "title": "Sales",
+        "who": "New projects & hardware",
+        "text": "Quotes, device orders, licences and new projects.",
+        "cta": "Email"
+      },
+      "accounts": {
+        "title": "Accounts",
+        "who": "Billing",
+        "text": "Invoices, contracts and payments.",
+        "cta": "Email"
+      },
+      "press": {
+        "title": "Press & media",
+        "media": "Media enquiries"
+      }
+    },
+    "faq": {
+      "title": "Frequently asked",
+      "more": "Still stuck?",
+      "reach": "Reach us",
+      "items": [
+        {
+          "q": "What does a support contract cover?",
+          "a": "The systems, software and devices listed in your contract: help desk access, the response times above, preventive maintenance and on-site visits where included."
+        },
+        {
+          "q": "How do I open a ticket?",
+          "a": "Email the help desk or call us during support hours. Give your company name, what happened and how urgent it is; you get a ticket number in reply."
+        },
+        {
+          "q": "Do you support hardware you did not supply?",
+          "a": "Often, yes. We first check the device and tell you what we can support and at what cost before any work starts."
+        },
+        {
+          "q": "Can you come on site outside Kigali?",
+          "a": "Yes, nationwide. Visits outside Kigali are scheduled with you in advance; travel is quoted separately unless your contract includes it."
+        },
+        {
+          "q": "Is remote help secure?",
+          "a": "A session only starts when you give the code shown on your screen, you see everything the technician does, and you can end it at any time."
+        }
+      ]
+    },
+    "band": {
+      "symbol": "Support hours",
+      "asOf": "Kigali time, CAT (UTC+2) · October 2026",
+      "card": {
+        "label": "Critical incidents",
+        "value": "< 1 h",
+        "note": "First response on contract (P1)"
+      },
+      "facts": [
+        {
+          "label": "Mon–Fri",
+          "value": "08:00–18:00"
+        },
+        {
+          "label": "Saturday",
+          "value": "09:00–13:00"
+        },
+        {
+          "label": "Channels",
+          "value": "4"
+        },
+        {
+          "label": "On-site",
+          "value": "Nationwide"
+        },
+        {
+          "label": "P1 resolution",
+          "value": "4 hours"
+        },
+        {
+          "label": "P2 response",
+          "value": "4 hours"
+        },
+        {
+          "label": "P3 response",
+          "value": "1 business day"
+        },
+        {
+          "label": "Help desk",
+          "value": "support@linsetech.com"
+        }
+      ]
+    }
+  },
+  "legalPage": {
+    "privacy": {
+      "meta": {
+        "title": "Privacy policy",
+        "description": "How Linse collects, uses and protects personal data (draft outline)."
+      },
+      "title": "Privacy policy",
+      "intro": {
+        "heading": "Your privacy matters to us.",
+        "body": [
+          "Placeholder. The Privacy policy text will be supplied and edited in the Studio.",
+          "The outline below lists the sections the final policy will cover. Until it is published, questions about personal data can be sent to {email}."
+        ]
+      },
+      "sections": [
+        {
+          "title": "Who we are",
+          "body": [
+            "This section will identify Linsetech Ltd (“Linse”), Kigali, Rwanda, as the organisation responsible for personal data collected through this website, and how to reach us."
+          ]
+        },
+        {
+          "title": "Information we collect",
+          "body": [
+            "This section will list the information we collect: what you send through the contact form (name, email, company and message) and technical data such as pages visited and device type."
+          ]
+        },
+        {
+          "title": "How we use information",
+          "body": [
+            "This section will explain why we use it: to answer enquiries, deliver services under contract, improve the website and meet legal obligations."
+          ]
+        },
+        {
+          "title": "Sharing",
+          "body": [
+            "This section will name the kinds of service providers that help us run the website and our services, and the cases where the law requires disclosure."
+          ]
+        },
+        {
+          "title": "Retention",
+          "body": [
+            "This section will state how long each type of information is kept and how it is deleted."
+          ]
+        },
+        {
+          "title": "Security",
+          "body": [
+            "This section will describe the measures we use to protect information against loss and unauthorised access."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "body": [
+            "This section will explain how to access, correct or delete your information, object to its use, and lodge a complaint with the competent authority in Rwanda."
+          ]
+        },
+        {
+          "title": "Cookies",
+          "body": [
+            "This section will list the cookies and similar technologies used on this website and how to control them."
+          ]
+        },
+        {
+          "title": "Changes to this policy",
+          "body": [
+            "This section will explain how updates are announced and when they take effect."
+          ]
+        },
+        {
+          "title": "Contact",
+          "body": [
+            "Questions about this policy: {email}."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "meta": {
+        "title": "Terms of use",
+        "description": "The terms that apply to the Linse website (draft outline)."
+      },
+      "title": "Terms of use",
+      "intro": {
+        "heading": "Please read these terms carefully.",
+        "body": [
+          "Placeholder. The Terms of use text will be supplied and edited in the Studio.",
+          "The outline below lists the sections the final terms will cover. Until they are published, questions can be sent to {email}."
+        ]
+      },
+      "sections": [
+        {
+          "title": "Acceptance",
+          "body": [
+            "This section will explain that using this website means accepting these terms."
+          ]
+        },
+        {
+          "title": "Use of the website",
+          "body": [
+            "This section will set out acceptable use: no misuse, and no attempt to disrupt the website or access our systems without permission."
+          ]
+        },
+        {
+          "title": "Services and quotes",
+          "body": [
+            "This section will explain that projects, products and hardware sales are governed by separate written agreements and quotes."
+          ]
+        },
+        {
+          "title": "Intellectual property",
+          "body": [
+            "This section will state who owns the content, brand and software shown on this website."
+          ]
+        },
+        {
+          "title": "Third-party links",
+          "body": [
+            "This section will cover links to other websites, which we do not control."
+          ]
+        },
+        {
+          "title": "Disclaimer",
+          "body": [
+            "This section will explain that information on the website is provided for general purposes and may change."
+          ]
+        },
+        {
+          "title": "Limitation of liability",
+          "body": [
+            "This section will set out the limits of our liability for the use of this website."
+          ]
+        },
+        {
+          "title": "Governing law",
+          "body": [
+            "This section will state the law that governs these terms and the courts that hear disputes."
+          ]
+        },
+        {
+          "title": "Changes to these terms",
+          "body": [
+            "This section will explain how and when these terms may be updated."
+          ]
+        },
+        {
+          "title": "Contact",
+          "body": [
+            "Questions about these terms: {email}."
+          ]
+        }
+      ]
+    }
+  }
+}

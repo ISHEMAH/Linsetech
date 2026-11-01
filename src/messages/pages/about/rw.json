@@ -1,0 +1,157 @@
+{
+  "aboutPage": {
+    "meta": {
+      "title": "Abo turi bo",
+      "description": "Linse ni ikigo cy’ikoranabuhanga gikorera i Kigali. Dukora kandi twubaka porogaramu, dusohora ibicuruzwa byacu, dukwirakwiza ibikoresho kandi ducunga IT y’ibigo bikeneye ko byose bikorana."
+    },
+    "hero": {
+      "title": "Twubaka urwego rwa digitale rw’ibigo bikura.",
+      "cta1": "Reba imirimo yacu",
+      "cta2": "Vugana natwe"
+    },
+    "story": {
+      "heading": "Ikipe imwe ku byo ikigo cyawe gikeneye byose.",
+      "rows": {
+        "story": {
+          "label": "Amateka yacu",
+          "text": "Linse ni ikigo cy’ikoranabuhanga gikorera i Kigali. Twatangiye turi sitidiyo nto ikora porogaramu, kandi ibigo twakoreraga byakomezaga kubaza ikibazo kimwe: ni nde uzatuma ibi byose bikorana?"
+        },
+        "scope": {
+          "label": "Ibyo dukora",
+          "text": "Ni yo mpamvu twaguye ibikorwa byacu. Uyu munsi dukora porogaramu zihariye, dusohora ibicuruzwa byacu bwite, dukwirakwiza ibikoresho by’umwuga kandi ducunga IT ku masezerano. Ikipe imwe, umuntu umwe wo kuvugana na we, n’ihame rimwe kuri byose: bigomba gukora."
+        },
+        "serve": {
+          "label": "Abo dukorera",
+          "text": "Dukorana n’abacuruzi, ibigo by’imari, amavuriro, amashuri n’ibigo bya leta mu Rwanda no mu karere. Igice kinini cy’akazi kacu ni uguhuza: gutuma sisitemu zisanzwe, ibicuruzwa bishya n’ibikoresho bikoreshwa bihanahana amakuru mu buryo bwizewe."
+        }
+      },
+      "whatLabel": "Icyo turi cyo",
+      "pillars": {
+        "software": {
+          "title": "Porogaramu zihariye",
+          "text": "Igishushanyo, imbuga, apulikasiyo na sisitemu bikozwe uko ubishaka."
+        },
+        "publishing": {
+          "title": "Gusohora porogaramu zacu",
+          "text": "Ibicuruzwa dushoramo imari kandi duha abandi uburenganzira bwo kubikoresha."
+        },
+        "hardware": {
+          "title": "Kugurisha no gukwirakwiza ibikoresho",
+          "text": "Ibikoresho bishakwa, bigezwa ku bakiriya kandi bikitabwaho mu gihugu hose."
+        },
+        "services": {
+          "title": "Serivisi za IT",
+          "text": "Ubufasha, imiyoboro, cloud n’umutekano, ku masezerano."
+        }
+      },
+      "milestonesLabel": "Intambwe z’ingenzi",
+      "milestones": {
+        "2022": {
+          "title": "Twashingiwe i Kigali",
+          "text": "Linse itangira ari sitidiyo ikora imbuga na sisitemu ku bigo byo mu gihugu."
+        },
+        "2024": {
+          "title": "MacyePay",
+          "text": "Dusohora igicuruzwa cyacu cya mbere: kwishyura mu byiciro hamwe no kugaruza mu buryo bw’amategeko."
+        },
+        "2025": {
+          "title": "Gukwirakwiza ibikoresho",
+          "text": "Gukwirakwiza ibikoresho n’imiyoboro by’umwuga byemewe."
+        },
+        "2026": {
+          "title": "Linsetech",
+          "text": "Porogaramu, ibicuruzwa, ibikoresho na serivisi za IT ahantu hamwe."
+        }
+      }
+    },
+    "quote": {
+      "text": "Ntitugurisha porogaramu, ibikoresho cyangwa ubufasha. Tugurisha ko, ku wa mbere mu gitondo, byose bikora.",
+      "name": "Uwashinze & Umuyobozi Mukuru",
+      "role": "Linse, Kigali"
+    },
+    "people": {
+      "statement": "Linse iyobowe n’abantu bubaka, batanga kandi bakita ku byo bagurisha. Twibanda ku kwizerwa, ku nshingano, ku busobanuro no ku serivisi.",
+      "rail": {
+        "aria": "Kuri uru rupapuro",
+        "leadership": "Ubuyobozi",
+        "team": "Ikipe",
+        "partners": "Abafatanyabikorwa",
+        "documents": "Inyandiko",
+        "contacts": "Aho utubona"
+      },
+      "headings": {
+        "leadership": "Ubuyobozi",
+        "team": "Ikipe",
+        "partners": "Abafatanyabikorwa & impamyabushobozi",
+        "documents": "Inyandiko z’ikigo",
+        "contacts": "Aho utubona"
+      },
+      "member": "Umunyamuryango w’ikipe",
+      "portrait": "Ifoto iraza vuba",
+      "readBio": "Soma byinshi",
+      "drawerTitle": "Menya ubuyobozi bwacu",
+      "close": "Funga",
+      "bio1": "{role} muri Linse, ushinzwe {focus}.",
+      "bio2": "Amateka ye yuzuye n’ifoto bizashyirwa hano bikimara kuboneka.",
+      "leadership": {
+        "ceo": {
+          "role": "Uwashinze & Umuyobozi Mukuru",
+          "focus": "ingamba n’ibicuruzwa"
+        },
+        "engineering": {
+          "role": "Ukuriye ubuhanga bwa tekiniki",
+          "focus": "porogaramu na sisitemu"
+        },
+        "hardware": {
+          "role": "Ukuriye ibikoresho",
+          "focus": "kugurisha no gukwirakwiza ibikoresho"
+        },
+        "design": {
+          "role": "Ukuriye igishushanyo",
+          "focus": "ikirango, UX na UI"
+        }
+      },
+      "roles": {
+        "engineer": "Injeniyeri",
+        "designer": "Umushushanyi",
+        "support": "Ubufasha",
+        "sales": "Ubucuruzi"
+      },
+      "partners": {
+        "sub": "Dutanga kandi twita ku bikoresho by’umwuga, tukubaka ku mbuga abakiriya bacu basanzwe bakoresha.",
+        "brands": "Ibirango by’ibikoresho",
+        "platforms": "Imbuga n’abafatanyabikorwa",
+        "certs": "Impamyabushobozi"
+      },
+      "certifications": {
+        "rdb": "Yanditswe muri RDB",
+        "rra": "Yubahiriza amabwiriza ya RRA",
+        "microsoft": "Umufatanyabikorwa wa Microsoft (biri gukorwa)",
+        "iso": "ISO 27001 (biri gukorwa)"
+      },
+      "documents": {
+        "profile": "Umwirondoro w’ikigo",
+        "incorporation": "Icyemezo cyo kwandikwa",
+        "press": "Ibikoresho by’itangazamakuru n’ikirango",
+        "soon": "Biraza vuba",
+        "download": "Kuramo"
+      },
+      "contacts": {
+        "sales": "Ubucuruzi",
+        "support": "Ubufasha",
+        "media": "Itangazamakuru",
+        "careers": "Akazi",
+        "office": "Ibiro",
+        "phone": "Telefone",
+        "copy": "Koporora",
+        "copied": "Byakoporowe",
+        "email": "Imeri"
+      },
+      "drawerCta": "Vugana natwe"
+    },
+    "cta": {
+      "title": "Tubyubakane, kandi tubikomeze bikora.",
+      "careers": "Akazi"
+    }
+  }
+}

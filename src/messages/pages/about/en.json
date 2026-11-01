@@ -1,0 +1,157 @@
+{
+  "aboutPage": {
+    "meta": {
+      "title": "About",
+      "description": "Linse is a Kigali-based technology company. We design and build software, publish our own products, distribute hardware and run IT for organisations that need all of it to work together."
+    },
+    "hero": {
+      "title": "Building the digital backbone of growing businesses.",
+      "cta1": "See our work",
+      "cta2": "Talk to us"
+    },
+    "story": {
+      "heading": "One team for everything your business runs on.",
+      "rows": {
+        "story": {
+          "label": "Our story",
+          "text": "Linse is a Kigali-based technology company. It started as a small software studio, and the businesses we built for kept asking the same question: who will make all of this work together?"
+        },
+        "scope": {
+          "label": "The scope",
+          "text": "So we widened the scope. Today we design and build software to a brief, publish products we own and operate, distribute business-grade hardware and run IT on contract. One team, one point of contact, and the same standard across all of it: it has to run."
+        },
+        "serve": {
+          "label": "Who we serve",
+          "text": "We work with retailers, lenders, clinics, schools and public institutions across Rwanda and the region. Most of our work is integration: making existing systems, new products and the devices they run on share data reliably."
+        }
+      },
+      "whatLabel": "What we are",
+      "pillars": {
+        "software": {
+          "title": "Software solutions",
+          "text": "Design, websites, apps and systems built to a brief."
+        },
+        "publishing": {
+          "title": "Publishing & owning software",
+          "text": "Products we invest in and license to the market."
+        },
+        "hardware": {
+          "title": "Hardware sales & distribution",
+          "text": "Devices sourced, delivered and supported nationwide."
+        },
+        "services": {
+          "title": "IT services",
+          "text": "Help desk, networks, cloud and security, on contract."
+        }
+      },
+      "milestonesLabel": "Milestones",
+      "milestones": {
+        "2022": {
+          "title": "Founded in Kigali",
+          "text": "Linse starts as a software studio building websites and systems for local businesses."
+        },
+        "2024": {
+          "title": "MacyePay",
+          "text": "We publish our first product: installment payments with legal recovery."
+        },
+        "2025": {
+          "title": "Hardware distribution",
+          "text": "Authorised distribution of business-grade devices and networking."
+        },
+        "2026": {
+          "title": "Linsetech",
+          "text": "Software, products, hardware and IT services under one roof."
+        }
+      }
+    },
+    "quote": {
+      "text": "We do not sell software, hardware or support. We sell the fact that, on Monday morning, everything works.",
+      "name": "Founder & CEO",
+      "role": "Linse, Kigali"
+    },
+    "people": {
+      "statement": "Linse is led by people who build, ship and support what they sell. Our focus is reliability, ownership, clarity and service.",
+      "rail": {
+        "aria": "On this page",
+        "leadership": "Leadership",
+        "team": "Team",
+        "partners": "Partners",
+        "documents": "Documents",
+        "contacts": "Contacts"
+      },
+      "headings": {
+        "leadership": "Leadership",
+        "team": "Team",
+        "partners": "Partners & certifications",
+        "documents": "Company documents",
+        "contacts": "Contacts"
+      },
+      "member": "Team member",
+      "portrait": "Portrait coming soon",
+      "readBio": "Read bio",
+      "drawerTitle": "Meet our leadership",
+      "close": "Close",
+      "bio1": "{role} at Linse, responsible for {focus}.",
+      "bio2": "A full biography and portrait will be published here as soon as they are supplied.",
+      "leadership": {
+        "ceo": {
+          "role": "Founder & CEO",
+          "focus": "strategy and products"
+        },
+        "engineering": {
+          "role": "Head of Engineering",
+          "focus": "software and systems"
+        },
+        "hardware": {
+          "role": "Head of Hardware",
+          "focus": "hardware sales and distribution"
+        },
+        "design": {
+          "role": "Head of Design",
+          "focus": "brand, UX and UI"
+        }
+      },
+      "roles": {
+        "engineer": "Engineer",
+        "designer": "Designer",
+        "support": "Support",
+        "sales": "Sales"
+      },
+      "partners": {
+        "sub": "We supply and support business-grade devices, and build on the platforms our clients already use.",
+        "brands": "Hardware brands",
+        "platforms": "Platforms & partners",
+        "certs": "Certifications"
+      },
+      "certifications": {
+        "rdb": "RDB registered",
+        "rra": "RRA compliant",
+        "microsoft": "Microsoft Partner (pending)",
+        "iso": "ISO 27001 (in progress)"
+      },
+      "documents": {
+        "profile": "Company profile",
+        "incorporation": "Certificate of incorporation",
+        "press": "Press kit & brand assets",
+        "soon": "Coming soon",
+        "download": "Download"
+      },
+      "contacts": {
+        "sales": "Sales",
+        "support": "Support",
+        "media": "Media",
+        "careers": "Careers",
+        "office": "Office",
+        "phone": "Phone",
+        "copy": "Copy",
+        "copied": "Copied",
+        "email": "Email"
+      },
+      "drawerCta": "Talk to us"
+    },
+    "cta": {
+      "title": "Build it with us, and keep it running.",
+      "careers": "Careers"
+    }
+  }
+}
