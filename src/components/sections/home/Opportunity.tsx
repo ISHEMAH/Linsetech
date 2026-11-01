@@ -32,6 +32,8 @@ const BRIGHT = "#F3F3F3";
 export default function Opportunity({ services }: { services: Service[] }) {
   const t = useTranslations("opportunity");
   const tw = useTranslations("whatWeDo.items");
+  // the cards' blurbs come from the services pages' messages, like their titles (the content fallback is English only)
+  const ts = useTranslations("servicesPage.services");
   const root = useRef<HTMLElement>(null);
   // the clip plays only while its window is on (from a screen before the fade, see below)
   const [partsOn, setPartsOn] = useState(false);
@@ -58,10 +60,16 @@ export default function Opportunity({ services }: { services: Service[] }) {
 
       if (reduced) {
         gsap.set(statement, { color: BRIGHT });
+        // no fades: the clip (held on a still frame) is simply shown beside the list and gone after it — it is fixed, so
+        // left on it stayed over the rest of the page
         if (partsBox) {
-          partsBox.style.setProperty("--po", "1");
-          partsBox.dataset.on = "1";
-          setPartsOn(true);
+          const show = (st: ScrollTrigger) => {
+            partsBox.style.setProperty("--po", st.isActive ? "1" : "0");
+            if (st.isActive) partsBox.dataset.on = "1";
+            else delete partsBox.dataset.on;
+            setPartsOn(st.isActive);
+          };
+          ScrollTrigger.create({ trigger: list, endTrigger: el, start: "top 75%", end: "bottom 60%", onToggle: show, onRefresh: show });
         }
         return;
       }
@@ -107,8 +115,9 @@ export default function Opportunity({ services }: { services: Service[] }) {
             onRefresh: (self) => setHead(self.progress * pinned.duration() >= 0.8 ? "light" : "dark"),
           });
 
-          // the chrome clip: in when the list reaches 75 %, out over the last fifth (desktop only here), done by the time
-          // the Work chapter enters — Sharplink's next section covers its video, but our Work sits below this layer
+          // the chrome clip: in when the list reaches 75 %, held through the whole list, out over the last fifth as the
+          // Work chapter's soft top edge comes in (desktop: until the section's bottom is 40 % up the screen) — as
+          // Sharplink's video stays until the next section; fading by "bottom bottom" took it away mid-list
           if (partsBox) {
             const fade = gsap.timeline({ paused: true });
             fade.fromTo(partsBox, { "--po": 0 }, { "--po": 1, duration: 0.3, ease: "none" }, 0);
@@ -117,7 +126,7 @@ export default function Opportunity({ services }: { services: Service[] }) {
               trigger: list,
               endTrigger: el,
               start: mobile ? "bottom 90%" : "top 75%",
-              end: mobile ? "bottom 75%" : "bottom bottom",
+              end: mobile ? "bottom 75%" : "bottom 60%",
               scrub: true,
               animation: fade,
             });
@@ -127,7 +136,7 @@ export default function Opportunity({ services }: { services: Service[] }) {
               trigger: list,
               endTrigger: el,
               start: mobile ? "bottom 190%" : "top 175%",
-              end: mobile ? "bottom 75%" : "bottom bottom",
+              end: mobile ? "bottom 75%" : "bottom 60%",
               onToggle: (st) => {
                 if (st.isActive) partsBox.dataset.on = "1";
                 else delete partsBox.dataset.on;
@@ -197,7 +206,7 @@ export default function Opportunity({ services }: { services: Service[] }) {
                     <Link href={`/services/${s.slug}` as never} className="hover:text-green-700">{tw(`${s.key}.title`)}</Link>
                   </h3>
                 </div>
-                <p className="mt-3 max-w-[48ch] text-[15px] leading-[1.45] text-ink/70">{s.intro}</p>
+                <p className="mt-3 max-w-[48ch] text-[15px] leading-[1.45] text-ink/70">{ts.has(`${s.key}.intro`) ? ts(`${s.key}.intro`) : s.intro}</p>
               </div>
             </article>
           ))}

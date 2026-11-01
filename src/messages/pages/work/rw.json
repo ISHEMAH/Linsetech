@@ -96,7 +96,16 @@
         "meta": {
           "scope": "Igishushanyo cy'igicuruzwa · Urubuga rw'abacuruzi · Porogaramu y'abakiriya · Inzira ya noteri · Backend n'ihuzwa",
           "period": "2024 — birakomeje",
-          "role": "Nyirayo, uwayishushanyije n'uyisohora"
+          "role": "Nyirayo, uwayishushanyije n'uyisohora",
+          "stack": [
+            null,
+            null,
+            null,
+            null,
+            "API za mobile money",
+            "CRB (amakuru y'inguzanyo)",
+            "Gusinya PDF"
+          ]
         },
         "year": "2024 — birakomeje",
         "delivered": [
@@ -244,18 +253,27 @@
         },
         "stats": [
           {
+            "value": "210",
             "label": "Ibikoresho byatanzwe"
           },
           {
+            "value": "Ibyumweru 6",
             "label": "Igihe byafashe"
           },
           {
+            "value": "Imyaka 2",
             "label": "Garanti n'ubufasha"
           }
         ],
         "meta": {
           "scope": "Kugura · Kugeza · Gushyiraho · Ubufasha",
-          "role": "Utanga n'uhuza"
+          "role": "Utanga n'uhuza",
+          "stack": [
+            "Imashini za POS",
+            null,
+            null,
+            null
+          ]
         },
         "delivered": [
           "Kugura: imashini, printeri na scanner bivuye ku bacuruzi bemewe, bifite garanti.",

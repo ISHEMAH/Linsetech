@@ -18,7 +18,9 @@ import type { ExhibitHover } from "@/components/sections/work/ExhibitCursor";
 import { waveTo } from "@/components/sections/work/pixelWave";
 import { cn } from "@/lib/cn";
 import { useCanvasVisible } from "./useCanvasVisible";
-import { CANVAS_CAMERA, CANVAS_DPR, Space, SpaceBackdrop, SpaceTimeline, canvasPointer, frame, gridPoint, handoffFrame, useSpace, type SpaceParams, type TileChipState } from "./WorkSpace";
+import { useContextRecovery } from "./useContextRecovery";
+import CanvasBoundary from "./CanvasBoundary";
+import { CANVAS_CAMERA, CANVAS_DPR, Space, SpaceBackdrop, SpaceTimeline, canvasPointer, forgetPointer, frame, gridPoint, handoffFrame, useSpace, type SpaceParams, type TileChipState } from "./WorkSpace";
 
 export type FloorCard = { slug: string; title: string; cover: string | null; shape: CardShape; accent: string };
 
@@ -46,7 +48,8 @@ function cardView(i: number, shape: CardShape, b: Partial<SpaceParams>): Partial
   const [x, z] = cardFoot(i);
   const [, h] = cardSize(shape);
   const portrait = shape !== "landscape";
-  return { tgtX: (b.gX ?? 0) + x, tgtY: (b.gY ?? 0) + h / 2, tgtZ: (b.gZ ?? 0) + z, azim: 8, elev: 9, dist: portrait ? 10 : 8.7, fov: 40, pan: 0.28 };
+  // a tall panel stands further off and a little lower: at 10 its top ran under the header once the hold dollied in
+  return { tgtX: (b.gX ?? 0) + x, tgtY: (b.gY ?? 0) + h / 2, tgtZ: (b.gZ ?? 0) + z, azim: 8, elev: 9, dist: portrait ? 11.5 : 8.7, fov: 40, pan: 0.28, panY: portrait ? -0.04 : 0 };
 }
 
 function buildTimeline(cards: FloorCard[], pacing: WorkPacing, dark: boolean, mobile: boolean, handoff: boolean) {
@@ -94,11 +97,12 @@ function shadowTexture() {
   return shadowTex;
 }
 
-/** Cover-fit a texture onto a panel of the given aspect. */
+/** Cover-fit a texture onto a panel of the given aspect. A vertical crop keeps the top: these are screenshots, and a
+ *  centred crop sliced the MacyePay dashboard's title in half (a 4:3 shot on a 16:9 panel). */
 function coverFit(tex: THREE.Texture, w: number, h: number, aspect: number) {
   const ia = w / Math.max(h, 1);
   tex.repeat.set(ia > aspect ? aspect / ia : 1, ia > aspect ? 1 : ia / aspect);
-  tex.offset.set((1 - tex.repeat.x) / 2, (1 - tex.repeat.y) / 2);
+  tex.offset.set((1 - tex.repeat.x) / 2, 1 - tex.repeat.y);
 }
 
 function placeholderTexture(card: FloorCard, w: number, h: number) {
@@ -168,9 +172,9 @@ function Panel({ card, index, dark, faces }: { card: FloorCard; index: number; d
     if (!g || !s || !frameMat.current || !faceMat.current || !shadowMat.current) return;
     const p = st.p;
     const u = raise(p, index);
-    const current = p.exhibit > 0.5 ? Math.round(p.raised) - 1 : -1;
-    // load the cover when the panel is about to show
-    if (!loaded.current && (u > 0 || Math.abs(current - index) <= 1)) {
+    // load the cover once the floor renders (half a screen before the chapter): loading it as the panel was about to rise
+    // showed a grey slab until the file arrived, on a slow connection for most of the hold
+    if (!loaded.current) {
       loaded.current = true;
       const mat = faceMat.current;
       if (card.cover) {
@@ -305,27 +309,38 @@ type Props = {
 
 export default function WorkFloor({ cards, pacing, screensRef, className, dark = false, handoff = false, hover, chip }: Props) {
   const [wrap, visible] = useCanvasVisible();
+  const [generation, watchContext] = useContextRecovery();
   const [ready, setReady] = useState(false);
   const timeline = useMemo(() => buildTimeline(cards, pacing, dark, false, handoff), [cards, pacing, dark, handoff]);
   const mobileTimeline = useMemo(() => buildTimeline(cards, pacing, dark, true, handoff), [cards, pacing, dark, handoff]);
+  // a fresh view of the floor (also after Back): no hover until the pointer has moved here
+  useEffect(() => forgetPointer(), []);
 
   return (
     // Puture's `.space-stage`: the canvas fades in over 1.4s once it exists
     <div ref={wrap} className={cn(className, "transition-opacity duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none", ready ? "opacity-100" : "opacity-0")}>
-      <Canvas
-        dpr={CANVAS_DPR}
-        flat
-        frameloop={visible ? "always" : "never"}
-        camera={CANVAS_CAMERA}
-        gl={{ antialias: true, powerPreference: "high-performance" }}
-        style={{ background: dark ? "#020a07" : "#f7f9f7" }}
-        onCreated={() => requestAnimationFrame(() => setReady(true))}
-      >
-        <Space timeline={timeline} mobileTimeline={mobileTimeline} screensRef={screensRef}>
-          <SpaceBackdrop env={1.2} chip={chip} />
-          <Panels cards={cards} dark={dark} hover={hover} />
-        </Space>
-      </Canvas>
+      <CanvasBoundary>
+        <Canvas
+          key={generation}
+          dpr={CANVAS_DPR}
+          flat
+          frameloop={visible ? "always" : "never"}
+          camera={CANVAS_CAMERA}
+          gl={{ antialias: true, powerPreference: "high-performance" }}
+          style={{ background: dark ? "#020a07" : "#f7f9f7" }}
+          onCreated={(state) => {
+            watchContext(state);
+            // the error check reads each program's compile log at once, forcing a blocking compile (60–100 ms frames)
+            state.gl.debug.checkShaderErrors = process.env.NODE_ENV !== "production";
+            requestAnimationFrame(() => setReady(true));
+          }}
+        >
+          <Space timeline={timeline} mobileTimeline={mobileTimeline} screensRef={screensRef}>
+            <SpaceBackdrop env={1.2} chip={chip} />
+            <Panels cards={cards} dark={dark} hover={hover} />
+          </Space>
+        </Canvas>
+      </CanvasBoundary>
     </div>
   );
 }

@@ -12,6 +12,8 @@
 import { useEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { cn } from "@/lib/cn";
+import { useContextRecovery } from "@/components/three/useContextRecovery";
+import CanvasBoundary from "@/components/three/CanvasBoundary";
 import { CANVAS_CAMERA, DEFAULTS, Space, SpaceBackdrop, frame, type Sample, type Sampler, type SpaceParams } from "@/components/three/WorkSpace";
 
 const HORIZON: Partial<SpaceParams> = {
@@ -171,6 +173,7 @@ export default function CaseBackdrop({ hero = ".case-hero", foot = "[data-case-f
   const screens = useRef(0);
   const [running, setRunning] = useState(true);
   const [ready, setReady] = useState(false);
+  const [generation, watchContext] = useContextRecovery();
   const desktop = useMemo(() => {
     const f = frames(false);
     return { frames: f, tween: new FrameTween(f.ring) };
@@ -210,22 +213,30 @@ export default function CaseBackdrop({ hero = ".case-hero", foot = "[data-case-f
 
   return (
     <div ref={wrap} className="pointer-events-none fixed inset-0 z-0 bg-[#020a07]" aria-hidden>
-      <Canvas
-        dpr={[1, 1.5]}
-        flat
-        frameloop={running ? "always" : "never"}
-        camera={CANVAS_CAMERA}
-        gl={{ antialias: true, powerPreference: "high-performance" }}
-        style={{ background: "#020a07" }}
-        className={cn("transition-opacity duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none", ready ? "opacity-100" : "opacity-0")}
-        onCreated={() => requestAnimationFrame(() => setReady(true))}
-      >
-        <Driver targetRef={target} desktop={desktop} mobile={mobile} atFootRef={atFoot} />
-        <HeaderProbe atFootRef={atFoot} />
-        <Space timeline={desktop.tween} mobileTimeline={mobile.tween} screensRef={screens} sway="time">
-          <SpaceBackdrop env={1.2} />
-        </Space>
-      </Canvas>
+      <CanvasBoundary>
+        <Canvas
+          key={generation}
+          dpr={[1, 1.5]}
+          flat
+          frameloop={running ? "always" : "never"}
+          camera={CANVAS_CAMERA}
+          gl={{ antialias: true, powerPreference: "high-performance" }}
+          style={{ background: "#020a07" }}
+          className={cn("transition-opacity duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none", ready ? "opacity-100" : "opacity-0")}
+          onCreated={(state) => {
+            watchContext(state);
+            // the error check reads each program's compile log at once, forcing a blocking compile (60–100 ms frames)
+            state.gl.debug.checkShaderErrors = process.env.NODE_ENV !== "production";
+            requestAnimationFrame(() => setReady(true));
+          }}
+        >
+          <Driver targetRef={target} desktop={desktop} mobile={mobile} atFootRef={atFoot} />
+          <HeaderProbe atFootRef={atFoot} />
+          <Space timeline={desktop.tween} mobileTimeline={mobile.tween} screensRef={screens} sway="time">
+            <SpaceBackdrop env={1.2} />
+          </Space>
+        </Canvas>
+      </CanvasBoundary>
     </div>
   );
 }

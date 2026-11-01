@@ -146,10 +146,14 @@ export default function Stack() {
         const r4 = last.top - vh / 2; // row 3 → 4 change
         const s0 = mobile ? first.bottom - vh : first.bottom - (vh / 2 + 80);
         const s1 = mobile ? last.top : last.top + 80 - vh / 2;
-        // linear in the scroll position, scaled so the clip's swaps land on the row changes; held outside the window
+        // linear in the scroll position, scaled so the clip's swaps land on the row changes; held outside the window.
+        // Up to the first change it starts from CLIP_MIN, so the clip rests on exactly the frame of the still shown
+        // before it loads (the straight line rested at ~.49, and the swap from still to clip jumped)
         const span = Math.max(1, r4 - r2);
-        const u = gsap.utils.clamp(s0 - r2, s1 - r2, -r2);
-        progress.current = gsap.utils.clamp(CLIP_MIN, CLIP_MAX, SWAPS[0] + (u * (SWAPS[1] - SWAPS[0])) / span);
+        const lo = s0 - r2;
+        const u = gsap.utils.clamp(lo, s1 - r2, -r2);
+        const p = u < 0 && lo < 0 ? CLIP_MIN + ((SWAPS[0] - CLIP_MIN) * (u - lo)) / -lo : SWAPS[0] + (u * (SWAPS[1] - SWAPS[0])) / span;
+        progress.current = gsap.utils.clamp(CLIP_MIN, CLIP_MAX, p);
       };
       ScrollTrigger.create({ trigger: el, start: "top bottom", end: "bottom top", onUpdate: update, onRefresh: update });
     },
@@ -177,10 +181,11 @@ export default function Stack() {
               {clips.stack.enabled ? (
                 <>
                   {/* the resting frame as a still until the clip shows its first seek: on a slow connection (or a busy
-                      Safari) the column stayed empty for the whole section while the 7 MB file arrived */}
+                      Safari) the column stayed empty for the whole section while the 7 MB file arrived. With the still
+                      covering the wait, the file is attached 1.5 screens ahead (2.5 loaded it on landing, desktop) */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={clips.stack.hold} alt="" draggable={false} className={cn("absolute inset-0 h-full w-full object-contain", clipReady && "invisible")} />
-                  <ClipVideo mode="scrub" progressRef={progress} webm={clips.stack.webm} mp4={clips.stack.mp4} poster={clips.stack.poster} fit="contain" near="250% 0px" onReady={() => setClipReady(true)} className="absolute inset-0" />
+                  <ClipVideo mode="scrub" progressRef={progress} webm={clips.stack.webm} mp4={clips.stack.mp4} poster={clips.stack.poster} fit="contain" near="150% 0px" onReady={() => setClipReady(true)} className="absolute inset-0" />
                 </>
               ) : (
                 <MachineScene progressRef={progress} rowRef={row} variant="stack" className="absolute inset-0" />

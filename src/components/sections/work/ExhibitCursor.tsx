@@ -20,17 +20,20 @@ export default function ExhibitCursor({ label, hover }: { label: string; hover?:
     if (!hover) return;
     const pointer = { x: 0, y: 0 };
     const pos = { x: 0, y: 0, amount: 0 };
+    // hidden until the pointer has moved since mount: before that its position is unknown (it sat at 0,0, on the logo)
+    let seen = false;
     let last = -1;
     let raf = 0;
     const onMove = (e: PointerEvent) => {
       pointer.x = e.clientX;
       pointer.y = e.clientY;
+      seen = true;
     };
     const tick = () => {
       raf = requestAnimationFrame(tick);
       const node = el.current;
       if (!node) return;
-      const a = hover.amount;
+      const a = seen ? hover.amount : 0;
       if (a > 0 || pos.amount > 0) {
         if (pos.amount === 0) {
           pos.x = pointer.x;

@@ -155,7 +155,9 @@ export default function PageHero({ title, eyebrow, sub, children, cards, clip, o
             className={cn(
               "text-balance",
               inv && "text-[52px] leading-[1.04] tracking-[-1.3px] min-[800px]:text-[88px] min-[800px]:leading-[0.96] min-[800px]:tracking-[-2.64px] max-[799px]:max-w-[300px]",
-              variant === "about" && "text-[44px] leading-[1.23] tracking-[-0.44px] min-[800px]:text-[68px] min-[800px]:leading-[1.06] min-[800px]:tracking-[-1.36px]",
+              // phones: a long heading (the French one runs to six lines) sets smaller, so it ends above the clip
+              variant === "about" && (title.length > 60 ? "text-[36px] leading-[1.2] tracking-[-0.36px]" : "text-[44px] leading-[1.23] tracking-[-0.44px]"),
+              variant === "about" && "min-[800px]:text-[68px] min-[800px]:leading-[1.06] min-[800px]:tracking-[-1.36px]",
               variant === "opportunity" && "text-[44px] leading-[1.23] tracking-[-0.44px] min-[800px]:text-[88px] min-[800px]:leading-[0.96] min-[800px]:tracking-[-2.64px]",
             )}
             delay={0.1}

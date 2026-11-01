@@ -798,6 +798,16 @@ select.field {
 .h1-sm { font-size: clamp(36px, 4.6vw, 66px); letter-spacing: -0.03em; line-height: 1; font-weight: 400; }
 .h2 { font-size: clamp(32px, 3.6vw, 52px); letter-spacing: -0.025em; line-height: 1.02; font-weight: 400; }
 .char-reveal .ch { opacity: 0; }
+/* the hero copy waits for its intro (GSAP); when the scripts are slow to arrive (a phone on slow 4G showed an empty hero
+   for ~9 s) it shows anyway after 3.5 s. A normal intro has finished by then, so this changes nothing on a fast load;
+   opacity only, so the hero's own autoAlpha still hides (and disables) it on the way out */
+.hero-in,
+.hero-title .ch {
+  animation: hero-copy-fallback 0s linear 3.5s forwards;
+}
+@keyframes hero-copy-fallback {
+  to { opacity: 1; }
+}
 
 /* chrome text (footer brand word) */
 .chrome-text {

@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
+import WhenNear from "@/components/media/WhenNear";
 import type { TileChipState } from "@/components/three/WorkSpace";
 import { CHAPTER_INDEX, processPacing, type Beat } from "@/components/sections/WorkPacing";
 import { ChapterLabel, REVEAL } from "@/components/sections/work/chapterParts";
@@ -169,6 +170,17 @@ export default function Process() {
         };
         ScrollTrigger.create({ trigger: el, start: "top bottom", end: "top top", onUpdate: align, onRefresh: align, onLeave: align, onEnterBack: align });
         align();
+        // leaving into the contact banner: the frame's bottom edge cut the grid off in a straight line over the banner's
+        // flat dark; it fades out over up to 35 % of the screen instead (the mirror of the Work floor's entry)
+        const edge = () => {
+          const r = frame.getBoundingClientRect();
+          const vh = window.innerHeight;
+          const fade = r.bottom > 0 && r.bottom < vh ? Math.min(vh - r.bottom, vh * 0.35) : 0;
+          const mask = fade > 1 ? `linear-gradient(to top, transparent 0, #000 ${fade.toFixed(0)}px)` : "";
+          frame.style.maskImage = mask;
+          frame.style.webkitMaskImage = mask;
+        };
+        ScrollTrigger.create({ trigger: el, start: "bottom bottom", end: "bottom top", onUpdate: edge, onRefresh: edge, onLeave: edge, onEnterBack: edge, onLeaveBack: edge });
       }
     },
     { scope: root, dependencies: [pacing, nodes, lines] },
@@ -179,7 +191,10 @@ export default function Process() {
       {/* clip-path as well as overflow: Safari let the shifted (composited) stage escape an overflow clip alone */}
       <div className="sticky top-0 h-svh overflow-hidden [clip-path:inset(0)]">
         <div ref={stage} className="absolute inset-0 will-change-transform">
-          <ProcessScene pacing={pacing} screensRef={screens} chip={chip} className="absolute inset-0" />
+          {/* built once the page has settled (or when the chapter is 1.5 screens away), not on arrival (see WorkChapter) */}
+          <WhenNear className="absolute inset-0" margin="150% 0px" idle={4500}>
+            <ProcessScene pacing={pacing} screensRef={screens} chip={chip} className="absolute inset-0" />
+          </WhenNear>
         </div>
 
         {/* title + intro + route */}
@@ -264,7 +279,9 @@ export default function Process() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div data-in={pacing.statement.in} data-out={pacing.statement.out} className={cn(REVEAL, "px-page grid w-full place-items-center")}>
             <div className="statement grid w-full place-items-center [text-shadow:0_1px_14px_rgba(0,0,0,.65)]" style={{ "--z": 0.1 } as React.CSSProperties}>
-              <div className="relative pb-[.18em] pl-[.22em] pr-[.22em] pt-[.12em] max-[900px]:pr-[14px]" style={{ transform: "scale(var(--z))", boxShadow: "0 0 0 calc(1px / var(--z)) #22c55e" }}>
+              {/* a soft dark scrim behind the words (scaling with the frame), as under the title: white tiles drifting behind
+                  the white type made letters vanish */}
+              <div className="relative isolate pb-[.18em] pl-[.22em] pr-[.22em] pt-[.12em] before:pointer-events-none before:absolute before:-inset-x-[12%] before:-inset-y-[22%] before:-z-10 before:bg-[radial-gradient(closest-side,rgba(1,8,4,.6),rgba(1,8,4,.35)_60%,rgba(1,8,4,0))] max-[900px]:pr-[14px]" style={{ transform: "scale(var(--z))", boxShadow: "0 0 0 calc(1px / var(--z)) #22c55e" }}>
                 <span className="statement-readout absolute bottom-full left-0 bg-green-500 font-narrow font-medium uppercase leading-none tracking-[0.08em] text-white" style={{ marginBottom: "calc(10px / var(--z))", padding: "calc(4px / var(--z)) calc(6px / var(--z))", fontSize: "calc(11px / var(--z))" }} aria-hidden>
                   10%
                 </span>

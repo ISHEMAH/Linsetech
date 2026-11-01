@@ -268,7 +268,7 @@ function LocaleSwitcher() {
           </option>
         ))}
       </select>
-      <span className="pointer-events-none absolute right-2 text-[9px]">▼</span>
+      <span className="pointer-events-none absolute right-2 text-[9px]" aria-hidden>▼</span>
     </label>
   );
 }

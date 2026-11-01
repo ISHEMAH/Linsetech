@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { currentOpener, restoreFocus } from "@/lib/focus-trap";
 import { gsap } from "@/lib/gsap";
 import { getLenis } from "@/lib/lenis";
 import { cn } from "@/lib/cn";
@@ -21,6 +22,8 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
   const tf = useTranslations("footer.legal");
   const root = useRef<HTMLDivElement>(null);
   const wasOpen = useRef(false);
+  const opener = useRef<HTMLElement | null>(null);
+  const inerted = useRef<HTMLElement[]>([]);
   const { open: openContact } = useContact();
   const items = [...site.nav, { key: "careers", href: "/careers" }, { key: "support", href: "/support" }, { key: "contact", href: "/contact" }] as const;
 
@@ -44,10 +47,19 @@ export default function MobileMenu({ open, onClose }: { open: boolean; onClose: 
     gsap.killTweensOf(targets);
     if (open) {
       lenis?.stop();
+      // the page under the menu is inert, so Tab stays on the header and the menu (it reached the hidden links of the
+      // page and the footer's email field); focus goes back to the Menu button on close
+      opener.current = currentOpener();
+      inerted.current = [...document.querySelectorAll<HTMLElement>("body > main, body > footer")].filter((n) => !n.inert);
+      inerted.current.forEach((n) => (n.inert = true));
       gsap.set(targets, { opacity: 0, y: 20 });
       gsap.to(targets, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power2.out", delay: 0.15 });
     } else {
       lenis?.start();
+      inerted.current.forEach((n) => (n.inert = false));
+      inerted.current = [];
+      restoreFocus(opener.current);
+      opener.current = null;
       gsap.to(targets, { opacity: 0, y: -10, duration: 0.25, stagger: 0.03, ease: "power2.in" });
     }
   }, [open]);

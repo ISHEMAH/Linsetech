@@ -7,6 +7,7 @@ import { ScrollTrigger, useGSAP } from "@/lib/gsap";
 import type { Project } from "@/content/work";
 import type { TileChipState } from "@/components/three/WorkSpace";
 import { ButtonLink } from "@/components/ui/Button";
+import WhenNear from "@/components/media/WhenNear";
 import { cn } from "@/lib/cn";
 import { CHAPTER_INDEX, workPacing } from "./WorkPacing";
 import { ChapterLabel, REVEAL } from "./work/chapterParts";
@@ -133,7 +134,11 @@ export default function WorkChapter({ projects, chapter = "work", dark = false, 
       {/* clip-path as well as overflow: Safari let the shifted (composited) stage escape an overflow clip alone */}
       <div className="sticky top-0 h-svh overflow-hidden [clip-path:inset(0)]">
         <div ref={stage} className="absolute inset-0 will-change-transform">
-          <WorkFloor cards={cards} pacing={pacing} screensRef={screens} dark={dark} handoff={toDark} hover={hover} chip={chip} className="absolute inset-0" />
+          {/* built once the page has settled (or when the chapter is 1.5 screens away), not on arrival: creating the
+              canvas and compiling its shaders on load stalled the hero intro for over a second in Safari */}
+          <WhenNear className="absolute inset-0" margin="150% 0px" idle={3500}>
+            <WorkFloor cards={cards} pacing={pacing} screensRef={screens} dark={dark} handoff={toDark} hover={hover} chip={chip} className="absolute inset-0" />
+          </WhenNear>
         </div>
 
         {/* the opening beat: Puture's work-award */}
@@ -194,7 +199,8 @@ export default function WorkChapter({ projects, chapter = "work", dark = false, 
         {tail && (
           <div className="pointer-events-none absolute inset-0 flex items-center max-md:items-end max-md:pb-[calc(132px+env(safe-area-inset-bottom))]">
             <div data-in={pacing.fold.in} data-out={pacing.fold.out} className={cn(REVEAL, "grid justify-items-start gap-5 max-md:mx-[clamp(1rem,4vw,4rem)] md:ml-[max(clamp(1rem,4vw,4rem),5vw)]")}>
-              <ChapterLabel index={String(projects.length + 1).padStart(2, "0")} dark={dark}>
+              {/* the chapter's own number: "04" (after projects 01–03) read as out of order before Process's "03" */}
+              <ChapterLabel index={CHAPTER_INDEX.work} dark={dark}>
                 {t("eyebrow")}
               </ChapterLabel>
               <ButtonLink href={tail.href} variant={dark ? "light" : "primary"}>

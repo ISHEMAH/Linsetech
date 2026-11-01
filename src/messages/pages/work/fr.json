@@ -96,7 +96,16 @@
         "meta": {
           "scope": "Conception produit · Portail web commerçant · Application mobile client · Circuit notarial · Backend et intégrations",
           "period": "2024 — en cours",
-          "role": "Propriétaire, concepteur et éditeur"
+          "role": "Propriétaire, concepteur et éditeur",
+          "stack": [
+            null,
+            null,
+            null,
+            null,
+            "API mobile money",
+            "Bureau de crédit (CRB)",
+            "Signature PDF"
+          ]
         },
         "year": "2024 — en cours",
         "delivered": [
@@ -258,7 +267,13 @@
         ],
         "meta": {
           "scope": "Achat · Livraison · Installation · Assistance",
-          "role": "Fournisseur et intégrateur"
+          "role": "Fournisseur et intégrateur",
+          "stack": [
+            "Terminaux de point de vente",
+            null,
+            null,
+            null
+          ]
         },
         "delivered": [
           "Achat : terminaux, imprimantes et lecteurs auprès de distributeurs agréés, avec garantie.",

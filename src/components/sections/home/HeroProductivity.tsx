@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -111,6 +111,15 @@ export default function HeroProductivity({ latest, latestDate }: { latest?: Post
   const title = useRef<RevealControl | null>(null);
   const scroll = useRef(0);
   const cardNdc = useRef({ x: 0, y: 0, h: 0.6 });
+  // the film plays only while the section is on screen (it kept decoding its 2.5 s idle loop for the whole visit)
+  const [filmOn, setFilmOn] = useState(true);
+  useEffect(() => {
+    const el = root.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setFilmOn(e.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   useGSAP(
     () => {
@@ -259,7 +268,7 @@ export default function HeroProductivity({ latest, latestDate }: { latest?: Post
           {/* film: phones fixed in the bottom 75lvh with a soft top edge (Sharplink .video-bg < 800px); desktop fills the hero */}
           <div className="hero-film pointer-events-none fixed inset-x-0 bottom-0 z-0 h-[75lvh] [mask-image:linear-gradient(0deg,#000_80%,transparent_98%)] md:absolute md:inset-0 md:h-full md:[mask-image:none]">
             {clips.hero.enabled ? (
-              <ClipVideo mode="play" loopFrom={7.5} webm={clips.hero.webm} mp4={clips.hero.mp4} poster={clips.hero.poster} className="absolute inset-0 object-[74%_45%] md:object-center" />
+              <ClipVideo mode="play" loopFrom={7.5} active={filmOn} webm={clips.hero.webm} mp4={clips.hero.mp4} poster={clips.hero.poster} className="absolute inset-0 object-[74%_45%] md:object-center" />
             ) : (
               <HeroIntroScene scrollRef={scroll} cardRef={cardNdc} className="absolute inset-0" />
             )}
@@ -273,21 +282,21 @@ export default function HeroProductivity({ latest, latestDate }: { latest?: Post
           />
 
           <div className={cn("relative z-[2]", MARGIN)}>
-            <CharReveal as="h1" text={t("title")} className="h1 max-w-[7.6em] text-balance" delay={0.1} duration={1} />
-            <div className="hero-in invisible mt-7 flex w-max flex-col items-stretch gap-1">
+            <CharReveal as="h1" text={t("title")} className="hero-title h1 max-w-[7.6em] text-balance" delay={0.1} duration={1} />
+            <div className="hero-in opacity-0 mt-7 flex w-max flex-col items-stretch gap-1">
               <ButtonLink href="/work" variant="primary">{t("cta1")}</ButtonLink>
               <Button variant="secondary" arrow={false} onClick={open}>{t("cta2")}</Button>
             </div>
           </div>
 
           <div className={cn("relative z-[2] grid grid-cols-4 items-end gap-x-4 gap-y-2 md:grid-cols-12 md:gap-x-[28px]", MARGIN)}>
-            <div className="hero-in invisible col-span-4 flex items-center gap-3 md:col-span-3">
+            <div className="hero-in opacity-0 col-span-4 flex items-center gap-3 md:col-span-3">
               <span className="eyebrow">{t("proudly")}</span>
               <Image src="/work/macyepay/logo.svg" alt="MacyePay" width={120} height={30} className="h-7 w-auto brightness-0 invert" />
             </div>
-            <p className="hero-in invisible col-span-4 max-w-[409px] text-[19px] leading-[1.35] font-medium md:col-span-5">{t("sub")}</p>
+            <p className="hero-in opacity-0 col-span-4 max-w-[409px] text-[19px] leading-[1.35] font-medium md:col-span-5">{t("sub")}</p>
             {press && (
-              <div className="hero-in invisible col-span-4 max-md:absolute max-md:inset-x-[clamp(16px,2.5vw,40px)] max-md:top-[calc(100%+32px)]">{press}</div>
+              <div className="hero-in opacity-0 col-span-4 max-md:absolute max-md:inset-x-[clamp(16px,2.5vw,40px)] max-md:top-[calc(100%+32px)]">{press}</div>
             )}
           </div>
         </div>

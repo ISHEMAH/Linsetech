@@ -43,12 +43,16 @@ export function workPacing(count: number, tail: boolean, compact = false, handof
   const fold = 0.4;
   const handoffLen = 1.5;
   const end = 0.35;
+  // the camera leaves a mark 2.2 screens before the next one (WorkSpace's TWEEN_SCREENS): a project's copy leaves with
+  // it rather than staying over the panel as it slides away (Puture's copy is gone between exhibits)
+  const travel = 2.2;
   const award: Beat = { at: 0, in: lead, out: lead + awardHold };
   let a = award.out + awardPause;
   const cards: Beat[] = [];
   for (let i = 0; i < count; i++) {
-    cards.push({ at: a, in: a, out: a + hold });
-    a += hold + (i < count - 1 ? pause : foldPause);
+    const gap = i < count - 1 ? pause : foldPause;
+    cards.push({ at: a, in: a, out: a + Math.min(hold, hold + gap - travel) });
+    a += hold + gap;
   }
   const foldAt = a;
   const endAt = foldAt + (handoff ? handoffLen : fold);

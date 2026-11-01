@@ -11,7 +11,7 @@ import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { LIMITS, TOPICS, validateContact, type Topic } from "@/lib/forms";
 import { Field, Honeypot, NOTE, RED_ON_LIGHT, formValues, mailto, useFormSubmit } from "@/lib/form-client";
-import { restoreFocus, trapTab } from "@/lib/focus-trap";
+import { currentOpener, restoreFocus, trapTab } from "@/lib/focus-trap";
 
 /**
  * Contact drawer, choreographed like Sharplink's team drawer (/about): the panel slides in from the right over 0.6 s
@@ -88,7 +88,7 @@ export default function ContactDialog() {
     if (isOpen) {
       if (!shown.current) {
         shown.current = true;
-        opener.current = returnTarget() ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+        opener.current = returnTarget() ?? currentOpener();
         lenis?.stop();
         inerted.current = [...document.querySelectorAll<HTMLElement>("body > header, body > main, body > footer")].filter((n) => !n.inert);
         inerted.current.forEach((n) => (n.inert = true));

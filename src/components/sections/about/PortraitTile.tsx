@@ -19,7 +19,10 @@ export default function PortraitTile({ index, label, className, pin = "brand", t
   const n = (index % PORTRAITS) + 1;
   const plate = PLATE[tone];
   return (
-    <div role="img" aria-label={label} className={cn("relative aspect-[304/346] overflow-hidden", className)} style={{ background: plate.bg }}>
+    <div role="img" aria-label={label} data-theme={tone === "light" ? "light" : undefined} className={cn("relative aspect-[304/346] overflow-hidden", className)} style={{ background: plate.bg }}>
+      {/* the green plate is mint at the top: an invisible light marker over its upper 55 % (down to where white type reads
+          again) turns the header dark while that part passes under it — white on mint was nearly invisible on phones */}
+      {tone === "dark" && <div data-theme="light" className="pointer-events-none absolute inset-x-0 top-0 h-[55%]" aria-hidden />}
       <div
         className="absolute inset-0"
         style={{

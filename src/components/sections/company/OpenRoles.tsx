@@ -3,7 +3,7 @@ import { useEffect, useEffectEvent, useMemo, useRef, useState, useSyncExternalSt
 import { createPortal } from "react-dom";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import { getLenis } from "@/lib/lenis";
-import { restoreFocus, trapTab } from "@/lib/focus-trap";
+import { currentOpener, restoreFocus, trapTab } from "@/lib/focus-trap";
 import { useContact } from "@/components/layout/ContactContext";
 import { Button, Cross } from "@/components/ui/Button";
 import DashedLine from "@/components/ui/DashedLine";
@@ -147,7 +147,7 @@ function RoleDrawer({ role, onClose, labels, email }: { role: RoleView | null; o
       lastRole.current = role;
       if (!isOpen.current) {
         isOpen.current = true;
-        opener.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        opener.current = currentOpener();
         lenis?.stop();
         t.eventCallback("onReverseComplete", null);
         gsap.set(el, { autoAlpha: 1 });

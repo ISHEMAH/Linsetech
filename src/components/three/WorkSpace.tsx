@@ -108,6 +108,13 @@ if (typeof window !== "undefined") {
   });
 }
 
+/** Forget the pointer until it moves again: the state outlives client-side navigation, so coming Back to a chapter
+ *  hovered whatever lay under the old position (with the pointer off the page, on the browser's Back button). */
+export function forgetPointer() {
+  POINTER.moved = false;
+  POINTER.open = false;
+}
+
 /** The shared pointer in `el`'s normalized device coordinates, or false when no fine pointer is resting over the scene there. */
 export function canvasPointer(el: HTMLElement, out: THREE.Vector2) {
   if (!POINTER.moved || !POINTER.fine || !POINTER.open) return false;
@@ -1047,6 +1054,7 @@ export function SpaceBackdrop({ env, chip }: { env?: number; chip?: TileChipStat
   );
 }
 
-/** Canvas defaults shared by the Work and Process scenes. */
+/** Canvas defaults shared by the Work and Process scenes. DPR at most 1.5: two full-screen multisampled canvases at 1.75
+ *  on a Retina screen (≈2600×1450 each) were a heavy fill for Safari, for little visible gain on grid lines and tiles. */
 export const CANVAS_CAMERA = { fov: 40, near: 0.1, far: 160, position: [0, 2.2, 9] as [number, number, number] };
-export const CANVAS_DPR: [number, number] = [1, 1.75];
+export const CANVAS_DPR: [number, number] = [1, 1.5];

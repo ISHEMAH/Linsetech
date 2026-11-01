@@ -23,6 +23,61 @@ export default function SmoothScroll() {
     };
   }, []);
 
+  // gsap.matchMedia rebuilds the pinned sections when the window crosses 768px (a phone or tablet turning, a window
+  // narrowed past it) and the page landed back at the top. Keep track of where the reader is (the section under the
+  // middle of the screen and how far into it) and land there again once ScrollTrigger has re-measured.
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    let anchor: { el: HTMLElement; f: number } | null = null;
+    let frozen = false;
+    let last = 0;
+    let safety = 0;
+    // a pinned section is measured through its spacer, which carries the pin's scroll length
+    const box = (el: HTMLElement) => (el.parentElement?.classList.contains("pin-spacer") ? el.parentElement : el);
+    const measure = () => {
+      const now = performance.now();
+      if (frozen || now - last < 200) return;
+      last = now;
+      const mid = window.innerHeight / 2;
+      for (const child of document.querySelectorAll<HTMLElement>("main > *")) {
+        const section = child.classList.contains("pin-spacer") ? (child.firstElementChild as HTMLElement | null) : child;
+        if (!section) continue;
+        const r = box(section).getBoundingClientRect();
+        if (r.top <= mid && r.bottom > mid) {
+          anchor = { el: section, f: (mid - r.top) / Math.max(1, r.height) };
+          return;
+        }
+      }
+    };
+    const restore = () => {
+      ScrollTrigger.removeEventListener("refresh", restore);
+      window.clearTimeout(safety);
+      frozen = false;
+      const a = anchor;
+      if (!a || !a.el.isConnected) return;
+      const r = box(a.el).getBoundingClientRect();
+      const y = Math.max(0, window.scrollY + r.top + a.f * r.height - window.innerHeight / 2);
+      const lenis = getLenisInstance();
+      if (lenis) lenis.scrollTo(y, { immediate: true, force: true });
+      else window.scrollTo(0, y);
+    };
+    const onChange = () => {
+      frozen = true;
+      ScrollTrigger.addEventListener("refresh", restore);
+      window.clearTimeout(safety);
+      safety = window.setTimeout(restore, 1500);
+    };
+    measure();
+    window.addEventListener("scroll", measure, { passive: true });
+    mq.addEventListener("change", onChange);
+    return () => {
+      window.removeEventListener("scroll", measure);
+      mq.removeEventListener("change", onChange);
+      ScrollTrigger.removeEventListener("refresh", restore);
+      window.clearTimeout(safety);
+    };
+  }, []);
+
   // New page: start at the top and let ScrollTrigger re-measure once the DOM settled.
   // (PageTransition does the same under its curtain; this is the fallback when there is none.)
   // A shared link with an anchor (/careers#open-roles) lands on that section instead, 150px below the top like the
