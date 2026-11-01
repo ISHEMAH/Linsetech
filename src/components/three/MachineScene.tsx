@@ -21,8 +21,6 @@ type Props = {
   variant?: Variant;
   className?: string;
   dark?: boolean;
-  /** false pauses the render loop although the canvas is on screen (a layer kept laid out but hidden) */
-  active?: boolean;
 };
 
 const chromeBase = { color: "#ffffff", metalness: 1, roughness: 0.18, envMapIntensity: 1.35 };
@@ -291,13 +289,13 @@ function DashedMaterialFix() {
   return null;
 }
 
-export default function MachineScene({ progressRef, rowRef, wireRef, variant = "stack", className, dark = false, active = true }: Props) {
+export default function MachineScene({ progressRef, rowRef, wireRef, variant = "stack", className, dark = false }: Props) {
   const [wrap, visible] = useCanvasVisible();
   return (
     <div ref={wrap} className={className}>
       <Canvas
         dpr={[1, 1.5]}
-        frameloop={visible && active ? "always" : "never"}
+        frameloop={visible ? "always" : "never"}
         camera={{ fov: 28, position: [0, variant === "parts" ? 0 : 0.6, variant === "parts" ? 19 : 15.5], near: 0.1, far: 60 }}
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance", toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: dark ? 0.9 : 1.05 }}
         style={{ background: "transparent" }}

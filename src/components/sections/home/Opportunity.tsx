@@ -10,8 +10,9 @@ import { ButtonLink } from "@/components/ui/Button";
 import DarkGradient from "@/components/backdrop/DarkGradient";
 import type { Service } from "@/content/services";
 import WhenNear from "@/components/media/WhenNear";
+import { clips } from "@/content/clips";
 
-const MachineScene = dynamic(() => import("@/components/three/MachineScene"), { ssr: false });
+const ClipVideo = dynamic(() => import("@/components/media/ClipVideo"), { ssr: false });
 
 const MARGIN = "px-[clamp(16px,2.5vw,40px)]";
 const BRIGHT = "#F3F3F3";
@@ -25,15 +26,15 @@ const BRIGHT = "#F3F3F3";
  * - eyebrow, CTA and statement pin at "top 160px" → "bottom 280px" (phones 100 / 320px); while pinned the dim lines turn
  *   white in reading order (stagger amount .7), then the statement leaves (opacity 0, y −200, .5 at .7) and the header
  *   row turns to its light theme at .8;
- * - the chrome parts fade in when the list reaches 75 % and out near the end, beside the service cards.
+ * - their chrome clip (an 8.7 s loop, a fixed 3:4 box at the right from 160px down, soft top edge) fades in when the
+ *   list reaches 75 % and out near the end, beside the service cards.
  */
 export default function Opportunity({ services }: { services: Service[] }) {
   const t = useTranslations("opportunity");
   const tw = useTranslations("whatWeDo.items");
   const root = useRef<HTMLElement>(null);
-  // the chrome parts render only while their window is on (shown a screen before the fade, see below)
+  // the clip plays only while its window is on (from a screen before the fade, see below)
   const [partsOn, setPartsOn] = useState(false);
-  const parts = useRef(0);
 
   useGSAP(
     () => {
@@ -42,8 +43,8 @@ export default function Opportunity({ services }: { services: Service[] }) {
       const head = el.querySelector<HTMLElement>(".opp-head")!;
       const statement = el.querySelector<HTMLElement>(".opp-statement")!;
       const list = el.querySelector<HTMLElement>(".cards")!;
-      // the parts layer is fixed (Sharplink .video-container) but mounted lazily inside an in-flow anchor: the anchor carries
-      // the layer's opacity (--po) and, while the fade window is active, data-on (display) so the canvas idles otherwise
+      // the clip layer is fixed (Sharplink .video-container) but mounted lazily inside an in-flow anchor: the anchor carries
+      // the layer's opacity (--po) and, while the fade window is active, data-on (shown) so the clip idles otherwise
       const partsBox = el.querySelector<HTMLElement>(".opp-parts-anchor");
       const reduced = prefersReducedMotion();
       const setHead = (theme: "dark" | "light") => (head.dataset.theme = theme);
@@ -54,13 +55,13 @@ export default function Opportunity({ services }: { services: Service[] }) {
         tl.fromTo(card, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "none" }, 0).fromTo(card.querySelector(".title-inner"), { yPercent: 100 }, { yPercent: 0, duration: 0.3, ease: "none" }, 0);
         ScrollTrigger.create({ trigger: card, start: "top 75%", end: "top 50%", scrub: true, animation: tl });
       });
-      ScrollTrigger.create({ trigger: list, start: "top bottom", end: "bottom top", scrub: true, onUpdate: (s) => (parts.current = s.progress) });
 
       if (reduced) {
         gsap.set(statement, { color: BRIGHT });
         if (partsBox) {
           partsBox.style.setProperty("--po", "1");
           partsBox.dataset.on = "1";
+          setPartsOn(true);
         }
         return;
       }
@@ -106,7 +107,7 @@ export default function Opportunity({ services }: { services: Service[] }) {
             onRefresh: (self) => setHead(self.progress * pinned.duration() >= 0.8 ? "light" : "dark"),
           });
 
-          // the chrome parts: in when the list reaches 75 %, out over the last fifth (desktop only here), done by the time
+          // the chrome clip: in when the list reaches 75 %, out over the last fifth (desktop only here), done by the time
           // the Work chapter enters — Sharplink's next section covers its video, but our Work sits below this layer
           if (partsBox) {
             const fade = gsap.timeline({ paused: true });
@@ -120,8 +121,8 @@ export default function Opportunity({ services }: { services: Service[] }) {
               scrub: true,
               animation: fade,
             });
-            // the canvas renders (data-on) from a screen before the fade, still at opacity 0: rendering only for the fade,
-            // its first frame (shader compile, environment map) landed after the window had already scrolled by
+            // the clip is shown and playing (data-on) from a screen before the fade, still at opacity 0, so its decoder
+            // is running by the time it fades in
             ScrollTrigger.create({
               trigger: list,
               endTrigger: el,
@@ -201,14 +202,16 @@ export default function Opportunity({ services }: { services: Service[] }) {
             </article>
           ))}
         </div>
-        {/* Sharplink .video-container: fixed at the right from 160px down, soft top edge, faded by the list's scroll */}
+        {/* Sharplink .video-container: fixed, 3:4, flush right from 160px down, soft top edge, faded by the list's scroll */}
         <div className="opp-parts-anchor relative hidden md:block" style={{ ["--po" as string]: 0 }}>
-          {/* mounted three screens ahead, so its chunk and studio lighting are loaded before it is shown */}
-          <WhenNear className="absolute inset-0" margin="300% 0px">
-            <div className="opp-parts pointer-events-none fixed right-0 top-[160px] z-0 h-[calc(100vh-160px)] w-[50vw] [mask-image:linear-gradient(0deg,#000_80%,transparent)]" style={{ opacity: "var(--po)" }}>
-              <MachineScene variant="parts" progressRef={parts} active={partsOn} className="absolute inset-0" />
-            </div>
-          </WhenNear>
+          {/* attached two screens ahead (the box itself is fixed, so it would always count as on screen) */}
+          {clips.opportunity.enabled && (
+            <WhenNear className="absolute inset-0" margin="200% 0px">
+              <div className="opp-parts pointer-events-none fixed right-0 top-[160px] z-0 aspect-[3/4] h-[calc(100vh-160px)] [mask-image:linear-gradient(0deg,#000_80%,transparent)]" style={{ opacity: "var(--po)" }}>
+                <ClipVideo mode="play" loop active={partsOn} near="0px" webm={clips.opportunity.webm} mp4={clips.opportunity.mp4} poster={clips.opportunity.poster} className="absolute inset-0" />
+              </div>
+            </WhenNear>
+          )}
         </div>
       </div>
     </section>

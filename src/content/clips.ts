@@ -5,7 +5,10 @@
  */
 export const clips = {
   hero: { enabled: true, webm: "/clips/hero_chrome.webm", mp4: "/clips/hero_safari.mp4", poster: "/clips/hero_poster.webp" },
-  stack: { enabled: true, webm: "/clips/stack_chrome.webm", mp4: "/clips/stack_safari.mp4", poster: "/clips/stack_poster.webp" },
+  // hold: the frame the scrub rests on (CLIP_MIN), shown as a still until the clip has landed its first seek
+  stack: { enabled: true, webm: "/clips/stack_chrome.webm", mp4: "/clips/stack_safari.mp4", poster: "/clips/stack_poster.webp", hold: "/clips/stack_hold.webp" },
+  // Sharplink's opportunity clip recreated (tools/blender/opportunity.py): an 8.7 s seamless loop beside the services list
+  opportunity: { enabled: true, webm: "/clips/opportunity_chrome.webm", mp4: "/clips/opportunity_safari.mp4", poster: "/clips/opportunity_poster.webp" },
 };
 
 export type Clip = { webm: string; mp4: string; poster?: string };

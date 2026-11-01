@@ -606,9 +606,8 @@ html[data-nav="dark"] .nav-chrome {
 .opp-head[data-theme="light"] .opp-head-line--light {
   opacity: 1;
 }
-/* the fixed chrome parts beside the service cards exist only while their fade window is active (Opportunity.tsx) */
-/* hidden but laid out: a canvas mounted under display:none keeps the 300×150 default size until the browser happens to
-   report the layer appearing, and showed nothing in the meantime (its render loop pauses there instead, Opportunity) */
+/* the fixed chrome clip beside the service cards is shown only while its fade window is active (Opportunity.tsx), and
+   paused otherwise; hidden rather than display:none so the video keeps its frame ready */
 .opp-parts-anchor:not([data-on]) .opp-parts {
   visibility: hidden;
 }

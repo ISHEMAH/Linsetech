@@ -22,6 +22,8 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     "sanity.config.ts",
+    // CommonJS command-line helpers (Playwright checks, reference captures, Blender), not part of the site
+    "tools/**",
   ]),
 ]);
 

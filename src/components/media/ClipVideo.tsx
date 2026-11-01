@@ -17,6 +17,14 @@ type Props = {
   onEnded?: () => void;
   /** "play" mode: when the clip ends, seek back here (seconds) and keep playing — the idle loop */
   loopFrom?: number;
+  /** "play" mode: a seamless loop from frame 0 (the element's own loop, no seek at the seam) */
+  loop?: boolean;
+  /** "play" mode: false pauses it (a layer that is faded out) */
+  active?: boolean;
+  /** called once the element shows its first real frame (scrub: the first seek landed; play: playback started) */
+  onReady?: () => void;
+  /** how far from the viewport the file is attached (IntersectionObserver rootMargin) */
+  near?: string;
   className?: string;
   /** object-fit for the element */
   fit?: "cover" | "contain";
@@ -29,18 +37,30 @@ const isSafari = () => typeof navigator !== "undefined" && /^((?!chrome|android)
  * Sharplink's video technique: a pre-rendered clip shipped as a WebM/HEVC pair, either played once
  * or scrubbed by scroll (currentTime driven from a ScrollTrigger progress ref, smoothed per frame).
  */
-export default function ClipVideo({ webm, mp4, poster, mode, progressRef, onEnded, loopFrom, className, fit = "cover" }: Props) {
+export default function ClipVideo({ webm, mp4, poster, mode, progressRef, onEnded, loopFrom, loop = false, active = true, onReady, near: margin, className, fit = "cover" }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   // the server cannot know the browser: render no source there and during hydration, then the right file on the client
   const safari = useSyncExternalStore(noSubscribe, isSafari, () => null);
-  // and only once the element is within ~1.5 screens of the viewport
+  // and only once the element is within ~1.5 screens of the viewport (or `near`)
   const [near, setNear] = useState(false);
   useEffect(() => {
     const v = ref.current;
     if (!v || near) return;
-    return whenNear(v, () => setNear(true));
-  }, [near]);
+    return whenNear(v, () => setNear(true), margin);
+  }, [near, margin]);
   const src = safari === null || !near ? undefined : safari ? mp4 : webm;
+
+  const ready = useRef(onReady);
+  useEffect(() => {
+    ready.current = onReady;
+  }, [onReady]);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || !src) return;
+    const done = () => ready.current?.();
+    v.addEventListener(mode === "scrub" ? "seeked" : "playing", done, { once: true });
+    return () => v.removeEventListener(mode === "scrub" ? "seeked" : "playing", done);
+  }, [mode, src]);
 
   useEffect(() => {
     const v = ref.current;
@@ -58,18 +78,23 @@ export default function ClipVideo({ webm, mp4, poster, mode, progressRef, onEnde
         else v.addEventListener("loadedmetadata", seek, { once: true });
         return;
       }
+      v.loop = loop;
+      if (!active) {
+        v.pause();
+        return;
+      }
       const play = () => {
         v.play().catch(() => {});
       };
       // start now: iOS Safari ignores preload and buffers nothing before play(), so waiting for "canplay" never ends
       play();
-      if (loopFrom === undefined) return;
-      const loop = () => {
+      if (loop || loopFrom === undefined) return;
+      const again = () => {
         v.currentTime = loopFrom;
         play();
       };
-      v.addEventListener("ended", loop);
-      return () => v.removeEventListener("ended", loop);
+      v.addEventListener("ended", again);
+      return () => v.removeEventListener("ended", again);
     }
     // scrub: iOS Safari loads no frame data until the element has played once, so seeks would show nothing.
     // Prime it with a muted play() → pause() (allowed without a gesture); elsewhere it just starts the download.
@@ -92,7 +117,7 @@ export default function ClipVideo({ webm, mp4, poster, mode, progressRef, onEnde
     };
     gsap.ticker.add(tick);
     return () => gsap.ticker.remove(tick);
-  }, [mode, progressRef, loopFrom, src]);
+  }, [mode, progressRef, loopFrom, loop, active, src]);
 
   return (
     <video

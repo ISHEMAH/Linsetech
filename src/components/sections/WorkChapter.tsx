@@ -93,11 +93,14 @@ export default function WorkChapter({ projects, chapter = "work", dark = false, 
         const frame = stage.current.parentElement!;
         const align = () => {
           const top = frame.getBoundingClientRect().top;
-          const shift = top > 0 || (top < 0 && toDark) ? -top : 0;
+          const vh = window.innerHeight;
+          // only while the frame is on screen: a refresh further up the page used to park the shifted canvas over the
+          // viewport, and Safari drew it there (a light plate over the Stack and the banner) when it failed to clip it
+          const shift = (top > 0 && top < vh) || (top < 0 && top > -vh && toDark) ? -top : 0;
           stage.current!.style.transform = shift ? `translate3d(0, ${shift.toFixed(1)}px, 0)` : "";
           // entering, the frame's top edge would cut the space off from the page above in a hard line: it fades in over
           // up to 35 % of the screen instead, shrinking to nothing as the frame reaches the top and pins
-          const fade = top > 0 ? Math.min(top, window.innerHeight * 0.35) : 0;
+          const fade = top > 0 && top < vh ? Math.min(top, vh * 0.35) : 0;
           const mask = fade > 1 ? `linear-gradient(to bottom, transparent 0, #000 ${fade.toFixed(0)}px)` : "";
           frame.style.maskImage = mask;
           frame.style.webkitMaskImage = mask;
@@ -127,7 +130,8 @@ export default function WorkChapter({ projects, chapter = "work", dark = false, 
           better contrast) the header uses its dark theme (an invisible themed marker — the header follows the innermost
           themed element under it) */}
       {toDark && <div aria-hidden data-theme="dark" className="pointer-events-none absolute inset-x-0 bottom-0" style={{ top: `${(pacing.fold.at + 1.05) * 100}svh` }} />}
-      <div className="sticky top-0 h-svh overflow-hidden">
+      {/* clip-path as well as overflow: Safari let the shifted (composited) stage escape an overflow clip alone */}
+      <div className="sticky top-0 h-svh overflow-hidden [clip-path:inset(0)]">
         <div ref={stage} className="absolute inset-0 will-change-transform">
           <WorkFloor cards={cards} pacing={pacing} screensRef={screens} dark={dark} handoff={toDark} hover={hover} chip={chip} className="absolute inset-0" />
         </div>

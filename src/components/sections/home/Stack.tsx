@@ -1,5 +1,5 @@
 "use client";
-import { Fragment, useRef } from "react";
+import { Fragment, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from "@/lib/gsap";
@@ -60,6 +60,7 @@ export default function Stack() {
   const root = useRef<HTMLElement>(null);
   const progress = useRef(CLIP_MIN);
   const row = useRef(0);
+  const [clipReady, setClipReady] = useState(false);
 
   useGSAP(
     () => {
@@ -174,7 +175,13 @@ export default function Stack() {
           <div className="col-span-12 md:col-span-5 md:col-start-8">
             <div className="machine-box relative h-[60svh] md:h-[85vh]">
               {clips.stack.enabled ? (
-                <ClipVideo mode="scrub" progressRef={progress} webm={clips.stack.webm} mp4={clips.stack.mp4} poster={clips.stack.poster} fit="contain" className="absolute inset-0" />
+                <>
+                  {/* the resting frame as a still until the clip shows its first seek: on a slow connection (or a busy
+                      Safari) the column stayed empty for the whole section while the 7 MB file arrived */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={clips.stack.hold} alt="" draggable={false} className={cn("absolute inset-0 h-full w-full object-contain", clipReady && "invisible")} />
+                  <ClipVideo mode="scrub" progressRef={progress} webm={clips.stack.webm} mp4={clips.stack.mp4} poster={clips.stack.poster} fit="contain" near="250% 0px" onReady={() => setClipReady(true)} className="absolute inset-0" />
+                </>
               ) : (
                 <MachineScene progressRef={progress} rowRef={row} variant="stack" className="absolute inset-0" />
               )}

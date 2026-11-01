@@ -24,6 +24,7 @@ SPEC = {
     "sl_chain": dict(w=1600, h=1200, fps=30, n=202, gop=15, crf="MEDIUM", poster_frame=1),         # 6.73 s seamless loop (About hero)
     "sl_sphere": dict(w=800, h=800, fps=30, n=300, gop=15, crf="MEDIUM", poster_frame=1),        # 10 s seamless loop (breakthrough sphere)
     "sl_watch": dict(w=800, h=800, fps=30, n=150, gop=15, crf="MEDIUM", poster_frame=1),         # 5 s seamless loop (supercycle watch)
+    "opportunity": dict(w=1200, h=1600, fps=30, n=261, gop=15, crf="MEDIUM", poster_frame=1),    # 8.7 s seamless loop (home services, opportunity.py)
 }[NAME]
 FRAMES = sorted(glob.glob(os.path.join(OUT, NAME, "frames", f"{NAME}_*.png")))
 assert len(FRAMES) == SPEC["n"], f"expected {SPEC['n']} frames, found {len(FRAMES)}"

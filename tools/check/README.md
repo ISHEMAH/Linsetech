@@ -14,5 +14,10 @@ Set `PW` to a Playwright module path (Chrome channel + WebKit installed), as wit
   `FROM`/`TO` for a range, `MAXS` time cap. Run with the GPU flags it sets (WebGL scenes render as in a real browser).
 - `node glitch.js <chrome|webkit> <desk|phone> [path]` — the same idea with settled steps (every 40px): finds state
   jumps between scroll positions rather than motion glitches.
+- `recording.swift` + `recording-sheet.js` — read a screen recording someone sends (a .mov from macOS; Homebrew's ffmpeg
+  is broken on this machine, so frames come out through AVFoundation): `swiftc -O recording.swift -o recording`, then
+  `./recording clip.mov out 0 -1 0.5 720` (a frame every 0.5 s, 720px wide; `all` for every frame) and
+  `node recording-sheet.js out sheet 6 5 360` for contact sheets. `out/frames.csv` lists every frame's timestamp:
+  macOS recordings are variable-rate, so long gaps between timestamps are moments the screen did not update (stalls).
 
 Note: if a CSS change does not show in `npm run dev`, restart it — its watcher can stop picking up `globals.css`.

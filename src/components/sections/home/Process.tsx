@@ -158,12 +158,14 @@ export default function Process() {
       apply(trigger.progress, true);
 
       // Hand-off: while the frame slides in over the Work floor (which ends on this chapter's opening frame),
-      // keep the canvas aligned with the viewport so the reveal is pixel-identical rather than a wipe.
+      // keep the canvas aligned with the viewport so the reveal is pixel-identical rather than a wipe. Only while the
+      // frame is on screen: a refresh further up the page used to park the shifted canvas over the viewport, and Safari
+      // drew it there (the page went #020a07 under the Stack) when it failed to clip it
       if (stage.current) {
         const frame = stage.current.parentElement!;
         const align = () => {
           const top = frame.getBoundingClientRect().top;
-          stage.current!.style.transform = top > 0 ? `translate3d(0, ${(-top).toFixed(1)}px, 0)` : "";
+          stage.current!.style.transform = top > 0 && top < window.innerHeight ? `translate3d(0, ${(-top).toFixed(1)}px, 0)` : "";
         };
         ScrollTrigger.create({ trigger: el, start: "top bottom", end: "top top", onUpdate: align, onRefresh: align, onLeave: align, onEnterBack: align });
         align();
@@ -174,7 +176,8 @@ export default function Process() {
 
   return (
     <section ref={root} id="process" data-theme="dark" data-chapter="process" className="relative bg-[#020a07] text-off-white" style={{ height: `${(pacing.total + 1) * 100}svh` }}>
-      <div className="sticky top-0 h-svh overflow-hidden">
+      {/* clip-path as well as overflow: Safari let the shifted (composited) stage escape an overflow clip alone */}
+      <div className="sticky top-0 h-svh overflow-hidden [clip-path:inset(0)]">
         <div ref={stage} className="absolute inset-0 will-change-transform">
           <ProcessScene pacing={pacing} screensRef={screens} chip={chip} className="absolute inset-0" />
         </div>
