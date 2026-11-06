@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, useSyncExternalStore, type RefObject } fro
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
 import { whenNear } from "@/lib/near";
+import { onReveal } from "@/lib/reveal";
 
 type Props = {
   /** VP9 WebM (Chrome / Firefox / Edge), with alpha when the clip is transparent */
@@ -86,15 +87,19 @@ export default function ClipVideo({ webm, mp4, poster, mode, progressRef, onEnde
       const play = () => {
         v.play().catch(() => {});
       };
-      // start now: iOS Safari ignores preload and buffers nothing before play(), so waiting for "canplay" never ends
-      play();
-      if (loop || loopFrom === undefined) return;
+      // start as soon as the loading screen lifts (the hero film's opening is the intro), not before: iOS Safari ignores
+      // preload and buffers nothing before play(), so waiting for "canplay" never ends
+      const off = onReveal(play);
+      if (loop || loopFrom === undefined) return off;
       const again = () => {
         v.currentTime = loopFrom;
         play();
       };
       v.addEventListener("ended", again);
-      return () => v.removeEventListener("ended", again);
+      return () => {
+        off();
+        v.removeEventListener("ended", again);
+      };
     }
     // scrub: iOS Safari loads no frame data until the element has played once, so seeks would show nothing.
     // Prime it with a muted play() → pause() (allowed without a gesture); elsewhere it just starts the download.

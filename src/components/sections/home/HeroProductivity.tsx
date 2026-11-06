@@ -13,6 +13,7 @@ import DarkGradient from "@/components/backdrop/DarkGradient";
 import { useContact } from "@/components/layout/ContactContext";
 import type { Post } from "@/content/news";
 import { clips } from "@/content/clips";
+import { onReveal } from "@/lib/reveal";
 import { cn } from "@/lib/cn";
 
 const HeroIntroScene = dynamic(() => import("@/components/three/HeroIntroScene"), { ssr: false });
@@ -127,8 +128,9 @@ export default function HeroProductivity({ latest, latestDate }: { latest?: Post
       const reduced = prefersReducedMotion();
       const q = gsap.utils.selector(el);
 
-      // intro (Sharplink HomeHero): CTAs → eyebrow → blurb → press card, .8s power2.out, stagger .2, delay .3
-      gsap.to(q(".hero-in"), { autoAlpha: 1, duration: 0.8, ease: "power2.out", stagger: 0.2, delay: reduced ? 0 : 0.3 });
+      // intro (Sharplink HomeHero): CTAs → eyebrow → blurb → press card, .8s power2.out, stagger .2, delay .3 — once the
+      // loading screen has lifted
+      onReveal(() => gsap.to(q(".hero-in"), { autoAlpha: 1, duration: 0.8, ease: "power2.out", stagger: 0.2, delay: reduced ? 0 : 0.3 }));
 
       const mm = gsap.matchMedia();
       mm.add({ desktop: "(min-width: 768px)", mobile: "(max-width: 767px)" }, (ctx) => {

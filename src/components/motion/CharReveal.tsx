@@ -2,6 +2,7 @@
 import { useMemo, useRef, type ElementType } from "react";
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import { cn } from "@/lib/cn";
+import { onReveal } from "@/lib/reveal";
 
 type Props = {
   as?: ElementType;
@@ -37,7 +38,8 @@ export default function CharReveal({ as: Tag = "h1", text, className, delay = 0.
       const tl = gsap.timeline({ paused: true, delay: scrub ? 0 : delay });
       chars.forEach((c) => tl.to(c, { opacity: 1, duration: 0.3, ease: "power2.out" }, Math.random() * window));
       if (scrub) ScrollTrigger.create({ trigger: el, start: scrub.start, end: scrub.end, scrub: true, animation: tl });
-      else tl.play();
+      // a timed reveal waits for the loading screen to lift (at once on a client-side navigation)
+      else return onReveal(() => tl.play());
     },
     { scope: ref, dependencies: [text] },
   );

@@ -126,11 +126,11 @@ export default function WorkChapter({ projects, chapter = "work", dark = false, 
       className={cn("relative", dark ? "bg-[#020a07] text-off-white" : "text-ink", className)}
       style={{ height: `${(pacing.total + 1) * 100}svh` }}
     >
-      {/* header theme: the floor turns night during the dark hand-off, through a bright saturated green; from ~1.05
-          screens into it (measured: where the space behind the logo drops under ~0.19 luminance, so white type has the
-          better contrast) the header uses its dark theme (an invisible themed marker — the header follows the innermost
-          themed element under it) */}
-      {toDark && <div aria-hidden data-theme="dark" className="pointer-events-none absolute inset-x-0 bottom-0" style={{ top: `${(pacing.fold.at + 1.05) * 100}svh` }} />}
+      {/* header theme: the floor turns night during the dark hand-off, through a bright saturated green; from 70 % of
+          the way into it (measured at 1.05 of 1.5 screens: where the space behind the logo drops under ~0.19 luminance,
+          so white type has the better contrast) the header uses its dark theme (an invisible themed marker — the header
+          follows the innermost themed element under it) */}
+      {toDark && <div aria-hidden data-theme="dark" className="pointer-events-none absolute inset-x-0 bottom-0" style={{ top: `${(pacing.fold.at + (pacing.end - pacing.fold.at) * 0.7) * 100}svh` }} />}
       {/* clip-path as well as overflow: Safari let the shifted (composited) stage escape an overflow clip alone */}
       <div className="sticky top-0 h-svh overflow-hidden [clip-path:inset(0)]">
         <div ref={stage} className="absolute inset-0 will-change-transform">

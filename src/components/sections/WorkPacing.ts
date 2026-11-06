@@ -29,7 +29,7 @@ export const CHAPTER_INDEX = { work: "02", process: "03" } as const;
 
 /**
  * Puture's Work pacing, on the home page and on /work alike (`compact` is kept for callers; it no longer shortens the
- * holds). `handoff`: after the fold the sky and grid ramp to the dark Process opening over 1.5 screens, so the next
+ * holds). `handoff`: after the fold the sky and grid ramp to the dark Process opening over 2 screens, so the next
  * chapter's canvas slides in over an identical frame (Puture cross-fades inside its single canvas).
  */
 export function workPacing(count: number, tail: boolean, compact = false, handoff = false): WorkPacing {
@@ -41,7 +41,8 @@ export function workPacing(count: number, tail: boolean, compact = false, handof
   const pause = 1;
   const foldPause = 2.4;
   const fold = 0.4;
-  const handoffLen = 1.5;
+  // the dusk: 2 screens (it was 1.5, and its last stretch read as the lights going out rather than nightfall)
+  const handoffLen = 2;
   const end = 0.35;
   // the camera leaves a mark 2.2 screens before the next one (WorkSpace's TWEEN_SCREENS): a project's copy leaves with
   // it rather than staying over the panel as it slides away (Puture's copy is gone between exhibits)

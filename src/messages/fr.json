@@ -476,5 +476,9 @@
       "error": "Une erreur est survenue. Veuillez réessayer.",
       "limited": "Trop de tentatives. Réessayez dans quelques minutes."
     }
+  },
+  "preloader": {
+    "loading": "Chargement",
+    "tag": "Logiciels, systèmes et matériel"
   }
 }

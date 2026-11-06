@@ -17,8 +17,9 @@ const SPREAD = 0.5;
 const RUN = 0.34;
 const NIGHT = [2, 10, 7];
 const ACCENT = [34, 197, 94];
-/** the dark hold between "covered" and "start clearing" on a route change (Puture's recorded hold is ~.9 s) */
-const HOLD = 800;
+/** the dark hold between "covered" and "start clearing" on a route change (Puture's recorded hold is ~.9 s, over a full
+ *  page load; ours mounts the page under it, so a shorter hold reads the same and the whole trip is under 2 s) */
+const HOLD = 600;
 /** never wait longer than this for the arriving page to settle */
 const SETTLE_MAX = 1600;
 const WATCHDOG = 8000;

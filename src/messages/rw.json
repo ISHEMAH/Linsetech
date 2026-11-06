@@ -476,5 +476,9 @@
       "error": "Habaye ikibazo. Ongera ugerageze.",
       "limited": "Wagerageje inshuro nyinshi. Ongera ugerageze mu minota mike."
     }
+  },
+  "preloader": {
+    "loading": "Birimo gupakira",
+    "tag": "Porogaramu, sisitemu n’ibikoresho"
   }
 }

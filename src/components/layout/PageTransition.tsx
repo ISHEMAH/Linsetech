@@ -6,7 +6,8 @@ import { gsap, ScrollTrigger, prefersReducedMotion } from "@/lib/gsap";
 import { getLenis } from "@/lib/lenis";
 
 /**
- * Sharplink `PageTransition`: a fixed, pointer-transparent curtain painted in the page-background gradient.
+ * Sharplink `PageTransition`: a fixed, pointer-transparent curtain (theirs in the page gradient; ours in the loading
+ * screen's night, since every page opens on a dark hero).
  *
  * Leaving (their route middleware): `gsap.to("#page-transition", { opacity: 1, duration: 0.5, ease: "power3.inOut" })`
  * runs to completion *before* the route changes, Lenis is stopped, and the header theme flips under cover.

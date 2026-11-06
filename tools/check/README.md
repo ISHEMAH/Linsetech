@@ -19,5 +19,9 @@ Set `PW` to a Playwright module path (Chrome channel + WebKit installed), as wit
   `./recording clip.mov out 0 -1 0.5 720` (a frame every 0.5 s, 720px wide; `all` for every frame) and
   `node recording-sheet.js out sheet 6 5 360` for contact sheets. `out/frames.csv` lists every frame's timestamp:
   macOS recordings are variable-rate, so long gaps between timestamps are moments the screen did not update (stalls).
+- `node preload.js` — the loading screen as a visitor sees it: a fresh visit, a repeat load in the same visit, a
+  client-side navigation (the curtain), reduced motion, and a load with every script blocked (the CSS fallback must hide
+  it and unlock the page), each as a frame sheet with pass/fail lines. `ENGINE=webkit`, `MOBILE=1`, `PAGE=/about`.
+  WebKit has no frame stream, so its sheets are a screenshot loop: judge timings in Chrome.
 
 Note: if a CSS change does not show in `npm run dev`, restart it — its watcher can stop picking up `globals.css`.

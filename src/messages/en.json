@@ -476,5 +476,9 @@
       "error": "Something went wrong. Please try again.",
       "limited": "Too many attempts. Try again in a few minutes."
     }
+  },
+  "preloader": {
+    "loading": "Loading",
+    "tag": "Software, systems and hardware"
   }
 }

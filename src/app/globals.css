@@ -144,8 +144,8 @@ body {
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Route transition curtain (Sharplink #page-transition): painted in the body
-   gradient, pointer-transparent, faded by PageTransition.tsx (0.5s power3.inOut)
+   Route transition curtain (Sharplink #page-transition): pointer-transparent,
+   faded by PageTransition.tsx (0.5s power3.inOut)
    ────────────────────────────────────────────────────────────────────────── */
 #page-transition {
   position: fixed;
@@ -153,9 +153,65 @@ body {
   z-index: 100;
   pointer-events: none;
   opacity: 0;
+  /* the loading screen's night and glow (Sharplink paints theirs in the page gradient; every page of ours opens on a
+     dark hero, so a pale curtain flashed between two dark screens) */
   background:
-    radial-gradient(ellipse 100% 130% at 50% -30%, #cdefd9 45%, #fbfdf9 85%, #f7f9f7),
-    #f7f9f7;
+    radial-gradient(ellipse 90% 60% at 50% 115%, rgba(34, 197, 94, 0.38), rgba(34, 197, 94, 0) 70%),
+    #020a07;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Loading screen (Preloader.tsx): in the server HTML, lifted by the script.
+   html[data-pre] is set by the inline script in layout.tsx before first paint
+   ("fresh" | "seen"), "done" once the loader has lifted.
+   ────────────────────────────────────────────────────────────────────────── */
+html[data-pre="fresh"],
+html[data-pre="seen"] {
+  overflow: hidden;
+}
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  overflow: hidden;
+  background: #020a07;
+  will-change: transform;
+}
+.preloader-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 90% 60% at 50% 115%, rgba(34, 197, 94, 0.38), rgba(34, 197, 94, 0) 70%);
+}
+.preloader-bar > span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+/* a repeat load in the visit shows the finished mark only */
+html[data-pre="seen"] .preloader-foot,
+html[data-pre="seen"] .preloader-bar {
+  display: none;
+}
+/* the scripts never came (blocked, or a very slow connection): the loader goes by itself and the page unlocks after
+   5.5 s, just past the script's own 5 s cap; scripts arriving later skip the loader (Preloader.tsx) */
+html:not([data-pre="done"]) .preloader {
+  animation: preloader-fallback 0s linear 5.5s forwards;
+}
+html:not([data-pre="done"]) {
+  animation: preloader-unlock 0s linear 5.5s forwards;
+}
+@keyframes preloader-fallback {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes preloader-unlock {
+  to {
+    overflow-y: visible;
+  }
 }
 
 /* ──────────────────────────────────────────────────────────────────────────

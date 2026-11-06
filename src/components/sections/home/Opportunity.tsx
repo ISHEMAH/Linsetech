@@ -164,7 +164,7 @@ export default function Opportunity({ services }: { services: Service[] }) {
         window.clearTimeout(timer);
         window.removeEventListener("resize", onResize);
         ctx?.revert();
-        split?.revert();
+        if (el.isConnected) split?.revert(); // not on unmount (see beatMotion.ts)
       };
     },
     { scope: root },

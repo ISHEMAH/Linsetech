@@ -5,6 +5,7 @@ import CharReveal from "@/components/motion/CharReveal";
 import DarkGradient from "@/components/backdrop/DarkGradient";
 import LoopVideo from "@/components/backdrop/LoopVideo";
 import { cn } from "@/lib/cn";
+import { onReveal } from "@/lib/reveal";
 
 export type HeroClip = { webm: string; mp4: string; poster?: string; loop?: boolean };
 
@@ -83,20 +84,21 @@ export default function PageHero({ title, eyebrow, sub, children, cards, clip, o
       const mm = gsap.matchMedia();
       mm.add({ desktop: "(min-width: 800px)", mobile: "(max-width: 799px)" }, (ctx) => {
         const mobile = !!ctx.conditions?.mobile;
+        // the timed intros wait for the loading screen to lift (lib/reveal.ts); the scrubbed exit is set up now
         const tl = gsap.timeline({ paused: true });
         if (inv) {
           const fadeIn = { autoAlpha: 1, duration: 0.8, ease: "power2.out", stagger: 0.2, delay: 0.3 };
           if (mobile) {
-            gsap.to([...eyebrowEl, ...copy], fadeIn);
+            onReveal(() => gsap.to([...eyebrowEl, ...copy], fadeIn));
             if (layers.length) tl.to(layers, { autoAlpha: 0, duration: 1, ease: "power2.in" }, 0);
             if (cardEls.length) tl.to(cardEls, { autoAlpha: 1, duration: 0.8, ease: "power2.out" }, 0.5);
           } else {
-            gsap.to([...eyebrowEl, ...copy, ...cardEls], fadeIn);
+            onReveal(() => gsap.to([...eyebrowEl, ...copy, ...cardEls], fadeIn));
             if (layers.length) tl.to(layers, { autoAlpha: 0, duration: 1, ease: "power2.in" }, 0);
           }
         } else {
-          if (eyebrowEl.length) gsap.to(eyebrowEl, { autoAlpha: 1, duration: 0.5, delay: 0.1, ease: "power2.out" });
-          if (copy.length) gsap.to(copy, { autoAlpha: 1, duration: 0.5, delay: 1.2, ease: "power2.out" });
+          if (eyebrowEl.length) onReveal(() => gsap.to(eyebrowEl, { autoAlpha: 1, duration: 0.5, delay: 0.1, ease: "power2.out" }));
+          if (copy.length) onReveal(() => gsap.to(copy, { autoAlpha: 1, duration: 0.5, delay: 1.2, ease: "power2.out" }));
           if (layers.length) tl.to(layers, { autoAlpha: 0, duration: 1, ease: "power2.in" }, 0);
         }
         if (tl.getChildren().length) {
